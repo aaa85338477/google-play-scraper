@@ -22,7 +22,7 @@ def scrape_play_store(url, lang='en', country='us'):
         return None
     try:
         app_info = play_app(package_name, lang=lang, country=country)
-        result, _ = reviews(package_name, lang=lang, country=country, sort=Sort.HELPFULNESS, count=5)
+        result, _ = reviews(package_name, lang=lang, country=country, sort=Sort.MOST_RELEVANT, count=5)
         
         return {
             "Game Name": app_info.get('title'),

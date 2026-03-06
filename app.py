@@ -87,36 +87,32 @@ def generate_pitch(scraped_data, market, gameplay, art):
     return json.loads(response.text)
 
 def generate_concept_image(prompt_text):
-    """使用 Hugging Face 免费 Inference API 生成高质量图像"""
-    # 获取我们在 Streamlit Secrets 中配置的 Token
+    """使用 Hugging Face 最新的 Router API 生成高质量图像"""
     hf_token = st.secrets.get("HF_API_TOKEN")
     if not hf_token:
         return "⚠️ 请先在 Streamlit Secrets 中配置 HF_API_TOKEN"
 
-    # 使用 Stable Diffusion XL 模型 (目前开源界画质最顶级的模型之一)
-    API_URL = "https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-xl-base-1.0"
+    # 已更新为 Hugging Face 最新的 Inference Router URL
+    API_URL = "https://router.huggingface.co/hf-inference/models/stabilityai/stable-diffusion-xl-base-1.0"
     headers = {"Authorization": f"Bearer {hf_token}"}
 
     try:
-        # 组装请求参数
         payload = {
             "inputs": prompt_text,
             "parameters": {
-                # 尽量不包含无用元素，提升买量图的纯粹感
+                # 过滤掉买量图中不需要的瑕疵元素
                 "negative_prompt": "text, watermark, ugly, blurry, low resolution, deformed"
             }
         }
         
-        # 发送 POST 请求，Hugging Face 的冷启动可能需要一点时间，所以 timeout 设长一点
         response = requests.post(API_URL, headers=headers, json=payload, timeout=60)
         
         if response.status_code == 200:
             return Image.open(io.BytesIO(response.content))
         elif response.status_code == 503:
-            # 503 通常意味着模型正在从云端加载 (冷启动)
             return "模型正在加载中，请等待约 30 秒后再次点击生成按钮。"
         else:
-            return f"Hugging Face 出图失败，状态码: {response.status_code}, 信息: {response.text}"
+            return f"出图失败，状态码: {response.status_code}, 信息: {response.text}"
             
     except Exception as e:
         return f"网络请求失败: {str(e)}"

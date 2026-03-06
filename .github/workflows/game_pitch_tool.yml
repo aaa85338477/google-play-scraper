@@ -1,0 +1,31 @@
+name: Game Pitch Automation
+
+# 配置触发条件
+on:
+  workflow_dispatch: # 允许你在 GitHub 网页端手动点击按钮运行 (测试阶段非常实用)
+  # schedule:
+  #   - cron: '18 1 * * *' # 如果未来你需要它每天自动去巡查新竞品，可以像这样配置定时任务 (例如北京时间 9:18)
+
+jobs:
+  scrape-and-generate:
+    runs-on: ubuntu-latest # 使用最新的 Ubuntu 虚拟环境
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4 # 拉取你仓库里的代码
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10' # 指定 Python 版本
+
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt 
+      # 👆 这一步就是 GitHub 服务器读取你的 requirements.txt 并执行安装的地方
+
+    - name: Run Scraper Script
+      run: |
+        python scraper.py 
+      # 👆 这里填写你实际的 Python 脚本名称

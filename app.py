@@ -87,13 +87,13 @@ def generate_pitch(scraped_data, market, gameplay, art):
     return json.loads(response.text)
 
 def generate_concept_image(prompt_text):
-    """使用 Hugging Face 最新的 Router API 调用 Qwen 图像模型"""
+    """使用 Hugging Face 最新的 Router API 调用 FLUX.1-schnell 极速模型"""
     hf_token = st.secrets.get("HF_API_TOKEN")
     if not hf_token:
         return "⚠️ 请先在 Streamlit Secrets 中配置 HF_API_TOKEN"
 
-    # 替换为你指定的 Qwen 模型节点
-    API_URL = "https://router.huggingface.co/hf-inference/models/Qwen/Qwen-Image-2512"
+    # 使用彻底解决加载慢、不支持等问题的 FLUX 极速版
+    API_URL = "https://router.huggingface.co/hf-inference/models/black-forest-labs/FLUX.1-schnell"
     headers = {"Authorization": f"Bearer {hf_token}"}
 
     try:
@@ -101,15 +101,13 @@ def generate_concept_image(prompt_text):
             "inputs": prompt_text,
         }
         
-        # 设置 60 秒超时，通常 Qwen 的唤醒速度比 FLUX 快很多
+        # 极速版响应极快，常规 timeout 即可
         response = requests.post(API_URL, headers=headers, json=payload, timeout=60)
         
         if response.status_code == 200:
             return Image.open(io.BytesIO(response.content))
         elif response.status_code == 503:
-            return "Qwen 模型正在从云端节点加载 (冷启动)，请等待约 20 秒后再次点击生成。"
-        elif response.status_code in [401, 403]:
-            return f"权限被拒: 请检查 Token 权限，或确认该模型是否需要在主页同意协议。详细信息: {response.text}"
+            return "极速模型节点正在被唤醒，请等待 5-10 秒后再次点击生成。"
         else:
             return f"出图失败，状态码: {response.status_code}, 信息: {response.text}"
             

@@ -93,7 +93,7 @@ def generate_concept_image(prompt_text):
         return "⚠️ 请先在 Streamlit Secrets 中配置 HF_API_TOKEN"
 
     # 直接替换为 FLUX.1-dev 的官方节点
-    API_URL = "https://router.huggingface.co/hf-inference/models/black-forest-labs/FLUX.1-dev"
+    API_URL = "https://router.huggingface.co/hf-inference/models/black-forest-labs/FLUX.1-schnell"
     headers = {"Authorization": f"Bearer {hf_token}"}
 
     try:

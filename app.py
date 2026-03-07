@@ -87,30 +87,30 @@ def generate_pitch(scraped_data, market, gameplay, art):
     return json.loads(response.text)
 
 def generate_concept_image(prompt_text):
-    """使用 Hugging Face 最新的 Router API 生成高质量图像"""
+    """使用 Hugging Face 最新的 Router API 调用 FLUX.1 模型"""
     hf_token = st.secrets.get("HF_API_TOKEN")
     if not hf_token:
         return "⚠️ 请先在 Streamlit Secrets 中配置 HF_API_TOKEN"
 
-    # 已更新为 Hugging Face 最新的 Inference Router URL
-    API_URL = "https://router.huggingface.co/hf-inference/models/stabilityai/stable-diffusion-xl-base-1.0"
+    # 直接替换为 FLUX.1-dev 的官方节点
+    API_URL = "https://router.huggingface.co/hf-inference/models/black-forest-labs/FLUX.1-dev"
     headers = {"Authorization": f"Bearer {hf_token}"}
 
     try:
         payload = {
             "inputs": prompt_text,
-            "parameters": {
-                # 过滤掉买量图中不需要的瑕疵元素
-                "negative_prompt": "text, watermark, ugly, blurry, low resolution, deformed"
-            }
+            # FLUX 极其聪明，通常不需要 negative_prompt 画蛇添足，直接留空 parameters 即可
         }
         
-        response = requests.post(API_URL, headers=headers, json=payload, timeout=60)
+        # FLUX.1-dev 模型极大，免费 API 的计算和冷启动时间较长，务必把 timeout 设大一些 (例如 120 秒)
+        response = requests.post(API_URL, headers=headers, json=payload, timeout=120)
         
         if response.status_code == 200:
             return Image.open(io.BytesIO(response.content))
         elif response.status_code == 503:
-            return "模型正在加载中，请等待约 30 秒后再次点击生成按钮。"
+            return "FLUX 模型正在从云端节点加载，这种大模型冷启动可能需要 1-2 分钟，请稍后再点击生成。"
+        elif response.status_code in [401, 403]:
+            return f"权限被拒 (403): 请务必确保你在 Hugging Face 网页端已打开 FLUX.1-dev 主页并点击了【Agree to access repository】。详细信息: {response.text}"
         else:
             return f"出图失败，状态码: {response.status_code}, 信息: {response.text}"
             

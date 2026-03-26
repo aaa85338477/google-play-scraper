@@ -4,6 +4,7 @@ import importlib
 import json
 import os
 from dataclasses import dataclass
+from datetime import datetime, timedelta, timezone
 from typing import Any
 
 import requests
@@ -36,6 +37,7 @@ GOOGLE_PLAY_COLLECTION_CANDIDATE_LIMIT = 60
 GOOGLE_PLAY_SEARCH_CANDIDATE_LIMIT = 30
 GOOGLE_PLAY_SEARCH_KEYWORDS = ["Editor's Choice Games", "Award winning games"]
 GOOGLE_PLAY_DEFAULT_SOURCE = "search"
+DEFAULT_MAX_GAME_AGE_DAYS = 7
 
 
 @dataclass
@@ -49,6 +51,7 @@ class GameRecord:
     icon_url: str | None
     screenshots: list[str]
     description: str | None
+    released_at: str | None
     contains_ads: bool | None = None
     offers_iap: bool | None = None
     url: str | None = None
@@ -66,6 +69,7 @@ class GameRecord:
             "icon_url": self.icon_url,
             "screenshots": self.screenshots,
             "description": self.description,
+            "released_at": self.released_at,
             "contains_ads": self.contains_ads,
             "offers_iap": self.offers_iap,
             "url": self.url,
@@ -86,6 +90,51 @@ def normalize_app_store_genre_ids(genre_ids: Any) -> set[str]:
     return {str(genre_id) for genre_id in genre_ids if genre_id is not None}
 
 
+def parse_app_store_release_date(lookup_item: dict[str, Any]) -> datetime | None:
+    for key in ("releaseDate", "currentVersionReleaseDate"):
+        value = lookup_item.get(key)
+        if not isinstance(value, str) or not value:
+            continue
+        normalized = value.replace("Z", "+00:00")
+        try:
+            return datetime.fromisoformat(normalized)
+        except ValueError:
+            continue
+    return None
+
+
+def parse_google_play_release_date(details: dict[str, Any]) -> datetime | None:
+    released = details.get("released")
+    if not isinstance(released, str) or not released:
+        return None
+
+    for fmt in ("%b %d, %Y", "%B %d, %Y"):
+        try:
+            parsed = datetime.strptime(released, fmt)
+            return parsed.replace(tzinfo=timezone.utc)
+        except ValueError:
+            continue
+    return None
+
+
+def serialize_release_date(released_at: datetime | None) -> str | None:
+    if released_at is None:
+        return None
+    return released_at.astimezone(timezone.utc).isoformat()
+
+
+def is_recent_release(
+    released_at: datetime | None,
+    age_days: int = DEFAULT_MAX_GAME_AGE_DAYS,
+    now: datetime | None = None,
+) -> bool:
+    if released_at is None:
+        return False
+    current_time = now or datetime.now(timezone.utc)
+    threshold = current_time - timedelta(days=age_days)
+    return released_at >= threshold
+
+
 def is_app_store_game(lookup_item: dict[str, Any]) -> bool:
     primary_genre_name = lookup_item.get("primaryGenreName")
     genres = lookup_item.get("genres") or []
@@ -97,7 +146,9 @@ def is_app_store_game(lookup_item: dict[str, Any]) -> bool:
     )
 
 
-def fetch_app_store_games() -> tuple[list[dict[str, Any]], dict[str, Any]]:
+def fetch_app_store_games(
+    age_days: int = DEFAULT_MAX_GAME_AGE_DAYS,
+) -> tuple[list[dict[str, Any]], dict[str, Any]]:
     session = requests.Session()
     session.headers.update(
         {
@@ -121,7 +172,8 @@ def fetch_app_store_games() -> tuple[list[dict[str, Any]], dict[str, Any]]:
         lookup_payload = fetch_json(session, lookup_url)
         lookup_results = lookup_payload.get("results", [])
         lookup_item = lookup_results[0] if lookup_results else {}
-        if not is_app_store_game(lookup_item):
+        released_at = parse_app_store_release_date(lookup_item)
+        if not is_app_store_game(lookup_item) or not is_recent_release(released_at, age_days=age_days):
             continue
 
         record = GameRecord(
@@ -134,6 +186,7 @@ def fetch_app_store_games() -> tuple[list[dict[str, Any]], dict[str, Any]]:
             icon_url=item.get("artworkUrl100"),
             screenshots=lookup_item.get("screenshotUrls", [])[:3],
             description=lookup_item.get("description"),
+            released_at=serialize_release_date(released_at),
             url=item.get("url"),
             source=APP_STORE_SOURCE,
             genre_verified=True,
@@ -144,6 +197,7 @@ def fetch_app_store_games() -> tuple[list[dict[str, Any]], dict[str, Any]]:
         "source": APP_STORE_SOURCE,
         "raw_count": len(results),
         "filtered_count": len(games),
+        "max_age_days": age_days,
     }
     return games, metadata
 
@@ -215,6 +269,15 @@ def is_google_play_game(details: dict[str, Any]) -> bool:
             return True
 
     return False
+
+
+def is_recent_google_play_game(
+    details: dict[str, Any],
+    age_days: int = DEFAULT_MAX_GAME_AGE_DAYS,
+    now: datetime | None = None,
+) -> bool:
+    released_at = parse_google_play_release_date(details)
+    return is_recent_release(released_at, age_days=age_days, now=now)
 
 
 def call_google_play_collection(collection_fn: Any, collection_member: Any) -> list[dict[str, Any]]:
@@ -306,7 +369,9 @@ def fetch_google_play_candidates() -> tuple[list[str], str]:
     return [], GOOGLE_PLAY_DEFAULT_SOURCE
 
 
-def fetch_google_play_games() -> tuple[list[dict[str, Any]], dict[str, Any]]:
+def fetch_google_play_games(
+    age_days: int = DEFAULT_MAX_GAME_AGE_DAYS,
+) -> tuple[list[dict[str, Any]], dict[str, Any]]:
     if gp_app is None or gp_search is None:
         raise RuntimeError(
             "google-play-scraper is not installed. Please install dependencies first."
@@ -317,7 +382,8 @@ def fetch_google_play_games() -> tuple[list[dict[str, Any]], dict[str, Any]]:
 
     for app_id in candidate_app_ids:
         details = gp_app(app_id, lang=GOOGLE_PLAY_LANG, country=GOOGLE_PLAY_COUNTRY)
-        if not is_google_play_game(details):
+        released_at = parse_google_play_release_date(details)
+        if not is_google_play_game(details) or not is_recent_release(released_at, age_days=age_days):
             continue
 
         record = GameRecord(
@@ -330,6 +396,7 @@ def fetch_google_play_games() -> tuple[list[dict[str, Any]], dict[str, Any]]:
             icon_url=details.get("icon"),
             screenshots=details.get("screenshots", [])[:3],
             description=details.get("description"),
+            released_at=serialize_release_date(released_at),
             contains_ads=details.get("containsAds"),
             offers_iap=details.get("offersIAP"),
             url=f"https://play.google.com/store/apps/details?id={app_id}",
@@ -345,6 +412,7 @@ def fetch_google_play_games() -> tuple[list[dict[str, Any]], dict[str, Any]]:
         "source": source,
         "raw_count": len(candidate_app_ids),
         "filtered_count": len(games),
+        "max_age_days": age_days,
     }
     return games, metadata
 
@@ -353,7 +421,7 @@ def heuristic_gameplay_summary(game: dict[str, Any]) -> str:
     description = (game.get("description") or "").replace("\r", " ").replace("\n", " ")
     cleaned = " ".join(description.split())
     if not cleaned:
-        return "暂无玩法摘要，建议点开详情进一步判断卖点。"
+        return "No gameplay summary is available yet."
 
     snippets = [part.strip(" -") for part in cleaned.split(".") if part.strip()]
     if not snippets:
@@ -363,20 +431,20 @@ def heuristic_gameplay_summary(game: dict[str, Any]) -> str:
     traits: list[str] = []
     lowered = cleaned.lower()
     keyword_pairs = [
-        ("multiplayer", "多人协作或对战"),
-        ("puzzle", "偏解谜闯关"),
-        ("strategy", "强调策略搭配"),
-        ("idle", "带放置成长"),
-        ("card", "卡牌构筑元素明显"),
-        ("adventure", "有冒险探索驱动"),
-        ("simulation", "偏模拟经营"),
-        ("story", "剧情包装较强"),
+        ("multiplayer", "multiplayer potential"),
+        ("puzzle", "puzzle loops"),
+        ("strategy", "strategy depth"),
+        ("idle", "idle progression"),
+        ("card", "card-building hooks"),
+        ("adventure", "adventure framing"),
+        ("simulation", "simulation systems"),
+        ("story", "story packaging"),
     ]
     for keyword, label in keyword_pairs:
         if keyword in lowered:
             traits.append(label)
-    trait_text = "，".join(traits[:3]) if traits else "节奏和题材信息需结合截图判断"
-    return f"{lead}。核心印象：{trait_text}。"
+    trait_text = ", ".join(traits[:3]) if traits else "genre cues need manual review"
+    return f"{lead}. Core read: {trait_text}."
 
 
 def call_llm(messages: list[dict[str, str]]) -> str | None:
@@ -409,8 +477,8 @@ def call_llm(messages: list[dict[str, str]]) -> str | None:
 
 def generate_gameplay_summary(game: dict[str, Any]) -> str:
     prompt = (
-        "你是一名手游内容编辑。请基于给定游戏信息，用简体中文提炼 2 句话，"
-        "总结核心玩法、题材卖点和适合传播的切入角度，不要虚构信息。"
+        "You are a mobile-games editor. Based on the provided metadata, summarize the game's core loop,"
+        " theme, and editorial angle in 2 sentences. Do not invent missing details."
     )
     content = json.dumps(
         {
@@ -419,6 +487,7 @@ def generate_gameplay_summary(game: dict[str, Any]) -> str:
             "score": game.get("score"),
             "ratings": game.get("ratings"),
             "description": game.get("description"),
+            "released_at": game.get("released_at"),
         },
         ensure_ascii=False,
     )
@@ -433,52 +502,47 @@ def generate_gameplay_summary(game: dict[str, Any]) -> str:
 
 def fallback_markdown(game: dict[str, Any], summary: str) -> str:
     screenshots = game.get("screenshots") or []
-    screenshot_lines = "\n".join(f"![截图{i + 1}]({url})" for i, url in enumerate(screenshots))
+    screenshot_lines = "\n".join(f"![Screenshot {i + 1}]({url})" for i, url in enumerate(screenshots))
     rating_text = f"{game.get('score', 'N/A')} / {game.get('ratings', 'N/A')} ratings"
     monetization: list[str] = []
     if game.get("contains_ads"):
-        monetization.append("含广告")
+        monetization.append("ads")
     if game.get("offers_iap"):
-        monetization.append("含内购")
-    monetization_text = "、".join(monetization) if monetization else "商业化信息未明确"
+        monetization.append("IAP")
+    monetization_text = ", ".join(monetization) if monetization else "commercial model not explicit"
 
     return f"""# {game.get('title')}
 
-> 选题判断：这款游戏适合做成“新游速递 / 值得一试”类推文卡片。
+> Editorial fit: this title is suitable for a new-game watchlist post.
 
-## 一句话看点
+## Hook
 
 {summary}
 
-## 基本信息
+## Basic info
 
-- 平台：{game.get('store')}
-- 开发者：{game.get('developer') or '未知'}
-- 商店评分：{rating_text}
-- 商业化：{monetization_text}
-- 商店链接：{game.get('url') or '暂无'}
+- Platform: {game.get('store')}
+- Developer: {game.get('developer') or 'Unknown'}
+- Release date: {game.get('released_at') or 'Unknown'}
+- Store rating: {rating_text}
+- Monetization: {monetization_text}
+- Store link: {game.get('url') or 'N/A'}
 
-## 推荐理由
+## Why it matters
 
-1. 题材和美术第一眼有传播空间，适合公众号封面与摘要包装。
-2. 评分与用户量可作为基础背书，便于编辑快速判断是否值得跟进。
-3. 可结合截图做“玩法机制 + 视觉风格 + 受众画像”的三段式表达。
+1. It is recent enough to fit a \"new games to watch\" angle.
+2. The store page already offers enough visible signals for a first-pass editorial take.
+3. Screenshots and description support a quick visual-plus-loop breakdown.
 
-## 稿件正文
+## Draft body
 
-最近又看到一款值得加入观察名单的新游《{game.get('title')}》。
+A newly released title worth tracking this week is {game.get('title')}.
 
-从公开信息看，这款产品的核心卖点主要集中在：{summary}
+Based on the store page, the main hook looks like this: {summary}
 
-如果你平时会关注同题材产品，这类作品通常最值得看的，是它有没有把美术包装、成长节奏和核心循环做出差异化。就目前商店页透露的信息来说，《{game.get('title')}》已经具备了一个不错的选题起点。
+For editorial packaging, lead with the premise and core loop first, then add release timing, rating, and monetization, and close on whether the visuals and progression are enough to justify attention right now.
 
-编辑层面建议：
-
-- 第一段先交代题材与核心玩法。
-- 第二段补评分、开发者与商业化信息。
-- 第三段结合截图落到“值不值得现在就试”。
-
-## 配图建议
+## Image slots
 
 ![Icon]({game.get('icon_url') or ''})
 {screenshot_lines}
@@ -487,9 +551,9 @@ def fallback_markdown(game: dict[str, Any], summary: str) -> str:
 
 def generate_wechat_markdown(game: dict[str, Any], summary: str) -> str:
     prompt = (
-        "你是一名游戏行业公众号编辑。请根据提供的游戏资料，输出一篇适合微信公众号发布的"
-        " Markdown 稿件，使用简体中文，风格专业但有可读性。内容需要包含：标题、导语、"
-        " 核心玩法拆解、适合什么玩家、编辑点评、基础信息表、配图占位。不要虚构未提供的信息。"
+        "You are a games-industry newsletter editor. Write a markdown article draft suitable for a WeChat post"
+        " using the provided game metadata. Include a headline, intro, gameplay breakdown, target audience,"
+        " editorial verdict, a basic info block, and image placeholders. Do not invent facts."
     )
     content = json.dumps(
         {

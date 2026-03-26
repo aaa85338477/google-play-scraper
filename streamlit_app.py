@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 
 import html
 import textwrap
@@ -14,7 +14,7 @@ from scraper_services import (
 )
 
 
-st.set_page_config(page_title="新游选题台", page_icon="🎮", layout="wide")
+st.set_page_config(page_title="Game Scout Desk", page_icon=":video_game:", layout="wide")
 
 st.markdown(
     """
@@ -76,14 +76,14 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-
 for key, default in {
     "games": [],
     "draft_markdown": "",
     "selected_game_id": None,
     "last_source": "",
     "gameplay_summaries": {},
-    "status_message": "左侧先抓一批新游，再从中挑适合公众号的题材。",
+    "status_message": "Fetch a batch of titles from the left, then pick the games worth covering.",
+    "last_counts": {"raw_count": 0, "filtered_count": 0},
 }.items():
     if key not in st.session_state:
         st.session_state[key] = default
@@ -95,7 +95,7 @@ def score_label(game: dict[str, Any]) -> str:
     ratings = game.get("ratings")
     score_text = f"{score:.1f}" if isinstance(score, (int, float)) else "N/A"
     ratings_text = f"{ratings:,}" if isinstance(ratings, int) else "N/A"
-    return f"评分 {score_text} / 评价 {ratings_text}"
+    return f"Score {score_text} / Ratings {ratings_text}"
 
 
 
@@ -106,7 +106,7 @@ def ensure_summaries(games: list[dict[str, Any]]) -> None:
         try:
             summary = generate_gameplay_summary(game)
         except Exception as exc:
-            summary = f"玩法摘要生成失败：{exc}"
+            summary = f"Gameplay summary failed: {exc}"
         st.session_state.gameplay_summaries[game["app_id"]] = summary
 
 
@@ -117,71 +117,92 @@ def reset_selection() -> None:
 
 
 
+def update_loaded_games(games: list[dict[str, Any]], metadata: dict[str, Any], label: str) -> None:
+    ensure_summaries(games)
+    st.session_state.games = [game for game in games if game.get("genre_verified")]
+    st.session_state.last_source = label
+    st.session_state.last_counts = {
+        "raw_count": metadata.get("raw_count", 0),
+        "filtered_count": metadata.get("filtered_count", 0),
+    }
+    if st.session_state.games:
+        st.session_state.status_message = (
+            f"Verified {metadata.get('filtered_count', 0)} game apps from "
+            f"{metadata.get('raw_count', 0)} candidates."
+        )
+    else:
+        st.session_state.status_message = (
+            f"No titles passed the strict game filter. "
+            f"Raw candidates: {metadata.get('raw_count', 0)}."
+        )
+    reset_selection()
+
+
+
 def load_app_store_games() -> None:
     try:
-        with st.spinner("正在抓取 App Store 美区新游..."):
-            games = fetch_app_store_games()
-        ensure_summaries(games)
-        st.session_state.games = games
-        st.session_state.last_source = "App Store 新游推荐"
-        st.session_state.status_message = f"已抓取 {len(games)} 款 App Store 游戏。"
-        reset_selection()
+        with st.spinner("Fetching App Store titles..."):
+            games, metadata = fetch_app_store_games()
+        update_loaded_games(games, metadata, "App Store new game feed")
     except Exception as exc:
-        st.session_state.status_message = f"App Store 抓取失败：{exc}"
+        st.session_state.status_message = f"App Store fetch failed: {exc}"
 
 
 
 def load_google_play_games() -> None:
     try:
-        with st.spinner("正在抓取 Google Play 编辑精选 / 新游集合..."):
-            games, source = fetch_google_play_games()
-        ensure_summaries(games)
-        st.session_state.games = games
-        st.session_state.last_source = f"Google Play {source}"
-        st.session_state.status_message = f"已抓取 {len(games)} 款 Google Play 游戏，来源：{source}。"
-        reset_selection()
+        with st.spinner("Fetching Google Play titles..."):
+            games, metadata = fetch_google_play_games()
+        update_loaded_games(games, metadata, f"Google Play {metadata.get('source', '')}")
     except Exception as exc:
-        st.session_state.status_message = f"Google Play 抓取失败：{exc}"
+        st.session_state.status_message = f"Google Play fetch failed: {exc}"
 
 
 
 def generate_draft(game: dict[str, Any]) -> None:
     summary = st.session_state.gameplay_summaries.get(game["app_id"], "")
     try:
-        with st.spinner(f"正在为《{game['title']}》生成公众号稿件..."):
+        with st.spinner(f"Generating article draft for {game['title']}..."):
             st.session_state.draft_markdown = generate_wechat_markdown(game, summary)
         st.session_state.selected_game_id = game["app_id"]
-        st.session_state.status_message = f"已生成《{game['title']}》的公众号 Markdown 稿件。"
+        st.session_state.status_message = f"Draft ready for {game['title']}."
     except Exception as exc:
-        st.session_state.status_message = f"推文生成失败：{exc}"
+        st.session_state.status_message = f"Draft generation failed: {exc}"
 
 
-st.title("🎮 新游选题台")
-st.caption("把两套爬虫接成一条运营工作流：抓取、扫卡、挑题、出稿。")
+st.title("Game Scout Desk")
+st.caption("A lightweight workflow for fetching candidate games, reviewing them, and drafting article copy.")
 
 left_col, center_col, right_col = st.columns([1.1, 2.3, 1.7], gap="large")
 
 with left_col:
-    st.markdown("### 控制栏")
-    st.markdown('<div class="sidebar-note">左边负责拉取候选池。默认优先抓公开榜单与集合，再自动做 AI 摘要，方便你快速扫题材。</div>', unsafe_allow_html=True)
-    if st.button("抓取 App Store 新游推荐", use_container_width=True, type="primary"):
+    st.markdown("### Controls")
+    st.markdown(
+        '<div class="sidebar-note">Use the buttons below to load raw candidates, then keep only items verified by official game categories.</div>',
+        unsafe_allow_html=True,
+    )
+    if st.button("Fetch App Store Games", use_container_width=True, type="primary"):
         load_app_store_games()
-    if st.button("抓取 Google Play 编辑精选", use_container_width=True):
+    if st.button("Fetch Google Play Games", use_container_width=True):
         load_google_play_games()
 
     st.divider()
-    st.markdown("### 当前状态")
+    st.markdown("### Status")
     st.info(st.session_state.status_message)
     if st.session_state.last_source:
-        st.write(f"数据源：`{st.session_state.last_source}`")
+        st.write(f"Source: `{st.session_state.last_source}`")
+    counts = st.session_state.last_counts
+    if counts.get("raw_count"):
+        st.write(f"Raw candidates: `{counts['raw_count']}`")
+        st.write(f"Verified games: `{counts['filtered_count']}`")
     if st.session_state.games:
-        st.write(f"候选数：`{len(st.session_state.games)}`")
+        st.write(f"Cards shown: `{len(st.session_state.games)}`")
 
 with center_col:
-    st.markdown("### 信息流")
+    st.markdown("### Feed")
     if not st.session_state.games:
         st.markdown(
-            '<div class="panel-card">还没有抓取结果。先从左侧选择一个商店，系统会把游戏卡片和 AI 提炼玩法一并放到这里。</div>',
+            '<div class="panel-card">No verified games to show yet. Fetch a store from the left. If every candidate is filtered out, this panel stays empty on purpose.</div>',
             unsafe_allow_html=True,
         )
     else:
@@ -189,7 +210,8 @@ with center_col:
             summary = st.session_state.gameplay_summaries.get(game["app_id"], "")
             safe_summary = html.escape(summary)
             safe_title = html.escape(game["title"])
-            safe_developer = html.escape(game.get("developer") or "未知开发者")
+            safe_developer = html.escape(game.get("developer") or "Unknown developer")
+            safe_store = html.escape(game.get("store") or "")
             with st.container():
                 st.markdown('<div class="panel-card">', unsafe_allow_html=True)
                 card_left, card_mid, card_right = st.columns([0.7, 2.2, 1.2], gap="medium")
@@ -199,7 +221,7 @@ with center_col:
                 with card_mid:
                     st.markdown(f'<div class="game-title">{safe_title}</div>', unsafe_allow_html=True)
                     st.markdown(
-                        f'<div class="game-meta">{safe_developer} · {html.escape(game.get("store") or "")}</div>',
+                        f'<div class="game-meta">{safe_developer} · {safe_store}</div>',
                         unsafe_allow_html=True,
                     )
                     st.markdown(
@@ -212,30 +234,30 @@ with center_col:
                     )
                 with card_right:
                     st.write(" ")
-                    if st.button("生成推文", key=f"generate_{game['app_id']}", use_container_width=True):
+                    if st.button("Generate Draft", key=f"generate_{game['app_id']}", use_container_width=True):
                         generate_draft(game)
                     if game.get("url"):
-                        st.link_button("打开商店页", game["url"], use_container_width=True)
+                        st.link_button("Open Store Page", game["url"], use_container_width=True)
                     screenshots = game.get("screenshots") or []
                     if screenshots:
-                        st.caption("截图预览")
+                        st.caption("Screenshot preview")
                         st.image(screenshots[0], use_container_width=True)
                 st.markdown('</div>', unsafe_allow_html=True)
 
 with right_col:
-    st.markdown("### 操作区")
+    st.markdown("### Draft")
     if st.session_state.selected_game_id:
         selected = next(
             (item for item in st.session_state.games if item["app_id"] == st.session_state.selected_game_id),
             None,
         )
         if selected:
-            st.success(f"当前稿件：{selected['title']}")
+            st.success(f"Current draft: {selected['title']}")
     else:
-        st.warning("选中一张卡片后，这里会出现可直接改写的公众号 Markdown 草稿。")
+        st.warning("Pick a card and generate a draft to populate this panel.")
 
     st.session_state.draft_markdown = st.text_area(
-        "公众号 Markdown",
+        "Article Markdown",
         value=st.session_state.draft_markdown,
         height=560,
         key="draft_box",
@@ -244,7 +266,7 @@ with right_col:
 
     if st.session_state.draft_markdown:
         st.download_button(
-            "下载 Markdown",
+            "Download Markdown",
             data=st.session_state.draft_markdown,
             file_name="wechat_game_post.md",
             mime="text/markdown",
@@ -253,8 +275,8 @@ with right_col:
         st.caption(
             textwrap.dedent(
                 """
-                提示：如果设置了 `OPENAI_API_KEY`，玩法提炼和推文会调用大模型；
-                没设置时会自动回退到本地模板，依然能跑通整个工作流。
+                Tip: if OPENAI_API_KEY is configured, gameplay summaries and article drafts use the model.
+                Without a key, the app falls back to local summaries and a template draft.
                 """
             ).strip()
         )

@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 
 import json
 
@@ -8,10 +8,9 @@ OUTPUT_FILE = "google_play_recommended_games.json"
 
 
 def main() -> None:
-    games, source = fetch_google_play_games()
+    games, metadata = fetch_google_play_games()
     payload = {
-        "source": source,
-        "count": len(games),
+        **metadata,
         "games": games,
     }
 

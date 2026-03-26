@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 
 import importlib
 import json
@@ -27,12 +27,15 @@ APP_STORE_RSS_URL = (
 APP_STORE_LOOKUP_URL_TEMPLATE = (
     "https://itunes.apple.com/lookup?id={app_id}&country={country}"
 )
+APP_STORE_SOURCE = "top-free-games-genre-6014"
 
 GOOGLE_PLAY_LANG = "en"
 GOOGLE_PLAY_COUNTRY = "us"
-GOOGLE_PLAY_COLLECTION_LIMIT = 20
-GOOGLE_PLAY_SEARCH_LIMIT = 10
+GOOGLE_PLAY_TARGET_LIMIT = 20
+GOOGLE_PLAY_COLLECTION_CANDIDATE_LIMIT = 60
+GOOGLE_PLAY_SEARCH_CANDIDATE_LIMIT = 30
 GOOGLE_PLAY_SEARCH_KEYWORDS = ["Editor's Choice Games", "Award winning games"]
+GOOGLE_PLAY_DEFAULT_SOURCE = "search"
 
 
 @dataclass
@@ -50,6 +53,7 @@ class GameRecord:
     offers_iap: bool | None = None
     url: str | None = None
     source: str | None = None
+    genre_verified: bool = True
 
     def to_dict(self) -> dict[str, Any]:
         return {
@@ -66,6 +70,7 @@ class GameRecord:
             "offers_iap": self.offers_iap,
             "url": self.url,
             "source": self.source,
+            "genre_verified": self.genre_verified,
         }
 
 
@@ -75,7 +80,24 @@ def fetch_json(session: requests.Session, url: str) -> dict[str, Any]:
     return response.json()
 
 
-def fetch_app_store_games() -> list[dict[str, Any]]:
+def normalize_app_store_genre_ids(genre_ids: Any) -> set[str]:
+    if not isinstance(genre_ids, list):
+        return set()
+    return {str(genre_id) for genre_id in genre_ids if genre_id is not None}
+
+
+def is_app_store_game(lookup_item: dict[str, Any]) -> bool:
+    primary_genre_name = lookup_item.get("primaryGenreName")
+    genres = lookup_item.get("genres") or []
+    genre_ids = normalize_app_store_genre_ids(lookup_item.get("genreIds"))
+    return (
+        primary_genre_name == "Games"
+        or "Games" in genres
+        or str(APP_STORE_GAMES_GENRE_ID) in genre_ids
+    )
+
+
+def fetch_app_store_games() -> tuple[list[dict[str, Any]], dict[str, Any]]:
     session = requests.Session()
     session.headers.update(
         {
@@ -97,7 +119,10 @@ def fetch_app_store_games() -> list[dict[str, Any]]:
             app_id=app_id, country=APP_STORE_COUNTRY
         )
         lookup_payload = fetch_json(session, lookup_url)
-        lookup_item = lookup_payload.get("results", [{}])[0]
+        lookup_results = lookup_payload.get("results", [])
+        lookup_item = lookup_results[0] if lookup_results else {}
+        if not is_app_store_game(lookup_item):
+            continue
 
         record = GameRecord(
             store="app_store",
@@ -110,11 +135,17 @@ def fetch_app_store_games() -> list[dict[str, Any]]:
             screenshots=lookup_item.get("screenshotUrls", [])[:3],
             description=lookup_item.get("description"),
             url=item.get("url"),
-            source="top-free-games-genre-6014",
+            source=APP_STORE_SOURCE,
+            genre_verified=True,
         )
         games.append(record.to_dict())
 
-    return games
+    metadata = {
+        "source": APP_STORE_SOURCE,
+        "raw_count": len(results),
+        "filtered_count": len(games),
+    }
+    return games, metadata
 
 
 def resolve_google_play_collection_api() -> tuple[Any | None, Any | None]:
@@ -170,28 +201,52 @@ def normalize_google_play_app_id(item: dict[str, Any]) -> str | None:
     return None
 
 
+def is_google_play_game(details: dict[str, Any]) -> bool:
+    genre_id = details.get("genreId")
+    if isinstance(genre_id, str) and genre_id.startswith("GAME_"):
+        return True
+
+    categories = details.get("categories") or []
+    for category in categories:
+        if not isinstance(category, dict):
+            continue
+        category_id = category.get("id")
+        if isinstance(category_id, str) and category_id.startswith("GAME_"):
+            return True
+
+    return False
+
+
 def call_google_play_collection(collection_fn: Any, collection_member: Any) -> list[dict[str, Any]]:
     attempts = [
         lambda: collection_fn(
             collection=collection_member,
             lang=GOOGLE_PLAY_LANG,
             country=GOOGLE_PLAY_COUNTRY,
-            results=GOOGLE_PLAY_COLLECTION_LIMIT,
+            results=GOOGLE_PLAY_COLLECTION_CANDIDATE_LIMIT,
         ),
         lambda: collection_fn(
             collection=collection_member,
             lang=GOOGLE_PLAY_LANG,
             country=GOOGLE_PLAY_COUNTRY,
-            n_results=GOOGLE_PLAY_COLLECTION_LIMIT,
+            n_results=GOOGLE_PLAY_COLLECTION_CANDIDATE_LIMIT,
         ),
         lambda: collection_fn(
             collection=collection_member,
             lang=GOOGLE_PLAY_LANG,
             country=GOOGLE_PLAY_COUNTRY,
-            count=GOOGLE_PLAY_COLLECTION_LIMIT,
+            count=GOOGLE_PLAY_COLLECTION_CANDIDATE_LIMIT,
         ),
         lambda: collection_fn(
-            collection_member, lang=GOOGLE_PLAY_LANG, country=GOOGLE_PLAY_COUNTRY
+            collection_member,
+            lang=GOOGLE_PLAY_LANG,
+            country=GOOGLE_PLAY_COUNTRY,
+            results=GOOGLE_PLAY_COLLECTION_CANDIDATE_LIMIT,
+        ),
+        lambda: collection_fn(
+            collection_member,
+            lang=GOOGLE_PLAY_LANG,
+            country=GOOGLE_PLAY_COUNTRY,
         ),
     ]
 
@@ -204,7 +259,7 @@ def call_google_play_collection(collection_fn: Any, collection_member: Any) -> l
             continue
 
         if isinstance(result, list):
-            return result[:GOOGLE_PLAY_COLLECTION_LIMIT]
+            return result
 
     if last_error:
         raise last_error
@@ -212,46 +267,59 @@ def call_google_play_collection(collection_fn: Any, collection_member: Any) -> l
     return []
 
 
-def fetch_google_play_games() -> tuple[list[dict[str, Any]], str]:
+def dedupe_app_ids(items: list[dict[str, Any]]) -> list[str]:
+    app_ids: list[str] = []
+    for item in items:
+        app_id = normalize_google_play_app_id(item)
+        if app_id and app_id not in app_ids:
+            app_ids.append(app_id)
+    return app_ids
+
+
+def fetch_google_play_candidates() -> tuple[list[str], str]:
+    if gp_search is None:
+        raise RuntimeError(
+            "google-play-scraper is not installed. Please install dependencies first."
+        )
+
+    collection_fn, collection_enum = resolve_google_play_collection_api()
+    if collection_fn and collection_enum:
+        collection_member = choose_google_play_collection(collection_enum)
+        if collection_member is not None:
+            items = call_google_play_collection(collection_fn, collection_member)
+            app_ids = dedupe_app_ids(items)
+            if app_ids:
+                source = f"collection:{getattr(collection_member, 'name', collection_member)}"
+                return app_ids, source
+
+    for keyword in GOOGLE_PLAY_SEARCH_KEYWORDS:
+        items = gp_search(
+            keyword,
+            n_hits=GOOGLE_PLAY_SEARCH_CANDIDATE_LIMIT,
+            lang=GOOGLE_PLAY_LANG,
+            country=GOOGLE_PLAY_COUNTRY,
+        )
+        app_ids = dedupe_app_ids(items)
+        if app_ids:
+            return app_ids, f"search:{keyword}"
+
+    return [], GOOGLE_PLAY_DEFAULT_SOURCE
+
+
+def fetch_google_play_games() -> tuple[list[dict[str, Any]], dict[str, Any]]:
     if gp_app is None or gp_search is None:
         raise RuntimeError(
             "google-play-scraper is not installed. Please install dependencies first."
         )
 
-    source = "search"
-    app_ids: list[str] = []
-    collection_fn, collection_enum = resolve_google_play_collection_api()
-
-    if collection_fn and collection_enum:
-        collection_member = choose_google_play_collection(collection_enum)
-        if collection_member is not None:
-            items = call_google_play_collection(collection_fn, collection_member)
-            for item in items:
-                app_id = normalize_google_play_app_id(item)
-                if app_id and app_id not in app_ids:
-                    app_ids.append(app_id)
-            if app_ids:
-                source = f"collection:{getattr(collection_member, 'name', collection_member)}"
-
-    if not app_ids:
-        for keyword in GOOGLE_PLAY_SEARCH_KEYWORDS:
-            items = gp_search(
-                keyword,
-                n_hits=GOOGLE_PLAY_SEARCH_LIMIT,
-                lang=GOOGLE_PLAY_LANG,
-                country=GOOGLE_PLAY_COUNTRY,
-            )
-            for item in items:
-                app_id = normalize_google_play_app_id(item)
-                if app_id and app_id not in app_ids:
-                    app_ids.append(app_id)
-            if app_ids:
-                source = f"search:{keyword}"
-                break
-
+    candidate_app_ids, source = fetch_google_play_candidates()
     games: list[dict[str, Any]] = []
-    for app_id in app_ids[:GOOGLE_PLAY_COLLECTION_LIMIT]:
+
+    for app_id in candidate_app_ids:
         details = gp_app(app_id, lang=GOOGLE_PLAY_LANG, country=GOOGLE_PLAY_COUNTRY)
+        if not is_google_play_game(details):
+            continue
+
         record = GameRecord(
             store="google_play",
             app_id=app_id,
@@ -266,10 +334,19 @@ def fetch_google_play_games() -> tuple[list[dict[str, Any]], str]:
             offers_iap=details.get("offersIAP"),
             url=f"https://play.google.com/store/apps/details?id={app_id}",
             source=source,
+            genre_verified=True,
         )
         games.append(record.to_dict())
 
-    return games, source
+        if len(games) >= GOOGLE_PLAY_TARGET_LIMIT:
+            break
+
+    metadata = {
+        "source": source,
+        "raw_count": len(candidate_app_ids),
+        "filtered_count": len(games),
+    }
+    return games, metadata
 
 
 def heuristic_gameplay_summary(game: dict[str, Any]) -> str:

@@ -421,7 +421,7 @@ def heuristic_gameplay_summary(game: dict[str, Any]) -> str:
     description = (game.get("description") or "").replace("\r", " ").replace("\n", " ")
     cleaned = " ".join(description.split())
     if not cleaned:
-        return "No gameplay summary is available yet."
+        return "暂无玩法摘要，建议结合截图和商店页进一步判断。"
 
     snippets = [part.strip(" -") for part in cleaned.split(".") if part.strip()]
     if not snippets:
@@ -431,20 +431,20 @@ def heuristic_gameplay_summary(game: dict[str, Any]) -> str:
     traits: list[str] = []
     lowered = cleaned.lower()
     keyword_pairs = [
-        ("multiplayer", "multiplayer potential"),
-        ("puzzle", "puzzle loops"),
-        ("strategy", "strategy depth"),
-        ("idle", "idle progression"),
-        ("card", "card-building hooks"),
-        ("adventure", "adventure framing"),
-        ("simulation", "simulation systems"),
-        ("story", "story packaging"),
+        ("multiplayer", "可能有多人协作或对战卖点"),
+        ("puzzle", "偏解谜或关卡挑战"),
+        ("strategy", "强调策略搭配"),
+        ("idle", "带放置成长节奏"),
+        ("card", "卡牌构筑元素较明显"),
+        ("adventure", "有冒险探索驱动"),
+        ("simulation", "偏模拟经营体验"),
+        ("story", "剧情包装感较强"),
     ]
     for keyword, label in keyword_pairs:
         if keyword in lowered:
             traits.append(label)
-    trait_text = ", ".join(traits[:3]) if traits else "genre cues need manual review"
-    return f"{lead}. Core read: {trait_text}."
+    trait_text = "，".join(traits[:3]) if traits else "题材和循环还需要人工复核"
+    return f"{lead}。核心判断：{trait_text}。"
 
 
 def call_llm(messages: list[dict[str, str]]) -> str | None:
@@ -477,8 +477,8 @@ def call_llm(messages: list[dict[str, str]]) -> str | None:
 
 def generate_gameplay_summary(game: dict[str, Any]) -> str:
     prompt = (
-        "You are a mobile-games editor. Based on the provided metadata, summarize the game's core loop,"
-        " theme, and editorial angle in 2 sentences. Do not invent missing details."
+        "你是一名手游内容编辑。请根据给定元数据，用简体中文提炼 2 句话，"
+        "总结这款游戏的核心玩法、题材卖点和适合传播的角度，不要虚构信息。"
     )
     content = json.dumps(
         {
@@ -502,47 +502,47 @@ def generate_gameplay_summary(game: dict[str, Any]) -> str:
 
 def fallback_markdown(game: dict[str, Any], summary: str) -> str:
     screenshots = game.get("screenshots") or []
-    screenshot_lines = "\n".join(f"![Screenshot {i + 1}]({url})" for i, url in enumerate(screenshots))
-    rating_text = f"{game.get('score', 'N/A')} / {game.get('ratings', 'N/A')} ratings"
+    screenshot_lines = "\n".join(f"![截图 {i + 1}]({url})" for i, url in enumerate(screenshots))
+    rating_text = f"{game.get('score', 'N/A')} / {game.get('ratings', 'N/A')} 条评价"
     monetization: list[str] = []
     if game.get("contains_ads"):
-        monetization.append("ads")
+        monetization.append("含广告")
     if game.get("offers_iap"):
-        monetization.append("IAP")
-    monetization_text = ", ".join(monetization) if monetization else "commercial model not explicit"
+        monetization.append("含内购")
+    monetization_text = "、".join(monetization) if monetization else "商业化信息未明确"
 
     return f"""# {game.get('title')}
 
-> Editorial fit: this title is suitable for a new-game watchlist post.
+> 选题判断：这款游戏适合放进“近期新游观察”类稿件中。
 
-## Hook
+## 一句话看点
 
 {summary}
 
-## Basic info
+## 基本信息
 
-- Platform: {game.get('store')}
-- Developer: {game.get('developer') or 'Unknown'}
-- Release date: {game.get('released_at') or 'Unknown'}
-- Store rating: {rating_text}
-- Monetization: {monetization_text}
-- Store link: {game.get('url') or 'N/A'}
+- 平台：{game.get('store')}
+- 开发者：{game.get('developer') or '未知'}
+- 上线时间：{game.get('released_at') or '未知'}
+- 商店评分：{rating_text}
+- 商业化：{monetization_text}
+- 商店链接：{game.get('url') or '暂无'}
 
-## Why it matters
+## 值得关注的原因
 
-1. It is recent enough to fit a \"new games to watch\" angle.
-2. The store page already offers enough visible signals for a first-pass editorial take.
-3. Screenshots and description support a quick visual-plus-loop breakdown.
+1. 这款产品足够新，适合放进“近几天新游”选题框架里。
+2. 商店页已经提供了基本的题材、玩法与视觉信息，足够支撑一版快稿。
+3. 可以结合截图做“玩法机制 + 美术风格 + 受众判断”的三段式表达。
 
-## Draft body
+## 稿件正文
 
-A newly released title worth tracking this week is {game.get('title')}.
+最近上新的游戏里，值得留意的一款是《{game.get('title')}》。
 
-Based on the store page, the main hook looks like this: {summary}
+从商店公开信息看，这款产品最值得优先提炼的卖点是：{summary}
 
-For editorial packaging, lead with the premise and core loop first, then add release timing, rating, and monetization, and close on whether the visuals and progression are enough to justify attention right now.
+如果要做成公众号稿件，建议第一段先交代题材与核心循环，第二段补上线时间、评分与商业化信息，第三段落到“适合谁玩、是否值得现在就试”。
 
-## Image slots
+## 配图建议
 
 ![Icon]({game.get('icon_url') or ''})
 {screenshot_lines}
@@ -551,9 +551,9 @@ For editorial packaging, lead with the premise and core loop first, then add rel
 
 def generate_wechat_markdown(game: dict[str, Any], summary: str) -> str:
     prompt = (
-        "You are a games-industry newsletter editor. Write a markdown article draft suitable for a WeChat post"
-        " using the provided game metadata. Include a headline, intro, gameplay breakdown, target audience,"
-        " editorial verdict, a basic info block, and image placeholders. Do not invent facts."
+        "你是一名游戏行业公众号编辑。请根据提供的游戏元数据，输出一篇适合微信公众号发布的 Markdown 稿件。"
+        "内容需要包含：标题、导语、核心玩法拆解、适合什么玩家、编辑点评、基础信息表和配图占位。"
+        "请使用简体中文，不要虚构未提供的信息。"
     )
     content = json.dumps(
         {

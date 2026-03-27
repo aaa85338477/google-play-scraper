@@ -6,7 +6,7 @@ from typing import Any
 
 import streamlit as st
 
-from developer_watchlist import CORE_DEVELOPERS, monitor_core_developers
+from developer_watchlist import CORE_DEVELOPERS, monitor_core_developers_fast
 from feishu_bitable import RICH_FIELD_NAMES, sync_game_records_to_bitable
 from monitoring_labels import market_signal_label
 
@@ -185,7 +185,7 @@ def monitor_watchlist() -> None:
 
     try:
         with st.spinner("正在扫描核心厂商监控列表..."):
-            snapshot = monitor_core_developers(targets)
+            snapshot = monitor_core_developers_fast(targets, concurrency=10)
             raw_apps = snapshot.get("apps", [])
             filtered_apps = [
                 app for app in raw_apps if within_release_window(app.get("released_at"), st.session_state.release_window_days)

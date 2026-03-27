@@ -1,0 +1,6492 @@
+[
+  {
+    "store": "google_play",
+    "label": "Tencent",
+    "query": "Tencent",
+    "developer_names": [
+      "Tencent",
+      "Image Future",
+      "Tencent Mobility Limited",
+      "Tencent Music Entertainment Hong Kong Limited",
+      "Tencent Technology (Shenzhen) Company Ltd.",
+      "熱酷遊戲",
+      "WeChat",
+      "Image Future Investment(HK) Limited",
+      "腾讯 Tencent",
+      "WeChat Tencent",
+      "xin bohuan",
+      "원광디지털대학교",
+      "WeChat International Pte. Ltd.",
+      "ODDM .Inc",
+      "Tencent Mobile International Ltd."
+    ],
+    "developer_ids": [
+      "8638120915920097780",
+      "7413279381841434225",
+      "Image Future",
+      "Tencent Mobility Limited",
+      "Tencent Music Entertainment Hong Kong Limited",
+      "Tencent Technology (Shenzhen) Company Ltd.",
+      "熱酷遊戲",
+      "WeChat",
+      "Image Future Investment(HK) Limited",
+      "腾讯 Tencent",
+      "WeChat Tencent",
+      "xin bohuan",
+      "원광디지털대학교",
+      "WeChat International Pte. Ltd.",
+      "ODDM .Inc",
+      "Tencent Mobile International Ltd."
+    ],
+    "publisher_rank": 1,
+    "company_region": "cn",
+    "company_type": "publisher",
+    "company_scale": "head",
+    "watch_priority": "p0"
+  },
+  {
+    "store": "app_store",
+    "label": "Tencent",
+    "query": "Tencent",
+    "developer_names": [
+      "Tencent"
+    ],
+    "developer_ids": [
+      "1586101358",
+      "292374531",
+      "446324237",
+      "472208019",
+      "504515421",
+      "614694882",
+      "1190539723",
+      "473924491",
+      "542280115",
+      "1220872289",
+      "1450392010",
+      "912765941",
+      "656087454",
+      "1254318151",
+      "883065289",
+      "468349231",
+      "352684059",
+      "975814325",
+      "1071377994",
+      "1228038935",
+      "1221907420"
+    ],
+    "publisher_rank": 1,
+    "company_region": "cn",
+    "company_type": "publisher",
+    "company_scale": "head",
+    "watch_priority": "p0"
+  },
+  {
+    "store": "google_play",
+    "label": "Century Games Pte. Ltd.",
+    "query": "Century Games Pte. Ltd.",
+    "developer_names": [
+      "Century Games Pte. Ltd.",
+      "Century Games Innovation Pte. Ltd.",
+      "OverBoost Studio",
+      "CQ Gaming"
+    ],
+    "developer_ids": [
+      "6832375891198423999",
+      "Century Games Innovation Pte. Ltd.",
+      "OverBoost Studio",
+      "5790676279664405139",
+      "8152171058994793947",
+      "CQ Gaming"
+    ],
+    "publisher_rank": 2,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Century Games Pte. Ltd.",
+    "query": "Century Games Pte. Ltd.",
+    "developer_names": [
+      "Century Games Pte. Ltd."
+    ],
+    "developer_ids": [
+      "1540548141",
+      "1733003236",
+      "1839022330",
+      "495598783",
+      "670204628",
+      "1876134518",
+      "1018148248",
+      "1826082097"
+    ],
+    "publisher_rank": 2,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Scopely, Inc.",
+    "query": "Scopely, Inc.",
+    "developer_names": [
+      "Scopely, Inc.",
+      "DIGPRM Games",
+      "LLC",
+      "Phase One Games LLC"
+    ],
+    "developer_ids": [
+      "9028773071151690823",
+      "DIGPRM Games",
+      "LLC",
+      "Phase One Games LLC"
+    ],
+    "publisher_rank": 3,
+    "company_region": "west",
+    "company_type": "publisher",
+    "company_scale": "head",
+    "watch_priority": "p1"
+  },
+  {
+    "store": "app_store",
+    "label": "Scopely, Inc.",
+    "query": "Scopely, Inc.",
+    "developer_names": [
+      "Scopely, Inc."
+    ],
+    "developer_ids": [
+      "305003647",
+      "1154563764",
+      "868961693"
+    ],
+    "publisher_rank": 3,
+    "company_region": "west",
+    "company_type": "publisher",
+    "company_scale": "head",
+    "watch_priority": "p1"
+  },
+  {
+    "store": "google_play",
+    "label": "Dream Games",
+    "query": "Dream Games",
+    "developer_names": [
+      "Dream Games",
+      "Ltd.",
+      "Dream Games Ltd."
+    ],
+    "developer_ids": [
+      "Dream Games",
+      "Ltd.",
+      "Dream Games Ltd."
+    ],
+    "publisher_rank": 4,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Dream Games",
+    "query": "Dream Games",
+    "developer_names": [
+      "Dream Games"
+    ],
+    "developer_ids": [
+      "1482155846"
+    ],
+    "publisher_rank": 4,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "FUNFLY PTE. LTD.",
+    "query": "FUNFLY PTE. LTD.",
+    "developer_names": [
+      "FUNFLY PTE. LTD.",
+      "UAC Studio",
+      "SILKWORLD GAME LIMITED",
+      "focus on fun studio",
+      "Onefun Games",
+      "WhatsFun",
+      "First Fun",
+      "Funfly Technology Limited",
+      "Travellet Online",
+      "FirstFun"
+    ],
+    "developer_ids": [
+      "FUNFLY PTE. LTD.",
+      "UAC Studio",
+      "SILKWORLD GAME LIMITED",
+      "focus on fun studio",
+      "Onefun Games",
+      "WhatsFun",
+      "First Fun",
+      "Funfly Technology Limited",
+      "Travellet Online",
+      "FirstFun"
+    ],
+    "publisher_rank": 5,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "FUNFLY PTE. LTD.",
+    "query": "FUNFLY PTE. LTD.",
+    "developer_names": [
+      "FUNFLY PTE. LTD."
+    ],
+    "developer_ids": [
+      "1748704065",
+      "1708213916",
+      "1521130965",
+      "1638066191",
+      "1598076202",
+      "1575315579"
+    ],
+    "publisher_rank": 5,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Roblox Corporation",
+    "query": "Roblox Corporation",
+    "developer_names": [
+      "Roblox Corporation",
+      "Guilded LLC",
+      "Loom.ai"
+    ],
+    "developer_ids": [
+      "5360036014478858866",
+      "Guilded LLC",
+      "6526467086144818804",
+      "Loom.ai"
+    ],
+    "publisher_rank": 6,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Roblox Corporation",
+    "query": "Roblox Corporation",
+    "developer_names": [
+      "Roblox Corporation"
+    ],
+    "developer_ids": [
+      "431946155",
+      "1128154379",
+      "1112038924"
+    ],
+    "publisher_rank": 6,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "NetEase",
+    "query": "NetEase",
+    "developer_names": [
+      "NetEase",
+      "NetEase Games",
+      "Exptional Global",
+      "Youdao (Hong Kong) Limited",
+      "网易(www.163.com)",
+      "Netease Games Global",
+      "Youdao.com",
+      "MAMBA INTERACTIVE ENTERTAINMENT LIMITED",
+      "NetEase Game",
+      "SHALL WE MANAGEMENT SERVICE LIMITED"
+    ],
+    "developer_ids": [
+      "NetEase Games",
+      "Exptional Global",
+      "5254120005112807906",
+      "Youdao (Hong Kong) Limited",
+      "网易(www.163.com)",
+      "5187385339385554524",
+      "Netease Games Global",
+      "Youdao.com",
+      "MAMBA INTERACTIVE ENTERTAINMENT LIMITED",
+      "NetEase Game",
+      "SHALL WE MANAGEMENT SERVICE LIMITED",
+      "NetEase"
+    ],
+    "publisher_rank": 7,
+    "company_region": "cn",
+    "company_type": "publisher",
+    "company_scale": "head",
+    "watch_priority": "p0"
+  },
+  {
+    "store": "app_store",
+    "label": "NetEase",
+    "query": "NetEase",
+    "developer_names": [
+      "NetEase"
+    ],
+    "developer_ids": [
+      "656116440",
+      "1202760281",
+      "874255382",
+      "1485225410",
+      "735778224",
+      "1315923347",
+      "1243986796",
+      "840227969",
+      "1463919424",
+      "371634018",
+      "1547202758",
+      "515629538",
+      "1319771552",
+      "910462528",
+      "1783237924",
+      "1477590429",
+      "383629312",
+      "1232117200",
+      "1025633806",
+      "1196098565",
+      "1628256738",
+      "542108916",
+      "326251333",
+      "1658445220",
+      "1434686129",
+      "1299643059",
+      "1226382858",
+      "1026738029",
+      "965789237",
+      "617933253",
+      "1121906086"
+    ],
+    "publisher_rank": 7,
+    "company_region": "cn",
+    "company_type": "publisher",
+    "company_scale": "head",
+    "watch_priority": "p0"
+  },
+  {
+    "store": "google_play",
+    "label": "Playrix",
+    "query": "Playrix",
+    "developer_names": [
+      "Playrix",
+      "pxcyprus"
+    ],
+    "developer_ids": [
+      "6598096594674427568",
+      "pxcyprus"
+    ],
+    "publisher_rank": 8,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "head",
+    "watch_priority": "p1"
+  },
+  {
+    "store": "app_store",
+    "label": "Playrix",
+    "query": "Playrix",
+    "developer_names": [
+      "Playrix"
+    ],
+    "developer_ids": [
+      "1162116447"
+    ],
+    "publisher_rank": 8,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "head",
+    "watch_priority": "p1"
+  },
+  {
+    "store": "google_play",
+    "label": "King",
+    "query": "King",
+    "developer_names": [
+      "King"
+    ],
+    "developer_ids": [
+      "6577204690045492686"
+    ],
+    "publisher_rank": 9,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "King",
+    "query": "King",
+    "developer_names": [
+      "King"
+    ],
+    "developer_ids": [
+      "526656015"
+    ],
+    "publisher_rank": 9,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Supercell",
+    "query": "Supercell",
+    "developer_names": [
+      "Supercell"
+    ],
+    "developer_ids": [
+      "6715068722362591614"
+    ],
+    "publisher_rank": 10,
+    "company_region": "west",
+    "company_type": "developer",
+    "company_scale": "head",
+    "watch_priority": "p0"
+  },
+  {
+    "store": "app_store",
+    "label": "Supercell",
+    "query": "Supercell",
+    "developer_names": [
+      "Supercell"
+    ],
+    "developer_ids": [
+      "488106216"
+    ],
+    "publisher_rank": 10,
+    "company_region": "west",
+    "company_type": "developer",
+    "company_scale": "head",
+    "watch_priority": "p0"
+  },
+  {
+    "store": "google_play",
+    "label": "miHoYo",
+    "query": "miHoYo",
+    "developer_names": [
+      "miHoYo",
+      "SU",
+      "YU-WEI",
+      "COGNOSPHERE PTE. LTD.",
+      "miHoYo Limited"
+    ],
+    "developer_ids": [
+      "4759911077617645855",
+      "7281312221908191506",
+      "SU",
+      "YU-WEI",
+      "COGNOSPHERE PTE. LTD.",
+      "5869687648793643753",
+      "miHoYo Limited"
+    ],
+    "publisher_rank": 11,
+    "company_region": "cn",
+    "company_type": "developer",
+    "company_scale": "head",
+    "watch_priority": "p0"
+  },
+  {
+    "store": "app_store",
+    "label": "miHoYo",
+    "query": "miHoYo",
+    "developer_names": [
+      "miHoYo"
+    ],
+    "developer_ids": [
+      "1599719156",
+      "1467190250",
+      "1650344341",
+      "1057119378",
+      "737651310",
+      "1233055282",
+      "1143402986",
+      "467894518",
+      "1286705195"
+    ],
+    "publisher_rank": 11,
+    "company_region": "cn",
+    "company_type": "developer",
+    "company_scale": "head",
+    "watch_priority": "p0"
+  },
+  {
+    "store": "google_play",
+    "label": "Moon Active",
+    "query": "Moon Active",
+    "developer_names": [
+      "Moon Active"
+    ],
+    "developer_ids": [
+      "6898760406631171989",
+      "4765571944833116862",
+      "4728882188872393300"
+    ],
+    "publisher_rank": 12,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Moon Active",
+    "query": "Moon Active",
+    "developer_names": [
+      "Moon Active"
+    ],
+    "developer_ids": [
+      "470556954",
+      "520119067"
+    ],
+    "publisher_rank": 12,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Bandai Namco Entertainment Inc.",
+    "query": "Bandai Namco Entertainment Inc.",
+    "developer_names": [
+      "Bandai Namco Entertainment Inc.",
+      "BANDAI CO.",
+      "LTD.",
+      "반다이남코코리아 주식회사",
+      "Bandai Namco Filmworks Inc.",
+      "BANDAI NAMCO Rights Marketing Inc.",
+      "BANDAI NAMCO Online Inc.",
+      "Bandai America Inc",
+      "Bandai America",
+      "BANDAI NAMCO Entertainment Inc."
+    ],
+    "developer_ids": [
+      "Bandai Namco Entertainment Inc.",
+      "5701224935704459046",
+      "BANDAI CO.",
+      "LTD.",
+      "반다이남코코리아 주식회사",
+      "Bandai Namco Filmworks Inc.",
+      "BANDAI NAMCO Rights Marketing Inc.",
+      "5061905671140962852",
+      "BANDAI NAMCO Online Inc.",
+      "7242995029088679351",
+      "Bandai America Inc",
+      "Bandai America",
+      "BANDAI NAMCO Entertainment Inc."
+    ],
+    "publisher_rank": 13,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Bandai Namco Entertainment Inc.",
+    "query": "Bandai Namco Entertainment Inc.",
+    "developer_names": [
+      "Bandai Namco Entertainment Inc."
+    ],
+    "developer_ids": [
+      "352305770",
+      "580781332",
+      "359834423",
+      "1041292556",
+      "949783532",
+      "1195775794",
+      "841925686",
+      "281656478",
+      "308869261",
+      "648288742"
+    ],
+    "publisher_rank": 13,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Microfun Limited",
+    "query": "Microfun Limited",
+    "developer_names": [
+      "Microfun Limited",
+      "MergeGames",
+      "GameDots",
+      "MICROFUN  LIMITED",
+      "Microfun",
+      "Inc."
+    ],
+    "developer_ids": [
+      "8578810333255962286",
+      "Microfun Limited",
+      "MergeGames",
+      "GameDots",
+      "MICROFUN  LIMITED",
+      "Microfun",
+      "Inc."
+    ],
+    "publisher_rank": 14,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Microfun Limited",
+    "query": "Microfun Limited",
+    "developer_names": [
+      "Microfun Limited"
+    ],
+    "developer_ids": [
+      "1650531996",
+      "893059061",
+      "1717534358",
+      "1592945265",
+      "1208935482",
+      "1203124399"
+    ],
+    "publisher_rank": 14,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "The Pokemon Company",
+    "query": "The Pokemon Company",
+    "developer_names": [
+      "The Pokemon Company",
+      "The Pokémon Company",
+      "The Pokémon Company International"
+    ],
+    "developer_ids": [
+      "The Pokémon Company",
+      "The Pokémon Company International",
+      "The Pokemon Company"
+    ],
+    "publisher_rank": 15,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "The Pokemon Company",
+    "query": "The Pokemon Company",
+    "developer_names": [
+      "The Pokemon Company"
+    ],
+    "developer_ids": [
+      "446737235",
+      "594261408"
+    ],
+    "publisher_rank": 15,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Playtika",
+    "query": "Playtika",
+    "developer_names": [
+      "Playtika",
+      "Playtika Santa Monica",
+      "Playtika UK – House of Fun Limited",
+      "Reworks Ltd.",
+      "Supertreat",
+      "PLAYTIKA UK - HOUSE OF FUN LIMITED",
+      "Reworks Ltd"
+    ],
+    "developer_ids": [
+      "8370476508159322879",
+      "Playtika Santa Monica",
+      "7797209574326486135",
+      "Playtika UK – House of Fun Limited",
+      "Reworks Ltd.",
+      "Supertreat",
+      "4954326688245318746",
+      "7639378078513286726",
+      "PLAYTIKA UK - HOUSE OF FUN LIMITED",
+      "7887547651896089900",
+      "5419502119363831668",
+      "Reworks Ltd"
+    ],
+    "publisher_rank": 16,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Playtika",
+    "query": "Playtika",
+    "developer_names": [
+      "Playtika"
+    ],
+    "developer_ids": [
+      "447553567",
+      "504720043",
+      "1223338260",
+      "580824260",
+      "1413287363",
+      "868013621",
+      "592117366",
+      "342462146"
+    ],
+    "publisher_rank": 16,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "KONAMI",
+    "query": "KONAMI",
+    "developer_names": [
+      "KONAMI",
+      "Konami Digital Entertainment",
+      "Inc."
+    ],
+    "developer_ids": [
+      "KONAMI",
+      "Konami Digital Entertainment",
+      "Inc."
+    ],
+    "publisher_rank": 17,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "KONAMI",
+    "query": "KONAMI",
+    "developer_names": [
+      "KONAMI"
+    ],
+    "developer_ids": [
+      "299580230",
+      "286115725"
+    ],
+    "publisher_rank": 17,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Peak Games",
+    "query": "Peak Games",
+    "developer_names": [
+      "Peak Games"
+    ],
+    "developer_ids": [
+      "7348725256760208886",
+      "8795996613429359757"
+    ],
+    "publisher_rank": 18,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Peak Games",
+    "query": "Peak Games",
+    "developer_names": [
+      "Peak Games"
+    ],
+    "developer_ids": [
+      "476160947"
+    ],
+    "publisher_rank": 18,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "37GAMES",
+    "query": "37GAMES",
+    "developer_names": [
+      "37GAMES",
+      "37 Mobile Games",
+      "BLANCOZONE NETWORK CO.",
+      "LIMITED",
+      "俠米遊戲",
+      "絕妙遊戲M",
+      "Lucky8 Games",
+      "Embla Games Studio",
+      "G妹在線",
+      "BLANCOZONE KR",
+      "彩蛋遊戲",
+      "Flyburst",
+      "37GAMES ENTERTAINMENT",
+      "Megoo Games",
+      "G-CONG NETWORK",
+      "37Games-Oversea",
+      "Lucky K",
+      "37GAMES.ASIA",
+      "37GAMES.AISA",
+      "37 Mobile Games Oversea",
+      "37Games.Asia",
+      "Ambrine Studio",
+      "37Games.japan",
+      "37games",
+      "WangJing",
+      "37 Mobile Games JAPAN",
+      "37 Mobile Games Global",
+      "Ujoy",
+      "37 Mobile Games Kr",
+      "MightyCat Games",
+      "37 Mobile Games JP",
+      "gm99",
+      "37GAMES.JP",
+      "37games.Japan",
+      "絕妙遊戲",
+      "37games.Asia"
+    ],
+    "developer_ids": [
+      "6473421354871744170",
+      "8000555669283447187",
+      "37 Mobile Games",
+      "7794517992835530794",
+      "BLANCOZONE NETWORK CO.",
+      "LIMITED",
+      "5974880237768379405",
+      "9005317742187331378",
+      "7734083285346131529",
+      "俠米遊戲",
+      "7149137710830513409",
+      "4789323276850605658",
+      "絕妙遊戲M",
+      "Lucky8 Games",
+      "4911276338977614693",
+      "5440609750410092807",
+      "Embla Games Studio",
+      "5064480859600735470",
+      "G妹在線",
+      "BLANCOZONE KR",
+      "彩蛋遊戲",
+      "Flyburst",
+      "37GAMES ENTERTAINMENT",
+      "Megoo Games",
+      "8185960592824406976",
+      "G-CONG NETWORK",
+      "37Games-Oversea",
+      "Lucky K",
+      "37GAMES.ASIA",
+      "37GAMES.AISA",
+      "37 Mobile Games Oversea",
+      "37Games.Asia",
+      "Ambrine Studio",
+      "37Games.japan",
+      "37games",
+      "WangJing",
+      "37 Mobile Games JAPAN",
+      "37GAMES",
+      "37 Mobile Games Global",
+      "Ujoy",
+      "37 Mobile Games Kr",
+      "MightyCat Games",
+      "37 Mobile Games JP",
+      "gm99",
+      "37GAMES.JP",
+      "37games.Japan",
+      "絕妙遊戲",
+      "37games.Asia"
+    ],
+    "publisher_rank": 19,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "37GAMES",
+    "query": "37GAMES",
+    "developer_names": [
+      "37GAMES"
+    ],
+    "developer_ids": [
+      "1055231096",
+      "1091188713",
+      "1516742703",
+      "1667803218",
+      "1652830936",
+      "1837105858",
+      "1457004705",
+      "1729056778",
+      "882640942",
+      "1304085689",
+      "1660689920",
+      "1495156477",
+      "1842081265",
+      "1611134134",
+      "1813829359",
+      "1504233969",
+      "1533376357",
+      "1586429691",
+      "1296168545",
+      "1455949636",
+      "1615695125",
+      "1270527988",
+      "1272004110",
+      "605266150",
+      "1101062973",
+      "1259674999",
+      "1540703105",
+      "1446874275",
+      "1625020963",
+      "1530536298",
+      "1693548360",
+      "1566495290",
+      "1540746184",
+      "843182346",
+      "1519965030",
+      "1560771403",
+      "1373137559",
+      "773053241"
+    ],
+    "publisher_rank": 19,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Niantic, Inc.",
+    "query": "Niantic, Inc.",
+    "developer_names": [
+      "Niantic, Inc.",
+      "Niantic",
+      "Inc."
+    ],
+    "developer_ids": [
+      "Niantic",
+      "Inc."
+    ],
+    "publisher_rank": 20,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Niantic, Inc.",
+    "query": "Niantic, Inc.",
+    "developer_names": [
+      "Niantic, Inc."
+    ],
+    "developer_ids": [
+      "1037205060"
+    ],
+    "publisher_rank": 20,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Zynga",
+    "query": "Zynga",
+    "developer_names": [
+      "Zynga",
+      "Small Giant Games",
+      "Gram Games Limited",
+      "NaturalMotionGames Ltd"
+    ],
+    "developer_ids": [
+      "6690081412016968981",
+      "Small Giant Games",
+      "8000319753740505601",
+      "7870377983463221056",
+      "Gram Games Limited",
+      "NaturalMotionGames Ltd"
+    ],
+    "publisher_rank": 21,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Zynga",
+    "query": "Zynga",
+    "developer_names": [
+      "Zynga"
+    ],
+    "developer_ids": [
+      "295913422",
+      "791124596",
+      "1202264615",
+      "330281898",
+      "422679887"
+    ],
+    "publisher_rank": 21,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Florere Game",
+    "query": "Florere Game",
+    "developer_names": [
+      "Florere Game"
+    ],
+    "developer_ids": [
+      "Florere Game"
+    ],
+    "publisher_rank": 22,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Florere Game",
+    "query": "Florere Game",
+    "developer_names": [
+      "Florere Game"
+    ],
+    "developer_ids": [
+      "1777735839"
+    ],
+    "publisher_rank": 22,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "GARENA INTERNATIONAL I",
+    "query": "GARENA INTERNATIONAL I",
+    "developer_names": [
+      "GARENA INTERNATIONAL I",
+      "Garena Mobile Private",
+      "Garena Mobile Private Limited",
+      "Garena Games Online",
+      "MOBA GAMES PRIVATE LIMITED",
+      "Good Mobile Games Private",
+      "Garena International I",
+      "GARENA GAMES PRIVATE LIMITED",
+      "Good Mobile Games Private Limited",
+      "GARENA INTERNATIONAL I PRIVATE LIMITED",
+      "Garena Online",
+      "MOBA Games Private Limited"
+    ],
+    "developer_ids": [
+      "GARENA INTERNATIONAL I",
+      "Garena Mobile Private",
+      "Garena Mobile Private Limited",
+      "6104947996812526680",
+      "Garena Games Online",
+      "MOBA GAMES PRIVATE LIMITED",
+      "Good Mobile Games Private",
+      "Garena International I",
+      "GARENA GAMES PRIVATE LIMITED",
+      "Good Mobile Games Private Limited",
+      "GARENA INTERNATIONAL I PRIVATE LIMITED",
+      "Garena Online",
+      "MOBA Games Private Limited"
+    ],
+    "publisher_rank": 23,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "GARENA INTERNATIONAL I",
+    "query": "GARENA INTERNATIONAL I",
+    "developer_names": [
+      "GARENA INTERNATIONAL I"
+    ],
+    "developer_ids": [
+      "1335627134",
+      "1047094789",
+      "513828660",
+      "1096472396",
+      "1549162089",
+      "1222857606",
+      "1569575029"
+    ],
+    "publisher_rank": 23,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Paper Games",
+    "query": "Paper Games",
+    "developer_names": [
+      "Paper Games",
+      "Papergames(Japan)",
+      "YU JUE",
+      "InFold Games",
+      "Papergames",
+      "Nikki Games",
+      "InFold Pte. Ltd."
+    ],
+    "developer_ids": [
+      "7714041244156962232",
+      "8621696561674850641",
+      "5071739339608028104",
+      "Papergames(Japan)",
+      "YU JUE",
+      "InFold Games",
+      "Papergames",
+      "Nikki Games",
+      "Paper Games",
+      "InFold Pte. Ltd."
+    ],
+    "publisher_rank": 24,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Paper Games",
+    "query": "Paper Games",
+    "developer_names": [
+      "Paper Games"
+    ],
+    "developer_ids": [
+      "946033492",
+      "1646211490",
+      "1169846771",
+      "1385024492",
+      "1447235763"
+    ],
+    "publisher_rank": 24,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Product Madness",
+    "query": "Product Madness",
+    "developer_names": [
+      "Product Madness"
+    ],
+    "developer_ids": [
+      "5696323743535622294",
+      "Product Madness"
+    ],
+    "publisher_rank": 25,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Product Madness",
+    "query": "Product Madness",
+    "developer_names": [
+      "Product Madness"
+    ],
+    "developer_ids": [
+      "525894639"
+    ],
+    "publisher_rank": 25,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Netmarble",
+    "query": "Netmarble",
+    "developer_names": [
+      "Netmarble"
+    ],
+    "developer_ids": [
+      "5258410538530331508"
+    ],
+    "publisher_rank": 26,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Netmarble",
+    "query": "Netmarble",
+    "developer_names": [
+      "Netmarble"
+    ],
+    "developer_ids": [
+      "930364579"
+    ],
+    "publisher_rank": 26,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Aniplex Inc.",
+    "query": "Aniplex Inc.",
+    "developer_names": [
+      "Aniplex Inc."
+    ],
+    "developer_ids": [
+      "Aniplex Inc."
+    ],
+    "publisher_rank": 27,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Aniplex Inc.",
+    "query": "Aniplex Inc.",
+    "developer_names": [
+      "Aniplex Inc."
+    ],
+    "developer_ids": [
+      "884966694"
+    ],
+    "publisher_rank": 27,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "ELECTRONIC ARTS",
+    "query": "ELECTRONIC ARTS",
+    "developer_names": [
+      "ELECTRONIC ARTS"
+    ],
+    "developer_ids": [
+      "6605125519975771237",
+      "4826430855807055421"
+    ],
+    "publisher_rank": 28,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "ELECTRONIC ARTS",
+    "query": "ELECTRONIC ARTS",
+    "developer_names": [
+      "ELECTRONIC ARTS"
+    ],
+    "developer_ids": [
+      "284800461",
+      "284832145"
+    ],
+    "publisher_rank": 28,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "SciPlay",
+    "query": "SciPlay",
+    "developer_names": [
+      "SciPlay",
+      "Scientific Games Interactive (IL)",
+      "Scientific Games Interactive",
+      "Scientific Games Corporation",
+      "Spicerack Media"
+    ],
+    "developer_ids": [
+      "7621977556026971856",
+      "6013035672701439729",
+      "Scientific Games Interactive (IL)",
+      "Scientific Games Interactive",
+      "Scientific Games Corporation",
+      "Spicerack Media"
+    ],
+    "publisher_rank": 29,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "SciPlay",
+    "query": "SciPlay",
+    "developer_names": [
+      "SciPlay"
+    ],
+    "developer_ids": [
+      "310624343",
+      "486692023",
+      "445097381",
+      "1052764694",
+      "354731085"
+    ],
+    "publisher_rank": 29,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "FunPlus International AG",
+    "query": "FunPlus International AG",
+    "developer_names": [
+      "FunPlus International AG",
+      "Puzala",
+      "KingsGroup Holdings",
+      "Triathlon HK",
+      "QJ Games",
+      "FunPlus International",
+      "KingsGroup International AG",
+      "Funplus Interactive (Hong Kong ) Limited",
+      "Puzza",
+      "Chiseled Games Limited",
+      "Globalgamejourney Limited"
+    ],
+    "developer_ids": [
+      "FunPlus International AG",
+      "Puzala",
+      "KingsGroup Holdings",
+      "Triathlon HK",
+      "QJ Games",
+      "FunPlus International",
+      "KingsGroup International AG",
+      "Funplus Interactive (Hong Kong ) Limited",
+      "Puzza",
+      "Chiseled Games Limited",
+      "Globalgamejourney Limited"
+    ],
+    "publisher_rank": 30,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "FunPlus International AG",
+    "query": "FunPlus International AG",
+    "developer_names": [
+      "FunPlus International AG"
+    ],
+    "developer_ids": [
+      "1343106322",
+      "1289632878",
+      "1731671311",
+      "1274268964",
+      "886541729",
+      "960546279"
+    ],
+    "publisher_rank": 30,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Cygames, Inc.",
+    "query": "Cygames, Inc.",
+    "developer_names": [
+      "Cygames, Inc.",
+      "Cygames",
+      "Inc."
+    ],
+    "developer_ids": [
+      "Cygames",
+      "Inc."
+    ],
+    "publisher_rank": 31,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Cygames, Inc.",
+    "query": "Cygames, Inc.",
+    "developer_names": [
+      "Cygames, Inc."
+    ],
+    "developer_ids": [
+      "561598806"
+    ],
+    "publisher_rank": 31,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "SpinX Games Limited",
+    "query": "SpinX Games Limited",
+    "developer_names": [
+      "SpinX Games Limited",
+      "GRANDE GAMES LIMITED"
+    ],
+    "developer_ids": [
+      "5793980904747267349",
+      "SpinX Games Limited",
+      "8454058997475921489",
+      "GRANDE GAMES LIMITED"
+    ],
+    "publisher_rank": 32,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "SpinX Games Limited",
+    "query": "SpinX Games Limited",
+    "developer_names": [
+      "SpinX Games Limited"
+    ],
+    "developer_ids": [
+      "1545873689",
+      "1186162194",
+      "1241617493"
+    ],
+    "publisher_rank": 32,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "NCSOFT",
+    "query": "NCSOFT",
+    "developer_names": [
+      "NCSOFT",
+      "NC Japan K.K.",
+      "NTREEV SOFT",
+      "NCSOFT Games",
+      "NC TAIWAN"
+    ],
+    "developer_ids": [
+      "5253789853304707629",
+      "NC Japan K.K.",
+      "5747755017262623270",
+      "NTREEV SOFT",
+      "NCSOFT Games",
+      "NC TAIWAN"
+    ],
+    "publisher_rank": 33,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "NCSOFT",
+    "query": "NCSOFT",
+    "developer_names": [
+      "NCSOFT"
+    ],
+    "developer_ids": [
+      "293317095",
+      "337863458",
+      "1304189137",
+      "366614626",
+      "1138886628"
+    ],
+    "publisher_rank": 33,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "HABBY",
+    "query": "HABBY",
+    "developer_names": [
+      "HABBY",
+      "Habby",
+      "Oliplay Technology Co.",
+      "Ltd."
+    ],
+    "developer_ids": [
+      "7972143603605848622",
+      "Habby",
+      "Oliplay Technology Co.",
+      "Ltd."
+    ],
+    "publisher_rank": 34,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "HABBY",
+    "query": "HABBY",
+    "developer_names": [
+      "HABBY"
+    ],
+    "developer_ids": [
+      "1422308796",
+      "1628270360",
+      "1501478260",
+      "1787091657"
+    ],
+    "publisher_rank": 34,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "NEXON Company",
+    "query": "NEXON Company",
+    "developer_names": [
+      "NEXON Company",
+      "Nexon (Thailand)",
+      "NEXON"
+    ],
+    "developer_ids": [
+      "7175795338936881781",
+      "Nexon (Thailand)",
+      "5561174420506036639",
+      "NEXON"
+    ],
+    "publisher_rank": 35,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "NEXON Company",
+    "query": "NEXON Company",
+    "developer_names": [
+      "NEXON Company"
+    ],
+    "developer_ids": [
+      "523546006",
+      "866964623",
+      "504822446",
+      "520995277"
+    ],
+    "publisher_rank": 35,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "LilithGames",
+    "query": "LilithGames",
+    "developer_names": [
+      "LilithGames",
+      "FARLIGHT",
+      "LILITH TECHNOLOGY HONG KONG LIMITED",
+      "Lilith Games SG Pte. Ltd.",
+      "LILITH GAMES SG PTE. LTD."
+    ],
+    "developer_ids": [
+      "6526849192653249949",
+      "FARLIGHT",
+      "LILITH TECHNOLOGY HONG KONG LIMITED",
+      "Lilith Games SG Pte. Ltd.",
+      "LILITH GAMES SG PTE. LTD."
+    ],
+    "publisher_rank": 36,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "LilithGames",
+    "query": "LilithGames",
+    "developer_names": [
+      "LilithGames"
+    ],
+    "developer_ids": [
+      "982119759",
+      "1478872809",
+      "1605558679",
+      "1481453487",
+      "1696267009",
+      "1590319961"
+    ],
+    "publisher_rank": 36,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "SuperPlay",
+    "query": "SuperPlay",
+    "developer_names": [
+      "SuperPlay",
+      "SuperPlay."
+    ],
+    "developer_ids": [
+      "6163102761666559735",
+      "SuperPlay."
+    ],
+    "publisher_rank": 37,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "SuperPlay",
+    "query": "SuperPlay",
+    "developer_names": [
+      "SuperPlay"
+    ],
+    "developer_ids": [
+      "1484468650"
+    ],
+    "publisher_rank": 37,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "XFLAG, Inc.",
+    "query": "XFLAG, Inc.",
+    "developer_names": [
+      "XFLAG, Inc."
+    ],
+    "developer_ids": [
+      "7496506598896213811"
+    ],
+    "publisher_rank": 38,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "XFLAG, Inc.",
+    "query": "XFLAG, Inc.",
+    "developer_names": [
+      "XFLAG, Inc."
+    ],
+    "developer_ids": [
+      "1106824482"
+    ],
+    "publisher_rank": 38,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "RiverGame",
+    "query": "RiverGame",
+    "developer_names": [
+      "RiverGame",
+      "River Game",
+      "Topwar Studio",
+      "Green Mushroom"
+    ],
+    "developer_ids": [
+      "RiverGame",
+      "River Game",
+      "Topwar Studio",
+      "Green Mushroom"
+    ],
+    "publisher_rank": 39,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "RiverGame",
+    "query": "RiverGame",
+    "developer_names": [
+      "RiverGame"
+    ],
+    "developer_ids": [
+      "1717022676",
+      "1452494069",
+      "1655797752",
+      "1734552841",
+      "1469399538"
+    ],
+    "publisher_rank": 39,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Alibaba Group",
+    "query": "Alibaba Group",
+    "developer_names": [
+      "Alibaba Group",
+      "Alibaba Mobile",
+      "Accio.com",
+      "Taobao",
+      "1688.com",
+      "Alibaba Cloud",
+      "ALIEXPRESS CIS HOLDING PTE. LTD",
+      "QookkaGames",
+      "口碑（上海）信息技术有限公司",
+      "VMate Mage UAKA short-video",
+      "Alibaba.com (Ru)",
+      "淘宝",
+      "SialiaGames",
+      "UCWeb",
+      "VMate Inc."
+    ],
+    "developer_ids": [
+      "Alibaba Mobile",
+      "5209823851140033458",
+      "6773114849598584416",
+      "Accio.com",
+      "Taobao",
+      "1688.com",
+      "Alibaba Cloud",
+      "ALIEXPRESS CIS HOLDING PTE. LTD",
+      "8666392712762951754",
+      "QookkaGames",
+      "口碑（上海）信息技术有限公司",
+      "VMate Mage UAKA short-video",
+      "Alibaba.com (Ru)",
+      "淘宝",
+      "SialiaGames",
+      "UCWeb",
+      "VMate Inc.",
+      "Alibaba Group"
+    ],
+    "publisher_rank": 40,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Alibaba Group",
+    "query": "Alibaba Group",
+    "developer_names": [
+      "Alibaba Group"
+    ],
+    "developer_ids": [
+      "1645853327",
+      "1014466415",
+      "726037046",
+      "1807514588",
+      "1600858986",
+      "1597411546",
+      "744923901",
+      "1822209568",
+      "1584059801",
+      "1025705471",
+      "1530758359",
+      "1516453497",
+      "1645835031",
+      "948517913",
+      "1787373603",
+      "1804500591",
+      "511837736",
+      "1075782061",
+      "390860328",
+      "785946887",
+      "1758251675",
+      "578838486",
+      "475259018",
+      "665061177",
+      "789732890",
+      "539411035",
+      "1177355285",
+      "1473950519",
+      "863832310",
+      "436672032",
+      "387682729"
+    ],
+    "publisher_rank": 40,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "MOONTON",
+    "query": "MOONTON",
+    "developer_names": [
+      "MOONTON",
+      "Vizta Games",
+      "Skystone Games Pte. Ltd.",
+      "MOONTON STUDIO",
+      "Skystone Games"
+    ],
+    "developer_ids": [
+      "8532907581042995001",
+      "Vizta Games",
+      "Skystone Games Pte. Ltd.",
+      "MOONTON STUDIO",
+      "Skystone Games"
+    ],
+    "publisher_rank": 41,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "MOONTON",
+    "query": "MOONTON",
+    "developer_names": [
+      "MOONTON"
+    ],
+    "developer_ids": [
+      "1795681969",
+      "1811064883",
+      "1630286143",
+      "1706091894",
+      "910435102",
+      "1742109154",
+      "1711000447"
+    ],
+    "publisher_rank": 41,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Activision Publishing, Inc.",
+    "query": "Activision Publishing, Inc.",
+    "developer_names": [
+      "Activision Publishing, Inc.",
+      "Activision Publishing",
+      "Inc."
+    ],
+    "developer_ids": [
+      "Activision Publishing",
+      "Inc.",
+      "6686843829714097468",
+      "7352154005287549568",
+      "7761425617423814507",
+      "6304076786970923315"
+    ],
+    "publisher_rank": 42,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Activision Publishing, Inc.",
+    "query": "Activision Publishing, Inc.",
+    "developer_names": [
+      "Activision Publishing, Inc."
+    ],
+    "developer_ids": [
+      "285005466"
+    ],
+    "publisher_rank": 42,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "TG Inc.",
+    "query": "TG Inc.",
+    "developer_names": [
+      "TG Inc.",
+      "TOP GAMES INC."
+    ],
+    "developer_ids": [
+      "8247472115258417018",
+      "TOP GAMES INC.",
+      "TG Inc."
+    ],
+    "publisher_rank": 43,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "TG Inc.",
+    "query": "TG Inc.",
+    "developer_names": [
+      "TG Inc."
+    ],
+    "developer_ids": [
+      "1050386041"
+    ],
+    "publisher_rank": 43,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Yostar Games",
+    "query": "Yostar Games",
+    "developer_names": [
+      "Yostar Games",
+      "Yostar",
+      "Inc.",
+      "Yostar Limited."
+    ],
+    "developer_ids": [
+      "6554603750168358328",
+      "5501543544118454799",
+      "8149611443935782416",
+      "Yostar",
+      "Inc.",
+      "5635477978503001293",
+      "Yostar Limited."
+    ],
+    "publisher_rank": 44,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Yostar Games",
+    "query": "Yostar Games",
+    "developer_names": [
+      "Yostar Games"
+    ],
+    "developer_ids": [
+      "1242186074",
+      "1411126548",
+      "1641235411",
+      "1782838982",
+      "1674540911"
+    ],
+    "publisher_rank": 44,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "SQUARE ENIX",
+    "query": "SQUARE ENIX",
+    "developer_names": [
+      "SQUARE ENIX",
+      "SQUARE ENIX LTD",
+      "SQUARE ENIX PVT.LTD.",
+      "SQUARE ENIX Ltd",
+      "SQUARE ENIX INC"
+    ],
+    "developer_ids": [
+      "8026010256970589886",
+      "6569532485639608036",
+      "SQUARE ENIX LTD",
+      "4949621155772591939",
+      "SQUARE ENIX PVT.LTD.",
+      "SQUARE ENIX Ltd",
+      "SQUARE ENIX INC"
+    ],
+    "publisher_rank": 45,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "SQUARE ENIX",
+    "query": "SQUARE ENIX",
+    "developer_names": [
+      "SQUARE ENIX"
+    ],
+    "developer_ids": [
+      "300186801",
+      "578072799"
+    ],
+    "publisher_rank": 45,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "4399",
+    "query": "4399",
+    "developer_names": [
+      "4399",
+      "TTHmobi",
+      "Rhinos",
+      "SPARKGAME LIMITED",
+      "Spark Game",
+      "4399 Co.",
+      "Ltd.",
+      "Phoenix VN",
+      "4399EN GAME",
+      "4399 NET LIMITED",
+      "SPOTLIGHT NETWORK LIMITED",
+      "四三九九",
+      "4399 Games",
+      "4399.com",
+      "4399en game"
+    ],
+    "developer_ids": [
+      "6950662405203913165",
+      "TTHmobi",
+      "5321013986587887822",
+      "Rhinos",
+      "7315419339265800962",
+      "5998266804311920815",
+      "SPARKGAME LIMITED",
+      "8976517434642708993",
+      "Spark Game",
+      "4399 Co.",
+      "Ltd.",
+      "Phoenix VN",
+      "4399EN GAME",
+      "4399 NET LIMITED",
+      "8212562760980308422",
+      "9017093023566815707",
+      "SPOTLIGHT NETWORK LIMITED",
+      "四三九九",
+      "4399 Games",
+      "4399.com",
+      "4399en game"
+    ],
+    "publisher_rank": 46,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "4399",
+    "query": "4399",
+    "developer_names": [
+      "4399"
+    ],
+    "developer_ids": [
+      "1688367866",
+      "1604321544",
+      "502212463",
+      "1594777650",
+      "967114195",
+      "1396412376",
+      "1301799802",
+      "1298961541",
+      "1631320611",
+      "1323413721",
+      "1703914972",
+      "1435995183",
+      "1657979674",
+      "780153891",
+      "1713487399",
+      "797345902",
+      "1022702047",
+      "930102865",
+      "1113943835"
+    ],
+    "publisher_rank": 46,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "HK KURO GAMES LIMITED",
+    "query": "HK KURO GAMES LIMITED",
+    "developer_names": [
+      "HK KURO GAMES LIMITED"
+    ],
+    "developer_ids": [
+      "6751239034997003943",
+      "8670778571117015724"
+    ],
+    "publisher_rank": 47,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "HK KURO GAMES LIMITED",
+    "query": "HK KURO GAMES LIMITED",
+    "developer_names": [
+      "HK KURO GAMES LIMITED"
+    ],
+    "developer_ids": [
+      "1723145160",
+      "1692119400",
+      "1571685288"
+    ],
+    "publisher_rank": 47,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Camel Games",
+    "query": "Camel Games",
+    "developer_names": [
+      "Camel Games",
+      "Camel Games Limited",
+      "Hong Kong Ke Mo software Co.",
+      "Limited",
+      "WoF Games",
+      "CamelStudio",
+      "Inc"
+    ],
+    "developer_ids": [
+      "5233897994951847421",
+      "Camel Games Limited",
+      "Hong Kong Ke Mo software Co.",
+      "Limited",
+      "WoF Games",
+      "CamelStudio",
+      "7150668333233092058",
+      "Camel Games",
+      "Inc"
+    ],
+    "publisher_rank": 48,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Camel Games",
+    "query": "Camel Games",
+    "developer_names": [
+      "Camel Games"
+    ],
+    "developer_ids": [
+      "1603183695",
+      "1179626508",
+      "1654881293",
+      "1300436103",
+      "1298915028",
+      "542910776"
+    ],
+    "publisher_rank": 48,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Rollic Games",
+    "query": "Rollic Games",
+    "developer_names": [
+      "Rollic Games",
+      "ByteTyper OU",
+      "ByteTyper"
+    ],
+    "developer_ids": [
+      "6018074114375198913",
+      "ByteTyper OU",
+      "Rollic Games",
+      "ByteTyper"
+    ],
+    "publisher_rank": 49,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Rollic Games",
+    "query": "Rollic Games",
+    "developer_names": [
+      "Rollic Games"
+    ],
+    "developer_ids": [
+      "1452111779",
+      "1614418901",
+      "1590849793",
+      "1561638383"
+    ],
+    "publisher_rank": 49,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Tuyoo Games",
+    "query": "Tuyoo Games",
+    "developer_names": [
+      "Tuyoo Games",
+      "ARK GAME LIMITED",
+      "Ace Unique Game Limited",
+      "ACE GAME INTERNATIONAL LIMITED",
+      "HK TUYOO TECHNOLOGY LIMITED",
+      "TUYOO POKER ONLINE (HK) LIMITED",
+      "TUYOO GAME"
+    ],
+    "developer_ids": [
+      "ARK GAME LIMITED",
+      "5023235651255710418",
+      "6530926507313072138",
+      "Ace Unique Game Limited",
+      "Tuyoo Games",
+      "ACE GAME INTERNATIONAL LIMITED",
+      "HK TUYOO TECHNOLOGY LIMITED",
+      "TUYOO POKER ONLINE (HK) LIMITED",
+      "7198059765943546780",
+      "TUYOO GAME"
+    ],
+    "publisher_rank": 50,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Tuyoo Games",
+    "query": "Tuyoo Games",
+    "developer_names": [
+      "Tuyoo Games"
+    ],
+    "developer_ids": [
+      "1021847690",
+      "1688147465",
+      "1556005350",
+      "1561915739",
+      "1617990591",
+      "1633206547",
+      "1490823604",
+      "1566267365"
+    ],
+    "publisher_rank": 50,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Com2uS Corp.",
+    "query": "Com2uS Corp.",
+    "developer_names": [
+      "Com2uS Corp.",
+      "Com2uS Japan Inc.",
+      "Com2uS TYGEM Corporation",
+      "GAMEVIL COM2US PLATFORM Inc.",
+      "Gamevilcom2usplatform",
+      "Com2uS Platform Corporation",
+      "TongYangOnline"
+    ],
+    "developer_ids": [
+      "6850516909323484758",
+      "8817065164862761736",
+      "8370361226290054499",
+      "Com2uS Japan Inc.",
+      "Com2uS TYGEM Corporation",
+      "GAMEVIL COM2US PLATFORM Inc.",
+      "Gamevilcom2usplatform",
+      "Com2uS Platform Corporation",
+      "5374431039651315752",
+      "TongYangOnline"
+    ],
+    "publisher_rank": 51,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Com2uS Corp.",
+    "query": "Com2uS Corp.",
+    "developer_names": [
+      "Com2uS Corp."
+    ],
+    "developer_ids": [
+      "299175870",
+      "299302366",
+      "646209316",
+      "1641203717",
+      "336755947",
+      "355472980",
+      "1178527367"
+    ],
+    "publisher_rank": 51,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "VERTEX GAMES PTE. LTD.",
+    "query": "VERTEX GAMES PTE. LTD.",
+    "developer_names": [
+      "VERTEX GAMES PTE. LTD.",
+      "JoyCastle",
+      "Solitaire Card Games Free",
+      "Solitaire Games Maker",
+      "Gluon Interactive Ltd.",
+      "Vertex Games PTE. LTD."
+    ],
+    "developer_ids": [
+      "VERTEX GAMES PTE. LTD.",
+      "JoyCastle",
+      "Solitaire Card Games Free",
+      "Solitaire Games Maker",
+      "Gluon Interactive Ltd.",
+      "Vertex Games PTE. LTD."
+    ],
+    "publisher_rank": 52,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "VERTEX GAMES PTE. LTD.",
+    "query": "VERTEX GAMES PTE. LTD.",
+    "developer_names": [
+      "VERTEX GAMES PTE. LTD."
+    ],
+    "developer_ids": [
+      "1652468982",
+      "955409331",
+      "1437617948"
+    ],
+    "publisher_rank": 52,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "乐元素",
+    "query": "乐元素",
+    "developer_names": [
+      "乐元素",
+      "pomelo company limited"
+    ],
+    "developer_ids": [
+      "8342237356707988495",
+      "pomelo company limited",
+      "5143272543571380181"
+    ],
+    "publisher_rank": 53,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "乐元素",
+    "query": "乐元素",
+    "developer_names": [
+      "乐元素"
+    ],
+    "developer_ids": [
+      "791491181",
+      "574733038",
+      "1021442110",
+      "1701764679",
+      "1426209560",
+      "658964752",
+      "493235661",
+      "445329835",
+      "1548914593"
+    ],
+    "publisher_rank": 53,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Miniclip.com",
+    "query": "Miniclip.com",
+    "developer_names": [
+      "Miniclip.com",
+      "Crunchy Avocado Chips",
+      "SYBO Games",
+      "Free Bubble Shooter Games",
+      "Bubble Shooter Pop!",
+      "Match 3 Bubble Games",
+      "Masomo Gaming",
+      "Ilyon Kids Playground",
+      "Dramaton",
+      "Ilyon Trivia Games",
+      "Bubble Shooter Artworks",
+      "Bubble Shooter Games by Ilyon",
+      "AppyNation Ltd."
+    ],
+    "developer_ids": [
+      "5933611429942957630",
+      "7363891306616760846",
+      "7473634688510685864",
+      "8964310704118504564",
+      "5498003471817844893",
+      "8065963838441938591",
+      "7184623397550987805",
+      "6388091340693855706",
+      "6991603797333969024",
+      "7268898997815915359",
+      "6046135866055090068",
+      "7849730008707515899",
+      "5680049482645835516",
+      "9067039168887832129",
+      "6248802720099859869",
+      "6629455289349118297",
+      "5057058873634489942",
+      "Crunchy Avocado Chips",
+      "SYBO Games",
+      "Free Bubble Shooter Games",
+      "Bubble Shooter Pop!",
+      "Match 3 Bubble Games",
+      "Masomo Gaming",
+      "Ilyon Kids Playground",
+      "Dramaton",
+      "Ilyon Trivia Games",
+      "Bubble Shooter Artworks",
+      "Bubble Shooter Games by Ilyon",
+      "AppyNation Ltd."
+    ],
+    "publisher_rank": 54,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Miniclip.com",
+    "query": "Miniclip.com",
+    "developer_names": [
+      "Miniclip.com"
+    ],
+    "developer_ids": [
+      "337457683",
+      "1190815537",
+      "471259040",
+      "1579865033",
+      "400201469",
+      "1114062186",
+      "604044223",
+      "972448637",
+      "488094583",
+      "1191480727",
+      "541407124",
+      "1057968964",
+      "997700104",
+      "1238111292"
+    ],
+    "publisher_rank": 54,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Plarium Global Ltd",
+    "query": "Plarium Global Ltd",
+    "developer_names": [
+      "Plarium Global Ltd",
+      "Plarium  LLC"
+    ],
+    "developer_ids": [
+      "5766366711041032164",
+      "5001298899523389669",
+      "Plarium  LLC"
+    ],
+    "publisher_rank": 55,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Plarium Global Ltd",
+    "query": "Plarium Global Ltd",
+    "developer_names": [
+      "Plarium Global Ltd"
+    ],
+    "developer_ids": [
+      "489487383",
+      "1053231049"
+    ],
+    "publisher_rank": 55,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "LINE Corporation",
+    "query": "LINE Corporation",
+    "developer_names": [
+      "LINE Corporation",
+      "LINE Digital Frontier Corporation",
+      "LINE MUSIC CORPORATION",
+      "LINE NEXT Corp.",
+      "LINE Pay Taiwan Limited",
+      "LINE Euro-Americas Corp.",
+      "©LINE Plus Corporation",
+      "LINE COMPANY (THAILAND) LIMITED",
+      "LINE TAIWAN LIMITED",
+      "LINE MUSIC"
+    ],
+    "developer_ids": [
+      "4919265583026901892",
+      "LINE Digital Frontier Corporation",
+      "LINE MUSIC CORPORATION",
+      "LINE NEXT Corp.",
+      "LINE Pay Taiwan Limited",
+      "LINE Euro-Americas Corp.",
+      "©LINE Plus Corporation",
+      "LINE COMPANY (THAILAND) LIMITED",
+      "LINE TAIWAN LIMITED",
+      "LINE MUSIC"
+    ],
+    "publisher_rank": 56,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "LINE Corporation",
+    "query": "LINE Corporation",
+    "developer_names": [
+      "LINE Corporation"
+    ],
+    "developer_ids": [
+      "359067226",
+      "966142319",
+      "1563230457",
+      "1661324301",
+      "1492856568",
+      "1437606204",
+      "913948811",
+      "1046762513",
+      "978249202"
+    ],
+    "publisher_rank": 56,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "GungHo Online Entertainment, Inc.",
+    "query": "GungHo Online Entertainment, Inc.",
+    "developer_names": [
+      "GungHo Online Entertainment, Inc."
+    ],
+    "developer_ids": [
+      "7849776799175690127",
+      "5256951659267379160"
+    ],
+    "publisher_rank": 57,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "GungHo Online Entertainment, Inc.",
+    "query": "GungHo Online Entertainment, Inc.",
+    "developer_names": [
+      "GungHo Online Entertainment, Inc."
+    ],
+    "developer_ids": [
+      "403963903",
+      "1019335866"
+    ],
+    "publisher_rank": 57,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "IGG",
+    "query": "IGG",
+    "developer_names": [
+      "IGG",
+      "幻想娛樂科技股份有限公司",
+      "IGG.COM",
+      "幻想娛樂科技"
+    ],
+    "developer_ids": [
+      "8895734616362643252",
+      "幻想娛樂科技股份有限公司",
+      "IGG.COM",
+      "幻想娛樂科技"
+    ],
+    "publisher_rank": 58,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "IGG",
+    "query": "IGG",
+    "developer_names": [
+      "IGG"
+    ],
+    "developer_ids": [
+      "1303288190",
+      "1451258474",
+      "455640811",
+      "954975110"
+    ],
+    "publisher_rank": 58,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Scorewarrior",
+    "query": "Scorewarrior",
+    "developer_names": [
+      "Scorewarrior"
+    ],
+    "developer_ids": [
+      "9087509962033752464",
+      "Scorewarrior"
+    ],
+    "publisher_rank": 59,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Scorewarrior",
+    "query": "Scorewarrior",
+    "developer_names": [
+      "Scorewarrior"
+    ],
+    "developer_ids": [
+      "1274132544"
+    ],
+    "publisher_rank": 59,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "bilibili",
+    "query": "bilibili",
+    "developer_names": [
+      "bilibili",
+      "BALABOOM PTE. LTD.",
+      "哔哩哔哩弹幕网",
+      "哔哩哔哩",
+      "BILIBILI HK",
+      "株式会社ビリビリ",
+      "BILIBILI"
+    ],
+    "developer_ids": [
+      "8877266805427887698",
+      "BALABOOM PTE. LTD.",
+      "哔哩哔哩弹幕网",
+      "哔哩哔哩",
+      "BILIBILI HK",
+      "bilibili",
+      "株式会社ビリビリ",
+      "BILIBILI"
+    ],
+    "publisher_rank": 60,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "bilibili",
+    "query": "bilibili",
+    "developer_names": [
+      "bilibili"
+    ],
+    "developer_ids": [
+      "736535969",
+      "928380301",
+      "1382536367",
+      "1108397778",
+      "1548857484",
+      "1517062288",
+      "1478403457"
+    ],
+    "publisher_rank": 60,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Tap4fun (Hong Kong) Limited",
+    "query": "Tap4fun (Hong Kong) Limited",
+    "developer_names": [
+      "Tap4fun (Hong Kong) Limited",
+      "Tap4fun Corp.",
+      "Ltd.",
+      "HOX SG PTE. LTD.",
+      "YoFun.LTD",
+      "tap4fun",
+      "Seagame"
+    ],
+    "developer_ids": [
+      "4842317878838679117",
+      "5087171922673557639",
+      "8045268998734167543",
+      "6569453306640017516",
+      "Tap4fun Corp.",
+      "Ltd.",
+      "HOX SG PTE. LTD.",
+      "YoFun.LTD",
+      "tap4fun",
+      "6860045433664063908",
+      "Seagame"
+    ],
+    "publisher_rank": 61,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Tap4fun (Hong Kong) Limited",
+    "query": "Tap4fun (Hong Kong) Limited",
+    "developer_names": [
+      "Tap4fun (Hong Kong) Limited"
+    ],
+    "developer_ids": [
+      "446315550",
+      "489418653",
+      "1439307723",
+      "500556134",
+      "1629633462",
+      "1777794929"
+    ],
+    "publisher_rank": 61,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "SEGA",
+    "query": "SEGA",
+    "developer_names": [
+      "SEGA",
+      "SEGA CORPORATION",
+      "SEGA　CORPORATION",
+      "SEGA　 CORPORATION"
+    ],
+    "developer_ids": [
+      "7891990035506213180",
+      "SEGA CORPORATION",
+      "SEGA　CORPORATION",
+      "SEGA　 CORPORATION"
+    ],
+    "publisher_rank": 62,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "SEGA",
+    "query": "SEGA",
+    "developer_names": [
+      "SEGA"
+    ],
+    "developer_ids": [
+      "302946768",
+      "281966698",
+      "541834318"
+    ],
+    "publisher_rank": 62,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Magic Tavern, Inc.",
+    "query": "Magic Tavern, Inc.",
+    "developer_names": [
+      "Magic Tavern, Inc.",
+      "Magic Tavern",
+      "Inc."
+    ],
+    "developer_ids": [
+      "7994336349840708503",
+      "Magic Tavern",
+      "Inc."
+    ],
+    "publisher_rank": 63,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Magic Tavern, Inc.",
+    "query": "Magic Tavern, Inc.",
+    "developer_names": [
+      "Magic Tavern, Inc."
+    ],
+    "developer_ids": [
+      "1399403555",
+      "1111095414"
+    ],
+    "publisher_rank": 63,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "X.D. Network",
+    "query": "X.D. Network",
+    "developer_names": [
+      "X.D. Network",
+      "CHEN MING-YUEH",
+      "XD Entertainment Pte Ltd",
+      "CHEN SHIN HSIUNG"
+    ],
+    "developer_ids": [
+      "5440507456444391869",
+      "6330309011255539991",
+      "7401370038771571034",
+      "7012903250586157610",
+      "7061793672440066856",
+      "CHEN MING-YUEH",
+      "XD Entertainment Pte Ltd",
+      "CHEN SHIN HSIUNG",
+      "X.D. Network"
+    ],
+    "publisher_rank": 64,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "X.D. Network",
+    "query": "X.D. Network",
+    "developer_names": [
+      "X.D. Network"
+    ],
+    "developer_ids": [
+      "1810952934",
+      "929034871",
+      "1310407757",
+      "1563750317",
+      "1666430308",
+      "727420859",
+      "1178857169"
+    ],
+    "publisher_rank": 64,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "雷霆游戏",
+    "query": "雷霆游戏",
+    "developer_names": [
+      "雷霆游戏",
+      "LTGAMES GLOBAL",
+      "LT games",
+      "LTGAME GLOBAL",
+      "BOLTRAY GAMES",
+      "LAVAGaming",
+      "JYSGaming",
+      "JYSGames",
+      "Leiting Games"
+    ],
+    "developer_ids": [
+      "LTGAMES GLOBAL",
+      "5555212361646746302",
+      "LT games",
+      "LTGAME GLOBAL",
+      "7638875499705349244",
+      "BOLTRAY GAMES",
+      "LAVAGaming",
+      "JYSGaming",
+      "JYSGames",
+      "Leiting Games"
+    ],
+    "publisher_rank": 65,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "雷霆游戏",
+    "query": "雷霆游戏",
+    "developer_names": [
+      "雷霆游戏"
+    ],
+    "developer_ids": [
+      "1031897588",
+      "696521940",
+      "1512565013",
+      "1676220745",
+      "1284300915",
+      "901738792",
+      "1249150547",
+      "1434798393"
+    ],
+    "publisher_rank": 65,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Double Down Interactive LLC",
+    "query": "Double Down Interactive LLC",
+    "developer_names": [
+      "Double Down Interactive LLC"
+    ],
+    "developer_ids": [
+      "5819088965110992860",
+      "Double Down Interactive LLC"
+    ],
+    "publisher_rank": 66,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Double Down Interactive LLC",
+    "query": "Double Down Interactive LLC",
+    "developer_names": [
+      "Double Down Interactive LLC"
+    ],
+    "developer_ids": [
+      "485126027"
+    ],
+    "publisher_rank": 66,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Zeroo Gravity Games",
+    "query": "Zeroo Gravity Games",
+    "developer_names": [
+      "Zeroo Gravity Games"
+    ],
+    "developer_ids": [
+      "6285385060368291276",
+      "Zeroo Gravity Games"
+    ],
+    "publisher_rank": 67,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Zeroo Gravity Games",
+    "query": "Zeroo Gravity Games",
+    "developer_names": [
+      "Zeroo Gravity Games"
+    ],
+    "developer_ids": [
+      "1588007114"
+    ],
+    "publisher_rank": 67,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Hainan Shengchang Network Technology Co., Ltd.",
+    "query": "Hainan Shengchang Network Technology Co., Ltd.",
+    "developer_names": [
+      "Hainan Shengchang Network Technology Co., Ltd."
+    ],
+    "developer_ids": [
+      "1695534339"
+    ],
+    "publisher_rank": 68,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Blizzard Entertainment, Inc.",
+    "query": "Blizzard Entertainment, Inc.",
+    "developer_names": [
+      "Blizzard Entertainment, Inc.",
+      "Blizzard",
+      "Blizzard Entertainment",
+      "Inc."
+    ],
+    "developer_ids": [
+      "8636572569301896616",
+      "Blizzard",
+      "Blizzard Entertainment",
+      "Inc."
+    ],
+    "publisher_rank": 69,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Blizzard Entertainment, Inc.",
+    "query": "Blizzard Entertainment, Inc.",
+    "developer_names": [
+      "Blizzard Entertainment, Inc."
+    ],
+    "developer_ids": [
+      "306862900"
+    ],
+    "publisher_rank": 69,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Long Tech Network Limited",
+    "query": "Long Tech Network Limited",
+    "developer_names": [
+      "Long Tech Network Limited",
+      "LIFE GAME PTE. LTD.",
+      "LIFE IS A GAME LIMITED",
+      "im30.net",
+      "Make Time More Interesting Network Limited",
+      "IM30 TECHNOLOGY LIMITED",
+      "Neuron Network Limited"
+    ],
+    "developer_ids": [
+      "Long Tech Network Limited",
+      "LIFE GAME PTE. LTD.",
+      "LIFE IS A GAME LIMITED",
+      "im30.net",
+      "Make Time More Interesting Network Limited",
+      "IM30 TECHNOLOGY LIMITED",
+      "Neuron Network Limited",
+      "6090857969104390434"
+    ],
+    "publisher_rank": 70,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Long Tech Network Limited",
+    "query": "Long Tech Network Limited",
+    "developer_names": [
+      "Long Tech Network Limited"
+    ],
+    "developer_ids": [
+      "1040083066",
+      "1784406172",
+      "1128387277",
+      "1180931800",
+      "1514564892"
+    ],
+    "publisher_rank": 70,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "ponos corporation",
+    "query": "ponos corporation",
+    "developer_names": [
+      "ponos corporation",
+      "PONOS Corporation"
+    ],
+    "developer_ids": [
+      "PONOS Corporation",
+      "5525924818463575153"
+    ],
+    "publisher_rank": 71,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "ponos corporation",
+    "query": "ponos corporation",
+    "developer_names": [
+      "ponos corporation"
+    ],
+    "developer_ids": [
+      "297248421"
+    ],
+    "publisher_rank": 71,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Kakao Games Corp.",
+    "query": "Kakao Games Corp.",
+    "developer_names": [
+      "Kakao Games Corp.",
+      "Kakao Corp.",
+      "Kakao Mobility Corp.",
+      "kakaopay corp.",
+      "KakaoBank Corp.",
+      "Kakao Style Corp.",
+      "Kong Studios",
+      "Inc.",
+      "Kakao VX Corp.",
+      "Loen Entertainment",
+      "KakaoTalk Theme",
+      "croquis.com",
+      "Kakao Page Corp.",
+      "Kakao Commerce",
+      "카카오뱅크",
+      "Kakao Corporation",
+      "Kakao M Corp."
+    ],
+    "developer_ids": [
+      "6236189329207394247",
+      "Kakao Corp.",
+      "7486299358955135916",
+      "8912845857975433354",
+      "Kakao Mobility Corp.",
+      "kakaopay corp.",
+      "KakaoBank Corp.",
+      "Kakao Style Corp.",
+      "Kong Studios",
+      "Inc.",
+      "Kakao VX Corp.",
+      "Loen Entertainment",
+      "KakaoTalk Theme",
+      "croquis.com",
+      "Kakao Page Corp.",
+      "Kakao Games Corp.",
+      "Kakao Commerce",
+      "카카오뱅크",
+      "Kakao Corporation",
+      "Kakao M Corp."
+    ],
+    "publisher_rank": 72,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Kakao Games Corp.",
+    "query": "Kakao Games Corp.",
+    "developer_names": [
+      "Kakao Games Corp."
+    ],
+    "developer_ids": [
+      "362057950",
+      "1002306740",
+      "407744771",
+      "1266185413",
+      "415597320",
+      "1435127192",
+      "526273463",
+      "1258016943",
+      "1159411932",
+      "644335616",
+      "298572967",
+      "1472304147"
+    ],
+    "publisher_rank": 72,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Devsisters Corporation",
+    "query": "Devsisters Corporation",
+    "developer_names": [
+      "Devsisters Corporation"
+    ],
+    "developer_ids": [
+      "7767058403001139720"
+    ],
+    "publisher_rank": 73,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Devsisters Corporation",
+    "query": "Devsisters Corporation",
+    "developer_names": [
+      "Devsisters Corporation"
+    ],
+    "developer_ids": [
+      "311464410"
+    ],
+    "publisher_rank": 73,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Wooga",
+    "query": "Wooga",
+    "developer_names": [
+      "Wooga"
+    ],
+    "developer_ids": [
+      "5187629073610793871"
+    ],
+    "publisher_rank": 74,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Wooga",
+    "query": "Wooga",
+    "developer_names": [
+      "Wooga"
+    ],
+    "developer_ids": [
+      "461402737"
+    ],
+    "publisher_rank": 74,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Riot Games, Inc",
+    "query": "Riot Games, Inc",
+    "developer_names": [
+      "Riot Games, Inc",
+      "Riot Games",
+      "Inc",
+      "RIOT GAMES SERVICES PTE. LTD."
+    ],
+    "developer_ids": [
+      "Riot Games",
+      "Inc",
+      "RIOT GAMES SERVICES PTE. LTD."
+    ],
+    "publisher_rank": 75,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Riot Games, Inc",
+    "query": "Riot Games, Inc",
+    "developer_names": [
+      "Riot Games, Inc"
+    ],
+    "developer_ids": [
+      "346988044",
+      "1764685949"
+    ],
+    "publisher_rank": 75,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "PLAYSTUDIOS US, LLC",
+    "query": "PLAYSTUDIOS US, LLC",
+    "developer_names": [
+      "PLAYSTUDIOS US, LLC",
+      "PlayStudios"
+    ],
+    "developer_ids": [
+      "6266607152549785498",
+      "PlayStudios",
+      "6550734437960579461"
+    ],
+    "publisher_rank": 76,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "PLAYSTUDIOS US, LLC",
+    "query": "PLAYSTUDIOS US, LLC",
+    "developer_names": [
+      "PLAYSTUDIOS US, LLC"
+    ],
+    "developer_ids": [
+      "624795774"
+    ],
+    "publisher_rank": 76,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Yotta Games",
+    "query": "Yotta Games",
+    "developer_names": [
+      "Yotta Games",
+      "Phantix Games",
+      "WESTLAKE TECHNOLOGIES CO.",
+      "PTE. LTD",
+      "YottaGames",
+      "YOTTA GAMES",
+      "VOYAGERONE PTE. LTD.",
+      "YOTTA GAMES PTE LTD",
+      "Xiao Junyun"
+    ],
+    "developer_ids": [
+      "Phantix Games",
+      "WESTLAKE TECHNOLOGIES CO.",
+      "PTE. LTD",
+      "YottaGames",
+      "YOTTA GAMES",
+      "6528811196348758064",
+      "7049348108305522338",
+      "VOYAGERONE PTE. LTD.",
+      "YOTTA GAMES PTE LTD",
+      "Xiao Junyun"
+    ],
+    "publisher_rank": 77,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Yotta Games",
+    "query": "Yotta Games",
+    "developer_names": [
+      "Yotta Games"
+    ],
+    "developer_ids": [
+      "1664028939",
+      "1470593249",
+      "910814521",
+      "1530324468",
+      "978992297",
+      "1235569397"
+    ],
+    "publisher_rank": 77,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Jam City, Inc.",
+    "query": "Jam City, Inc.",
+    "developer_names": [
+      "Jam City, Inc.",
+      "TinyCo"
+    ],
+    "developer_ids": [
+      "5509190841173705883",
+      "TinyCo"
+    ],
+    "publisher_rank": 78,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Jam City, Inc.",
+    "query": "Jam City, Inc.",
+    "developer_names": [
+      "Jam City, Inc."
+    ],
+    "developer_ids": [
+      "290671617",
+      "405176113",
+      "373788528"
+    ],
+    "publisher_rank": 78,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Nexters (GDEV)",
+    "query": "Nexters (GDEV)",
+    "developer_names": [
+      "Nexters (GDEV)",
+      "Vangelina Savva"
+    ],
+    "developer_ids": [
+      "8107855987752203465",
+      "Vangelina Savva"
+    ],
+    "publisher_rank": 79,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Nexters (GDEV)",
+    "query": "Nexters (GDEV)",
+    "developer_names": [
+      "Nexters (GDEV)"
+    ],
+    "developer_ids": [
+      "660706304"
+    ],
+    "publisher_rank": 79,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Big Fish Games, Inc",
+    "query": "Big Fish Games, Inc",
+    "developer_names": [
+      "Big Fish Games, Inc",
+      "BFG Entertainmnent Inc",
+      "Big Fish Games",
+      "7 Hits Games"
+    ],
+    "developer_ids": [
+      "5779864456489890910",
+      "BFG Entertainmnent Inc",
+      "8355317828905497231",
+      "Big Fish Games",
+      "4647361560738614803",
+      "7 Hits Games"
+    ],
+    "publisher_rank": 80,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Big Fish Games, Inc",
+    "query": "Big Fish Games, Inc",
+    "developer_names": [
+      "Big Fish Games, Inc"
+    ],
+    "developer_ids": [
+      "292594310",
+      "1871196798",
+      "1865983885",
+      "1269668575",
+      "920182716"
+    ],
+    "publisher_rank": 80,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "EWORLD",
+    "query": "EWORLD",
+    "developer_names": [
+      "EWORLD",
+      "SINGAPORE JUST GAME TECHNOLOGY PTE. LTD.",
+      "ESTARGAMES",
+      "IYAGAMES",
+      "SINGAPORE JUST FUN TECHNOLOGY PTE. LTD."
+    ],
+    "developer_ids": [
+      "SINGAPORE JUST GAME TECHNOLOGY PTE. LTD.",
+      "4779445317914863788",
+      "8955960418774897395",
+      "ESTARGAMES",
+      "IYAGAMES",
+      "SINGAPORE JUST FUN TECHNOLOGY PTE. LTD."
+    ],
+    "publisher_rank": 81,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "EWORLD",
+    "query": "EWORLD",
+    "developer_names": [
+      "EWORLD"
+    ],
+    "developer_ids": [
+      "1554999509",
+      "1679513448",
+      "1478407605",
+      "1731758003",
+      "1622549166",
+      "1606899915"
+    ],
+    "publisher_rank": 81,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "MYGAMES MENA FZ LLC",
+    "query": "MYGAMES MENA FZ LLC",
+    "developer_names": [
+      "MYGAMES MENA FZ LLC",
+      "MY.GAMES VENTURE CAPITAL LTD",
+      "MAPS.ME (CYPRUS) LTD",
+      "PIXONIC",
+      "MGL MY.COM (CYPRUS) LIMITED"
+    ],
+    "developer_ids": [
+      "4752267657972454045",
+      "6354966239220109675",
+      "MY.GAMES VENTURE CAPITAL LTD",
+      "6208681972014538218",
+      "5496590613422638755",
+      "7645543627560774556",
+      "MAPS.ME (CYPRUS) LTD",
+      "MYGAMES MENA FZ LLC",
+      "PIXONIC",
+      "MGL MY.COM (CYPRUS) LIMITED"
+    ],
+    "publisher_rank": 82,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "MYGAMES MENA FZ LLC",
+    "query": "MYGAMES MENA FZ LLC",
+    "developer_names": [
+      "MYGAMES MENA FZ LLC"
+    ],
+    "developer_ids": [
+      "1754968548",
+      "1292570999",
+      "875810767",
+      "1748573674",
+      "1633448217",
+      "442143178",
+      "1539932298",
+      "652136894"
+    ],
+    "publisher_rank": 82,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Mojang",
+    "query": "Mojang",
+    "developer_names": [
+      "Mojang"
+    ],
+    "developer_ids": [
+      "4772240228547998649",
+      "Mojang"
+    ],
+    "publisher_rank": 83,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Mojang",
+    "query": "Mojang",
+    "developer_names": [
+      "Mojang"
+    ],
+    "developer_ids": [
+      "479516146"
+    ],
+    "publisher_rank": 83,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Huuuge Games - Play Together",
+    "query": "Huuuge Games - Play Together",
+    "developer_names": [
+      "Huuuge Games - Play Together",
+      "Coffee Break Games",
+      "Fun Monkey Ltd",
+      "Gamelion Studios"
+    ],
+    "developer_ids": [
+      "8992197787187790047",
+      "Coffee Break Games",
+      "8478335903866170260",
+      "Fun Monkey Ltd",
+      "8024798716054605949",
+      "4724408783534569859",
+      "Gamelion Studios",
+      "7636126946971633584",
+      "5440522347396167156"
+    ],
+    "publisher_rank": 84,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Huuuge Games - Play Together",
+    "query": "Huuuge Games - Play Together",
+    "developer_names": [
+      "Huuuge Games - Play Together"
+    ],
+    "developer_ids": [
+      "1222929957",
+      "1644070469",
+      "1471349552",
+      "314395447"
+    ],
+    "publisher_rank": 84,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Giant Network",
+    "query": "Giant Network",
+    "developer_names": [
+      "Giant Network",
+      "Giant Game",
+      "Giant Interactive Group",
+      "Giant Global",
+      "Giant       Global"
+    ],
+    "developer_ids": [
+      "7930803962176246587",
+      "Giant Game",
+      "6341813657055536512",
+      "Giant Interactive Group",
+      "Giant Network",
+      "Giant Global",
+      "Giant       Global"
+    ],
+    "publisher_rank": 85,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Giant Network",
+    "query": "Giant Network",
+    "developer_names": [
+      "Giant Network"
+    ],
+    "developer_ids": [
+      "542097913",
+      "1478410146",
+      "1502193073",
+      "938550955"
+    ],
+    "publisher_rank": 85,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Metacore Games Oy",
+    "query": "Metacore Games Oy",
+    "developer_names": [
+      "Metacore Games Oy",
+      "Everywear Games Oy"
+    ],
+    "developer_ids": [
+      "7240594971851857167",
+      "Everywear Games Oy"
+    ],
+    "publisher_rank": 86,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Metacore Games Oy",
+    "query": "Metacore Games Oy",
+    "developer_names": [
+      "Metacore Games Oy"
+    ],
+    "developer_ids": [
+      "974585521"
+    ],
+    "publisher_rank": 86,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "iKame Games - Zego Studio",
+    "query": "iKame Games - Zego Studio",
+    "developer_names": [
+      "iKame Games - Zego Studio",
+      "iKame Global JSC",
+      "Zego Global Pte Ltd",
+      "Zego Global Pte"
+    ],
+    "developer_ids": [
+      "4900731214850202819",
+      "4764343509860143092",
+      "4711295997770640883",
+      "iKame Global JSC",
+      "Zego Global Pte Ltd",
+      "5891027934210113676",
+      "8097407929876428583",
+      "Zego Global Pte"
+    ],
+    "publisher_rank": 87,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "iKame Games - Zego Studio",
+    "query": "iKame Games - Zego Studio",
+    "developer_names": [
+      "iKame Games - Zego Studio"
+    ],
+    "developer_ids": [
+      "1637372610",
+      "1543651631",
+      "1671721506",
+      "1592281460",
+      "1673696926"
+    ],
+    "publisher_rank": 87,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Melsoft Games Ltd",
+    "query": "Melsoft Games Ltd",
+    "developer_names": [
+      "Melsoft Games Ltd",
+      "MelSoft"
+    ],
+    "developer_ids": [
+      "7512418058857457125",
+      "MelSoft",
+      "5280080061020002660"
+    ],
+    "publisher_rank": 88,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Melsoft Games Ltd",
+    "query": "Melsoft Games Ltd",
+    "developer_names": [
+      "Melsoft Games Ltd"
+    ],
+    "developer_ids": [
+      "438182507"
+    ],
+    "publisher_rank": 88,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Wildlife Studios",
+    "query": "Wildlife Studios",
+    "developer_names": [
+      "Wildlife Studios",
+      "Fun Games for Free",
+      "Fun Games For Free",
+      "Fun Games For Free Ltd",
+      "Top Free Games."
+    ],
+    "developer_ids": [
+      "8119287488360456150",
+      "Fun Games for Free",
+      "Fun Games For Free",
+      "8186084684070471579",
+      "7486557340409834297",
+      "Fun Games For Free Ltd",
+      "Top Free Games."
+    ],
+    "publisher_rank": 89,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Wildlife Studios",
+    "query": "Wildlife Studios",
+    "developer_names": [
+      "Wildlife Studios"
+    ],
+    "developer_ids": [
+      "1721431484",
+      "618574061",
+      "1479050267",
+      "429363358"
+    ],
+    "publisher_rank": 89,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "VOODOO",
+    "query": "VOODOO",
+    "developer_names": [
+      "VOODOO",
+      "BeReal",
+      "App Advisory"
+    ],
+    "developer_ids": [
+      "VOODOO",
+      "8672611700495170178",
+      "BeReal",
+      "App Advisory"
+    ],
+    "publisher_rank": 90,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "VOODOO",
+    "query": "VOODOO",
+    "developer_names": [
+      "VOODOO"
+    ],
+    "developer_ids": [
+      "714804730",
+      "956239526",
+      "657096670"
+    ],
+    "publisher_rank": 90,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Rovio Entertainment Oy",
+    "query": "Rovio Entertainment Oy",
+    "developer_names": [
+      "Rovio Entertainment Oy",
+      "Dark Matter Oy"
+    ],
+    "developer_ids": [
+      "9133452689932095671",
+      "Dark Matter Oy"
+    ],
+    "publisher_rank": 91,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Rovio Entertainment Oy",
+    "query": "Rovio Entertainment Oy",
+    "developer_names": [
+      "Rovio Entertainment Oy"
+    ],
+    "developer_ids": [
+      "298910979",
+      "985584975"
+    ],
+    "publisher_rank": 91,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "KOEI TECMO GAMES CO., LTD.",
+    "query": "KOEI TECMO GAMES CO., LTD.",
+    "developer_names": [
+      "KOEI TECMO GAMES CO., LTD.",
+      "KOEI TECMO GAMES CO.",
+      "LTD."
+    ],
+    "developer_ids": [
+      "KOEI TECMO GAMES CO.",
+      "LTD."
+    ],
+    "publisher_rank": 92,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "KOEI TECMO GAMES CO., LTD.",
+    "query": "KOEI TECMO GAMES CO., LTD.",
+    "developer_names": [
+      "KOEI TECMO GAMES CO., LTD."
+    ],
+    "developer_ids": [
+      "335308086"
+    ],
+    "publisher_rank": 92,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "KamaGames",
+    "query": "KamaGames",
+    "developer_names": [
+      "KamaGames",
+      "KamaGames-Korea",
+      "KamaGames Korea"
+    ],
+    "developer_ids": [
+      "5335705331407041492",
+      "KamaGames-Korea",
+      "6179794243705556952",
+      "KamaGames Korea"
+    ],
+    "publisher_rank": 93,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "KamaGames",
+    "query": "KamaGames",
+    "developer_names": [
+      "KamaGames"
+    ],
+    "developer_ids": [
+      "312479206",
+      "1487774398"
+    ],
+    "publisher_rank": 93,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Toca Boca",
+    "query": "Toca Boca",
+    "developer_names": [
+      "Toca Boca"
+    ],
+    "developer_ids": [
+      "8567646723268777320"
+    ],
+    "publisher_rank": 94,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Toca Boca",
+    "query": "Toca Boca",
+    "developer_names": [
+      "Toca Boca"
+    ],
+    "developer_ids": [
+      "419103351"
+    ],
+    "publisher_rank": 94,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "VIZOR APPS LTD.",
+    "query": "VIZOR APPS LTD.",
+    "developer_names": [
+      "VIZOR APPS LTD."
+    ],
+    "developer_ids": [
+      "8530020481101400394",
+      "5685833084663736990",
+      "VIZOR APPS LTD."
+    ],
+    "publisher_rank": 95,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "VIZOR APPS LTD.",
+    "query": "VIZOR APPS LTD.",
+    "developer_names": [
+      "VIZOR APPS LTD."
+    ],
+    "developer_ids": [
+      "1568120076",
+      "1098184645"
+    ],
+    "publisher_rank": 95,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Bingchuan Network",
+    "query": "Bingchuan Network",
+    "developer_names": [
+      "Bingchuan Network",
+      "K3GAMES",
+      "Glacier Game",
+      "Glaciers Game"
+    ],
+    "developer_ids": [
+      "4623555298708963451",
+      "K3GAMES",
+      "7641042387181882567",
+      "Glacier Game",
+      "8309053968004433310",
+      "Glaciers Game"
+    ],
+    "publisher_rank": 96,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Bingchuan Network",
+    "query": "Bingchuan Network",
+    "developer_names": [
+      "Bingchuan Network"
+    ],
+    "developer_ids": [
+      "1605575568",
+      "1478697635",
+      "1668975668",
+      "1756431119",
+      "1539597804",
+      "1584278644"
+    ],
+    "publisher_rank": 96,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "ONEMT",
+    "query": "ONEMT",
+    "developer_names": [
+      "ONEMT",
+      "ONEMT HONG KONG LIMITED",
+      "ONEMT SGP",
+      "ONEMT Ltd"
+    ],
+    "developer_ids": [
+      "8451548922865108776",
+      "8999084889030602957",
+      "ONEMT HONG KONG LIMITED",
+      "ONEMT SGP",
+      "ONEMT Ltd",
+      "7006382305291329295"
+    ],
+    "publisher_rank": 97,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "ONEMT",
+    "query": "ONEMT",
+    "developer_names": [
+      "ONEMT"
+    ],
+    "developer_ids": [
+      "1698286192",
+      "1450598084",
+      "1621059825",
+      "896047171"
+    ],
+    "publisher_rank": 97,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "游酷盛世科技(北京)有限公司",
+    "query": "游酷盛世科技(北京)有限公司",
+    "developer_names": [
+      "游酷盛世科技(北京)有限公司"
+    ],
+    "developer_ids": [
+      "1447922832"
+    ],
+    "publisher_rank": 98,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Mattel163 Limited",
+    "query": "Mattel163 Limited",
+    "developer_names": [
+      "Mattel163 Limited"
+    ],
+    "developer_ids": [
+      "Mattel163 Limited"
+    ],
+    "publisher_rank": 99,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Mattel163 Limited",
+    "query": "Mattel163 Limited",
+    "developer_names": [
+      "Mattel163 Limited"
+    ],
+    "developer_ids": [
+      "1344700141",
+      "1731961465"
+    ],
+    "publisher_rank": 99,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Gravity Game Vision Limited",
+    "query": "Gravity Game Vision Limited",
+    "developer_names": [
+      "Gravity Game Vision Limited",
+      "Gravity Game Tech",
+      "Gravity Communications Co.",
+      "Ltd",
+      "GRAVITY Co.",
+      "Gravity Game Hub",
+      "GRAVITY GAME ARISE Co.",
+      "Ltd.",
+      "Gravity Communications Co.."
+    ],
+    "developer_ids": [
+      "8503167265868140693",
+      "7607104298320040017",
+      "7827533453560141672",
+      "6262333202706287552",
+      "Gravity Game Tech",
+      "6411727115793723050",
+      "6004709299668521231",
+      "Gravity Communications Co.",
+      "Ltd",
+      "GRAVITY Co.",
+      "Gravity Game Hub",
+      "GRAVITY GAME ARISE Co.",
+      "Ltd.",
+      "8767773366125402032",
+      "Gravity Communications Co..",
+      "9039637452829796984",
+      "4887640545618306758"
+    ],
+    "publisher_rank": 100,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Gravity Game Vision Limited",
+    "query": "Gravity Game Vision Limited",
+    "developer_names": [
+      "Gravity Game Vision Limited"
+    ],
+    "developer_ids": [
+      "1618358914",
+      "1588175760",
+      "1183164104",
+      "1475616326",
+      "399169590",
+      "1479016358",
+      "1453001973",
+      "1465084004"
+    ],
+    "publisher_rank": 100,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "SayGames Ltd",
+    "query": "SayGames Ltd",
+    "developer_names": [
+      "SayGames Ltd",
+      "GoLeft spol. s r. o.",
+      "SayGames",
+      "Autumn Knock Games"
+    ],
+    "developer_ids": [
+      "6392896734092635573",
+      "SayGames Ltd",
+      "GoLeft spol. s r. o.",
+      "SayGames",
+      "6298813763312919073",
+      "Autumn Knock Games"
+    ],
+    "publisher_rank": 101,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "SayGames Ltd",
+    "query": "SayGames Ltd",
+    "developer_names": [
+      "SayGames Ltd"
+    ],
+    "developer_ids": [
+      "1551847165",
+      "1278916211",
+      "1584815374",
+      "1405039362"
+    ],
+    "publisher_rank": 101,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "網銀國際 股份有限 公司",
+    "query": "網銀國際 股份有限 公司",
+    "developer_names": [
+      "網銀國際 股份有限 公司"
+    ],
+    "developer_ids": [
+      "7898821361707275817"
+    ],
+    "publisher_rank": 102,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "網銀國際 股份有限 公司",
+    "query": "網銀國際 股份有限 公司",
+    "developer_names": [
+      "網銀國際 股份有限 公司"
+    ],
+    "developer_ids": [
+      "409060861"
+    ],
+    "publisher_rank": 102,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "杭州游卡网络技术有限公司",
+    "query": "杭州游卡网络技术有限公司",
+    "developer_names": [
+      "杭州游卡网络技术有限公司"
+    ],
+    "developer_ids": [
+      "杭州游卡网络技术有限公司"
+    ],
+    "publisher_rank": 103,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "杭州游卡网络技术有限公司",
+    "query": "杭州游卡网络技术有限公司",
+    "developer_names": [
+      "杭州游卡网络技术有限公司"
+    ],
+    "developer_ids": [
+      "1089864561",
+      "1429480422",
+      "1221765434",
+      "1812609600",
+      "1186188470"
+    ],
+    "publisher_rank": 103,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Homa",
+    "query": "Homa",
+    "developer_names": [
+      "Homa",
+      "HOMA GAMES",
+      "Homa Games",
+      "Emesh Inc"
+    ],
+    "developer_ids": [
+      "4656343638685426415",
+      "HOMA GAMES",
+      "Homa Games",
+      "Emesh Inc"
+    ],
+    "publisher_rank": 104,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Homa",
+    "query": "Homa",
+    "developer_names": [
+      "Homa"
+    ],
+    "developer_ids": [
+      "1508492426",
+      "1316437775",
+      "1592085359"
+    ],
+    "publisher_rank": 104,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Candivore",
+    "query": "Candivore",
+    "developer_names": [
+      "Candivore"
+    ],
+    "developer_ids": [
+      "6187525518349627915",
+      "Candivore"
+    ],
+    "publisher_rank": 105,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Candivore",
+    "query": "Candivore",
+    "developer_names": [
+      "Candivore"
+    ],
+    "developer_ids": [
+      "1362025075"
+    ],
+    "publisher_rank": 105,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "KRAFTON, Inc.",
+    "query": "KRAFTON, Inc.",
+    "developer_names": [
+      "KRAFTON, Inc.",
+      "KRAFTON",
+      "Inc.",
+      "PUBG CORPORATION",
+      "Bluehole"
+    ],
+    "developer_ids": [
+      "4685442390253494069",
+      "KRAFTON",
+      "Inc.",
+      "PUBG CORPORATION",
+      "Bluehole"
+    ],
+    "publisher_rank": 106,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "KRAFTON, Inc.",
+    "query": "KRAFTON, Inc.",
+    "developer_names": [
+      "KRAFTON, Inc."
+    ],
+    "developer_ids": [
+      "852927650",
+      "1366526330"
+    ],
+    "publisher_rank": 106,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Gamehaus Network",
+    "query": "Gamehaus Network",
+    "developer_names": [
+      "Gamehaus Network",
+      "QY Games",
+      "Fantacy XClub",
+      "Epoch-Games",
+      "Gamepromo ltd",
+      "Slots Gamer",
+      "Unstoppable games",
+      "Elestorm Casino",
+      "Dafish games",
+      "GameDay Dev Team",
+      "wayne2016",
+      "Avid.ly Games",
+      "Game Up Entertainment",
+      "Fishing Carnival",
+      "avid.ly games",
+      "Avid.ly Entertainment",
+      "Gaminpower",
+      "Avid.ly",
+      "HONGKONG ZEFENG TECHNOLOGY CO.",
+      "LIMITED",
+      "Dataverse games",
+      "Elestorm Casino - Best Bingo Game",
+      "Hot Casino",
+      "GAMEHAUS PTE. LTD."
+    ],
+    "developer_ids": [
+      "Gamehaus Network",
+      "QY Games",
+      "7133304247214104051",
+      "5817729045804332618",
+      "Fantacy XClub",
+      "Epoch-Games",
+      "Gamepromo ltd",
+      "Slots Gamer",
+      "7924010181222684681",
+      "5055903126271026691",
+      "Unstoppable games",
+      "6219363235627026479",
+      "Elestorm Casino",
+      "Dafish games",
+      "GameDay Dev Team",
+      "wayne2016",
+      "Avid.ly Games",
+      "Game Up Entertainment",
+      "Fishing Carnival",
+      "avid.ly games",
+      "Avid.ly Entertainment",
+      "Gaminpower",
+      "Avid.ly",
+      "HONGKONG ZEFENG TECHNOLOGY CO.",
+      "LIMITED",
+      "Dataverse games",
+      "6035104825005107893",
+      "Elestorm Casino - Best Bingo Game",
+      "Hot Casino",
+      "GAMEHAUS PTE. LTD."
+    ],
+    "publisher_rank": 107,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Gamehaus Network",
+    "query": "Gamehaus Network",
+    "developer_names": [
+      "Gamehaus Network"
+    ],
+    "developer_ids": [
+      "1562307552",
+      "1664707862",
+      "1181305700",
+      "1148842807",
+      "1619749576",
+      "1528150846",
+      "1287034099",
+      "1499936244",
+      "1532005308",
+      "1211579881",
+      "1471084051",
+      "1546336252",
+      "1311141261",
+      "1129171898",
+      "1382108509",
+      "1446858202"
+    ],
+    "publisher_rank": 107,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "1SOFT",
+    "query": "1SOFT",
+    "developer_names": [
+      "1SOFT",
+      "TechArts Games",
+      "FALCON JSC",
+      "1Soft Go Global"
+    ],
+    "developer_ids": [
+      "7627571908184472902",
+      "7468795961400459851",
+      "5293766053124296887",
+      "4889071845520145564",
+      "7594991822386633020",
+      "5010210823072680001",
+      "6342368821866045726",
+      "6229681369417821587",
+      "7945041308701688258",
+      "TechArts Games",
+      "FALCON JSC",
+      "1Soft Go Global"
+    ],
+    "publisher_rank": 108,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "1SOFT",
+    "query": "1SOFT",
+    "developer_names": [
+      "1SOFT"
+    ],
+    "developer_ids": [
+      "1439862247",
+      "1649029526",
+      "1662088347",
+      "1620655465",
+      "1795833978",
+      "1436458898"
+    ],
+    "publisher_rank": 108,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Happibits",
+    "query": "Happibits",
+    "developer_names": [
+      "Happibits",
+      "Happibits Game"
+    ],
+    "developer_ids": [
+      "Happibits Game"
+    ],
+    "publisher_rank": 109,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Happibits",
+    "query": "Happibits",
+    "developer_names": [
+      "Happibits"
+    ],
+    "developer_ids": [
+      "1597889315"
+    ],
+    "publisher_rank": 109,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "HaoPlay Limited",
+    "query": "HaoPlay Limited",
+    "developer_names": [
+      "HaoPlay Limited",
+      "HaoPlay USA",
+      "Young Phoenix Co.",
+      "Limited",
+      "HaoPlay"
+    ],
+    "developer_ids": [
+      "8515655196792319830",
+      "6720028475101379940",
+      "6362534608787522762",
+      "6880335665997995903",
+      "HaoPlay USA",
+      "Young Phoenix Co.",
+      "Limited",
+      "HaoPlay"
+    ],
+    "publisher_rank": 110,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "HaoPlay Limited",
+    "query": "HaoPlay Limited",
+    "developer_names": [
+      "HaoPlay Limited"
+    ],
+    "developer_ids": [
+      "1518979561",
+      "1618718019",
+      "1538377668",
+      "1661611605"
+    ],
+    "publisher_rank": 110,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "GRYPHLINE",
+    "query": "GRYPHLINE",
+    "developer_names": [
+      "GRYPHLINE"
+    ],
+    "developer_ids": [
+      "7204391758476304499"
+    ],
+    "publisher_rank": 111,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "GRYPHLINE",
+    "query": "GRYPHLINE",
+    "developer_names": [
+      "GRYPHLINE"
+    ],
+    "developer_ids": [
+      "1701568466",
+      "1719937631",
+      "1304907587"
+    ],
+    "publisher_rank": 111,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "AppQuantum",
+    "query": "AppQuantum",
+    "developer_names": [
+      "AppQuantum"
+    ],
+    "developer_ids": [
+      "4629548824296547330",
+      "AppQuantum"
+    ],
+    "publisher_rank": 112,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "AppQuantum",
+    "query": "AppQuantum",
+    "developer_names": [
+      "AppQuantum"
+    ],
+    "developer_ids": [
+      "1464501653"
+    ],
+    "publisher_rank": 112,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Guangzhou Duoyi Network Co., Ltd.",
+    "query": "Guangzhou Duoyi Network Co., Ltd.",
+    "developer_names": [
+      "Guangzhou Duoyi Network Co., Ltd.",
+      "Duoyi (Hong Kong)  Interactive Entertainment-OLD",
+      "Duoyi (Hong Kong)  Interactive Entertainment",
+      "Duoyi (Hong Kong) Interactive Entertainment"
+    ],
+    "developer_ids": [
+      "Duoyi (Hong Kong)  Interactive Entertainment-OLD",
+      "Duoyi (Hong Kong)  Interactive Entertainment",
+      "Duoyi (Hong Kong) Interactive Entertainment"
+    ],
+    "publisher_rank": 113,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Guangzhou Duoyi Network Co., Ltd.",
+    "query": "Guangzhou Duoyi Network Co., Ltd.",
+    "developer_names": [
+      "Guangzhou Duoyi Network Co., Ltd."
+    ],
+    "developer_ids": [
+      "412411824",
+      "1069228117",
+      "1595550589",
+      "1635722267",
+      "1620481294",
+      "1441411913",
+      "1635312536"
+    ],
+    "publisher_rank": 113,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "NHN Corp.",
+    "query": "NHN Corp.",
+    "developer_names": [
+      "NHN Corp.",
+      "NHN comico Corporation",
+      "NHN hangame Corp.",
+      "NHN JAPAN Corporation"
+    ],
+    "developer_ids": [
+      "9081645972946213311",
+      "NHN comico Corporation",
+      "NHN hangame Corp.",
+      "NHN JAPAN Corporation"
+    ],
+    "publisher_rank": 114,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "NHN Corp.",
+    "query": "NHN Corp.",
+    "developer_names": [
+      "NHN Corp."
+    ],
+    "developer_ids": [
+      "708107055",
+      "1298381858",
+      "380298670"
+    ],
+    "publisher_rank": 114,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Bytedance",
+    "query": "Bytedance",
+    "developer_names": [
+      "Bytedance",
+      "TikTok Pte. Ltd.",
+      "Bytedance Pte. Ltd.",
+      "SPRING (SG) PTE. LTD.",
+      "POLIGON",
+      "Beijing Chuntian Zhiyun Technology Co.",
+      "Ltd.",
+      "Beijing Zhending Technology Co.",
+      "Lemon",
+      "Inc.",
+      "Nuverse",
+      "TikTok PTE.ltd.",
+      "Bytedance PTE. Ltd.",
+      "Helo Holdings Limited",
+      "BYTEDANCE PTE.LTD",
+      "Poligon",
+      "Nuverse KK",
+      "Ohayoo",
+      "POLIGON PTE. LTD.",
+      "Beijing Bytedance Technology Co.",
+      "Nuverse Games",
+      "Vigo Video",
+      "Bytedance K.K",
+      "TikTok Inc.",
+      "POLIGON PTE. LTD",
+      "POLIGON PTE LTD.",
+      "Douyin"
+    ],
+    "developer_ids": [
+      "TikTok Pte. Ltd.",
+      "Bytedance Pte. Ltd.",
+      "SPRING (SG) PTE. LTD.",
+      "POLIGON",
+      "7173436862811536298",
+      "4703595805112017538",
+      "Beijing Chuntian Zhiyun Technology Co.",
+      "Ltd.",
+      "Beijing Zhending Technology Co.",
+      "Lemon",
+      "Inc.",
+      "Nuverse",
+      "TikTok PTE.ltd.",
+      "Bytedance PTE. Ltd.",
+      "Helo Holdings Limited",
+      "BYTEDANCE PTE.LTD",
+      "Poligon",
+      "Nuverse KK",
+      "8066565653576764776",
+      "Ohayoo",
+      "POLIGON PTE. LTD.",
+      "Beijing Bytedance Technology Co.",
+      "Nuverse Games",
+      "6072458830644956088",
+      "Vigo Video",
+      "Bytedance K.K",
+      "TikTok Inc.",
+      "POLIGON PTE. LTD",
+      "POLIGON PTE LTD.",
+      "Douyin",
+      "5299725221209516149"
+    ],
+    "publisher_rank": 115,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Bytedance",
+    "query": "Bytedance",
+    "developer_names": [
+      "Bytedance"
+    ],
+    "developer_ids": [
+      "1322881000",
+      "1170416082",
+      "1497663561",
+      "764976186",
+      "1701815329",
+      "1658937908",
+      "1313126203",
+      "1698257573",
+      "1616151889",
+      "912289441",
+      "484926831",
+      "1479664692",
+      "1580509304",
+      "1545102302",
+      "1188276632",
+      "1442182648",
+      "1611329263",
+      "1449445582",
+      "1479391423",
+      "1498607142"
+    ],
+    "publisher_rank": 115,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Yalla Group",
+    "query": "Yalla Group",
+    "developer_names": [
+      "Yalla Group",
+      "Aviva Sun",
+      "Metaverse Technology FZ-LLC",
+      "Yalla Technology FZ-LLC",
+      "Fyxtech HK Limited"
+    ],
+    "developer_ids": [
+      "Aviva Sun",
+      "Metaverse Technology FZ-LLC",
+      "Yalla Technology FZ-LLC",
+      "7952134190952403359",
+      "7398573015863307963",
+      "Fyxtech HK Limited"
+    ],
+    "publisher_rank": 116,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Yalla Group",
+    "query": "Yalla Group",
+    "developer_names": [
+      "Yalla Group"
+    ],
+    "developer_ids": [
+      "1444567250",
+      "1712055048",
+      "1610685845",
+      "1669203075"
+    ],
+    "publisher_rank": 116,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Smilegate, Inc.",
+    "query": "Smilegate, Inc.",
+    "developer_names": [
+      "Smilegate, Inc."
+    ],
+    "developer_ids": [
+      "5153970434677900725"
+    ],
+    "publisher_rank": 117,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Smilegate, Inc.",
+    "query": "Smilegate, Inc.",
+    "developer_names": [
+      "Smilegate, Inc."
+    ],
+    "developer_ids": [
+      "588277915"
+    ],
+    "publisher_rank": 117,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Boombox Games LTD",
+    "query": "Boombox Games LTD",
+    "developer_names": [
+      "Boombox Games LTD"
+    ],
+    "developer_ids": [
+      "6499205192421311786"
+    ],
+    "publisher_rank": 118,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Boombox Games LTD",
+    "query": "Boombox Games LTD",
+    "developer_names": [
+      "Boombox Games LTD"
+    ],
+    "developer_ids": [
+      "1529787666"
+    ],
+    "publisher_rank": 118,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "International Games System Co., Ltd.",
+    "query": "International Games System Co., Ltd.",
+    "developer_names": [
+      "International Games System Co., Ltd.",
+      "International Games System Co.",
+      "Ltd."
+    ],
+    "developer_ids": [
+      "International Games System Co.",
+      "Ltd."
+    ],
+    "publisher_rank": 119,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "International Games System Co., Ltd.",
+    "query": "International Games System Co., Ltd.",
+    "developer_names": [
+      "International Games System Co., Ltd."
+    ],
+    "developer_ids": [
+      "402387648"
+    ],
+    "publisher_rank": 119,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Rudel inc.",
+    "query": "Rudel inc.",
+    "developer_names": [
+      "Rudel inc."
+    ],
+    "developer_ids": [
+      "Rudel inc."
+    ],
+    "publisher_rank": 120,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Rudel inc.",
+    "query": "Rudel inc.",
+    "developer_names": [
+      "Rudel inc."
+    ],
+    "developer_ids": [
+      "648301876"
+    ],
+    "publisher_rank": 120,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "StarFortune",
+    "query": "StarFortune",
+    "developer_names": [
+      "StarFortune"
+    ],
+    "developer_ids": [
+      "6712852036678955591",
+      "4922179359616923865"
+    ],
+    "publisher_rank": 121,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "StarFortune",
+    "query": "StarFortune",
+    "developer_names": [
+      "StarFortune"
+    ],
+    "developer_ids": [
+      "1568415099",
+      "1628516807"
+    ],
+    "publisher_rank": 121,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "DeNA Co., Ltd.",
+    "query": "DeNA Co., Ltd.",
+    "developer_names": [
+      "DeNA Co., Ltd.",
+      "mobage",
+      "蝌蚪互動娛樂科技有限公司",
+      "DeNA HONG KONG LIMITED",
+      "DeNA Corp.",
+      "DeNA Co.",
+      "Ltd. Manga Box",
+      "DeNA Global Publishing",
+      "Program Twenty Three"
+    ],
+    "developer_ids": [
+      "5614074995304947897",
+      "mobage",
+      "蝌蚪互動娛樂科技有限公司",
+      "DeNA HONG KONG LIMITED",
+      "DeNA Corp.",
+      "DeNA Co.",
+      "Ltd. Manga Box",
+      "DeNA Global Publishing",
+      "Program Twenty Three"
+    ],
+    "publisher_rank": 122,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "DeNA Co., Ltd.",
+    "query": "DeNA Co., Ltd.",
+    "developer_names": [
+      "DeNA Co., Ltd."
+    ],
+    "developer_ids": [
+      "431078943",
+      "463267379",
+      "1780719528",
+      "881149457",
+      "581481118"
+    ],
+    "publisher_rank": 122,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Kabam Games, Inc.",
+    "query": "Kabam Games, Inc.",
+    "developer_names": [
+      "Kabam Games, Inc."
+    ],
+    "developer_ids": [
+      "5584164941825017957",
+      "9199344989204994692"
+    ],
+    "publisher_rank": 123,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Kabam Games, Inc.",
+    "query": "Kabam Games, Inc.",
+    "developer_names": [
+      "Kabam Games, Inc."
+    ],
+    "developer_ids": [
+      "1453908357",
+      "445459903"
+    ],
+    "publisher_rank": 123,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Leniu Technology Co., Limited",
+    "query": "Leniu Technology Co., Limited",
+    "developer_names": [
+      "Leniu Technology Co., Limited",
+      "Leniu Technology Co.",
+      "Limited",
+      "Leniu Games",
+      "lnhwgame"
+    ],
+    "developer_ids": [
+      "5206326662801424535",
+      "Leniu Technology Co.",
+      "Limited",
+      "7507294784301118061",
+      "Leniu Games",
+      "lnhwgame"
+    ],
+    "publisher_rank": 124,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Leniu Technology Co., Limited",
+    "query": "Leniu Technology Co., Limited",
+    "developer_names": [
+      "Leniu Technology Co., Limited"
+    ],
+    "developer_ids": [
+      "1670293385",
+      "1681977869",
+      "1570607406"
+    ],
+    "publisher_rank": 124,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "JJWorld(Beijing) Network Technology Company Limited",
+    "query": "JJWorld(Beijing) Network Technology Company Limited",
+    "developer_names": [
+      "JJWorld(Beijing) Network Technology Company Limited"
+    ],
+    "developer_ids": [
+      "472885643"
+    ],
+    "publisher_rank": 125,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Elex",
+    "query": "Elex",
+    "developer_names": [
+      "Elex",
+      "Elex Wireless",
+      "Galaxy Play Technology Limited"
+    ],
+    "developer_ids": [
+      "6711335536439627375",
+      "Elex Wireless",
+      "Elex",
+      "Galaxy Play Technology Limited"
+    ],
+    "publisher_rank": 126,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Elex",
+    "query": "Elex",
+    "developer_names": [
+      "Elex"
+    ],
+    "developer_ids": [
+      "1493742816",
+      "424770549",
+      "624476126",
+      "807340020"
+    ],
+    "publisher_rank": 126,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Warner Bros. International Enterprises",
+    "query": "Warner Bros. International Enterprises",
+    "developer_names": [
+      "Warner Bros. International Enterprises"
+    ],
+    "developer_ids": [
+      "Warner Bros. International Enterprises"
+    ],
+    "publisher_rank": 127,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Warner Bros. International Enterprises",
+    "query": "Warner Bros. International Enterprises",
+    "developer_names": [
+      "Warner Bros. International Enterprises"
+    ],
+    "developer_ids": [
+      "298372283",
+      "299948604"
+    ],
+    "publisher_rank": 127,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Ludia Inc.",
+    "query": "Ludia Inc.",
+    "developer_names": [
+      "Ludia Inc."
+    ],
+    "developer_ids": [
+      "4725338541424081298",
+      "6650389988837544544",
+      "Ludia Inc."
+    ],
+    "publisher_rank": 128,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Ludia Inc.",
+    "query": "Ludia Inc.",
+    "developer_names": [
+      "Ludia Inc."
+    ],
+    "developer_ids": [
+      "293912963"
+    ],
+    "publisher_rank": 128,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "2K",
+    "query": "2K",
+    "developer_names": [
+      "2K"
+    ],
+    "developer_ids": [
+      "6681606924556273560"
+    ],
+    "publisher_rank": 129,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "2K",
+    "query": "2K",
+    "developer_names": [
+      "2K"
+    ],
+    "developer_ids": [
+      "324563547"
+    ],
+    "publisher_rank": 129,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "1.11",
+    "query": "1.11",
+    "developer_names": [
+      "1.11",
+      "0.1%"
+    ],
+    "developer_ids": [
+      "7769366979601471884",
+      "0.1%"
+    ],
+    "publisher_rank": 130,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "1.11",
+    "query": "1.11",
+    "developer_names": [
+      "1.11"
+    ],
+    "developer_ids": [
+      "1060433596",
+      "1247721322"
+    ],
+    "publisher_rank": 130,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Crowdstar Inc",
+    "query": "Crowdstar Inc",
+    "developer_names": [
+      "Crowdstar Inc"
+    ],
+    "developer_ids": [
+      "Crowdstar Inc"
+    ],
+    "publisher_rank": 131,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Crowdstar Inc",
+    "query": "Crowdstar Inc",
+    "developer_names": [
+      "Crowdstar Inc"
+    ],
+    "developer_ids": [
+      "321598392"
+    ],
+    "publisher_rank": 131,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Beijing Wei Wo Le Yuan Information and Technology Co., Ltd",
+    "query": "Beijing Wei Wo Le Yuan Information and Technology Co., Ltd",
+    "developer_names": [
+      "Beijing Wei Wo Le Yuan Information and Technology Co., Ltd"
+    ],
+    "developer_ids": [
+      "1043817467"
+    ],
+    "publisher_rank": 132,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Grand Games A.Ş.",
+    "query": "Grand Games A.Ş.",
+    "developer_names": [
+      "Grand Games A.Ş."
+    ],
+    "developer_ids": [
+      "6430038787206489041"
+    ],
+    "publisher_rank": 133,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Grand Games A.Ş.",
+    "query": "Grand Games A.Ş.",
+    "developer_names": [
+      "Grand Games A.Ş."
+    ],
+    "developer_ids": [
+      "1742757639"
+    ],
+    "publisher_rank": 133,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "WFS, Inc.",
+    "query": "WFS, Inc.",
+    "developer_names": [
+      "WFS, Inc.",
+      "GREE",
+      "Inc.",
+      "GREE Inc.",
+      "GREE Inc",
+      "GREE Entertainment",
+      "funplex",
+      "Inc"
+    ],
+    "developer_ids": [
+      "7573454388742517884",
+      "GREE",
+      "Inc.",
+      "GREE Inc.",
+      "GREE Inc",
+      "GREE Entertainment",
+      "funplex",
+      "Inc"
+    ],
+    "publisher_rank": 134,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "WFS, Inc.",
+    "query": "WFS, Inc.",
+    "developer_names": [
+      "WFS, Inc."
+    ],
+    "developer_ids": [
+      "858357083",
+      "403482783",
+      "1434641297"
+    ],
+    "publisher_rank": 134,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "AZUR GAMES",
+    "query": "AZUR GAMES",
+    "developer_names": [
+      "AZUR GAMES",
+      "Jerboa Games",
+      "GameClay",
+      "RED BUTTON LLC",
+      "Ararat Games"
+    ],
+    "developer_ids": [
+      "8232174611457920989",
+      "5464069849262017456",
+      "Jerboa Games",
+      "GameClay",
+      "6606463368796872625",
+      "RED BUTTON LLC",
+      "Ararat Games"
+    ],
+    "publisher_rank": 135,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "AZUR GAMES",
+    "query": "AZUR GAMES",
+    "developer_names": [
+      "AZUR GAMES"
+    ],
+    "developer_ids": [
+      "1478916023",
+      "1296347323",
+      "1462267626",
+      "1231732979",
+      "460975962"
+    ],
+    "publisher_rank": 135,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Chess.com",
+    "query": "Chess.com",
+    "developer_names": [
+      "Chess.com"
+    ],
+    "developer_ids": [
+      "5068259210636929122"
+    ],
+    "publisher_rank": 136,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Chess.com",
+    "query": "Chess.com",
+    "developer_names": [
+      "Chess.com"
+    ],
+    "developer_ids": [
+      "329218552"
+    ],
+    "publisher_rank": 136,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Shiyue Network",
+    "query": "Shiyue Network",
+    "developer_names": [
+      "Shiyue Network",
+      "BLUE PLANET JOY",
+      "Sygames",
+      "SY2019",
+      "ShiYue Joy"
+    ],
+    "developer_ids": [
+      "BLUE PLANET JOY",
+      "5888404278348200704",
+      "5032781655350152511",
+      "Sygames",
+      "SY2019",
+      "ShiYue Joy"
+    ],
+    "publisher_rank": 137,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Shiyue Network",
+    "query": "Shiyue Network",
+    "developer_names": [
+      "Shiyue Network"
+    ],
+    "developer_ids": [
+      "1745113163",
+      "1555236170",
+      "1852431406",
+      "1809372699",
+      "1519717387",
+      "1459503569",
+      "1721505144",
+      "1452104937",
+      "1612239762",
+      "1501305764",
+      "1637868869"
+    ],
+    "publisher_rank": 137,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Beach Bum Ltd.",
+    "query": "Beach Bum Ltd.",
+    "developer_names": [
+      "Beach Bum Ltd."
+    ],
+    "developer_ids": [
+      "6496128650038483596"
+    ],
+    "publisher_rank": 138,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Beach Bum Ltd.",
+    "query": "Beach Bum Ltd.",
+    "developer_names": [
+      "Beach Bum Ltd."
+    ],
+    "developer_ids": [
+      "1076918346"
+    ],
+    "publisher_rank": 138,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "DoubleUGames",
+    "query": "DoubleUGames",
+    "developer_names": [
+      "DoubleUGames"
+    ],
+    "developer_ids": [
+      "DoubleUGames"
+    ],
+    "publisher_rank": 139,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "DoubleUGames",
+    "query": "DoubleUGames",
+    "developer_names": [
+      "DoubleUGames"
+    ],
+    "developer_ids": [
+      "642727746"
+    ],
+    "publisher_rank": 139,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Budge Studios",
+    "query": "Budge Studios",
+    "developer_names": [
+      "Budge Studios"
+    ],
+    "developer_ids": [
+      "7489594886728593506"
+    ],
+    "publisher_rank": 140,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Budge Studios",
+    "query": "Budge Studios",
+    "developer_names": [
+      "Budge Studios"
+    ],
+    "developer_ids": [
+      "390712652"
+    ],
+    "publisher_rank": 140,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "SPGFun",
+    "query": "SPGFun",
+    "developer_names": [
+      "SPGFun",
+      "Huang Jie",
+      "SUMMERFUN",
+      "SummertimeGame",
+      "SUMMERFUN PTE. LTD.",
+      "SummerfunGame",
+      "SPGGame",
+      "springgame"
+    ],
+    "developer_ids": [
+      "SPGFun",
+      "7523714556490296414",
+      "5377912203767081650",
+      "Huang Jie",
+      "SUMMERFUN",
+      "SummertimeGame",
+      "SUMMERFUN PTE. LTD.",
+      "SummerfunGame",
+      "SPGGame",
+      "springgame"
+    ],
+    "publisher_rank": 141,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "SPGFun",
+    "query": "SPGFun",
+    "developer_names": [
+      "SPGFun"
+    ],
+    "developer_ids": [
+      "1406651575",
+      "1578671848",
+      "1629172529",
+      "1470032733",
+      "1687253948",
+      "1296148231"
+    ],
+    "publisher_rank": 141,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "NEOWIZ",
+    "query": "NEOWIZ",
+    "developer_names": [
+      "NEOWIZ",
+      "NEOWIZ ABLE STUDIO",
+      "GameOn Co.",
+      "Ltd.",
+      "NEOWIZ PLAY STUDIO"
+    ],
+    "developer_ids": [
+      "7923366608034857427",
+      "7754474998603501355",
+      "5895086175148238138",
+      "NEOWIZ ABLE STUDIO",
+      "GameOn Co.",
+      "Ltd.",
+      "NEOWIZ PLAY STUDIO",
+      "5720721090409394019"
+    ],
+    "publisher_rank": 142,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "NEOWIZ",
+    "query": "NEOWIZ",
+    "developer_names": [
+      "NEOWIZ"
+    ],
+    "developer_ids": [
+      "392281430",
+      "967101223",
+      "356831200",
+      "1693198561",
+      "1133373707",
+      "949800192"
+    ],
+    "publisher_rank": 142,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "YOOZOO",
+    "query": "YOOZOO",
+    "developer_names": [
+      "YOOZOO",
+      "Yoozoo (Singapore) Pte. Ltd",
+      "Yoozoo (Hongkong)",
+      "YOOZOO Inc.",
+      "YOUZU(SINGAPORE)PTE.LTD.",
+      "GTarcade",
+      "Youzu Stars",
+      "YOOZOO GAMES KOREA CO.",
+      "LTD.",
+      "Youzu (Singapore) Pte. Ltd",
+      "Youzu Games HONGKONG LIMITED",
+      "Yoozoo Global"
+    ],
+    "developer_ids": [
+      "Yoozoo (Singapore) Pte. Ltd",
+      "Yoozoo (Hongkong)",
+      "YOOZOO Inc.",
+      "YOUZU(SINGAPORE)PTE.LTD.",
+      "GTarcade",
+      "6365129696809078934",
+      "Youzu Stars",
+      "YOOZOO GAMES KOREA CO.",
+      "LTD.",
+      "Youzu (Singapore) Pte. Ltd",
+      "Youzu Games HONGKONG LIMITED",
+      "Yoozoo Global"
+    ],
+    "publisher_rank": 143,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "YOOZOO",
+    "query": "YOOZOO",
+    "developer_names": [
+      "YOOZOO"
+    ],
+    "developer_ids": [
+      "1436268048",
+      "525667853",
+      "930452495",
+      "1138202144",
+      "1252470561",
+      "1136569322",
+      "1423041750",
+      "1112060887"
+    ],
+    "publisher_rank": 143,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "SHI YI NETWORK TECHNOLOGY (SHANGHAI) CO., LTD",
+    "query": "SHI YI NETWORK TECHNOLOGY (SHANGHAI) CO., LTD",
+    "developer_names": [
+      "SHI YI NETWORK TECHNOLOGY (SHANGHAI) CO., LTD",
+      "Higgs Games",
+      "Higgs Gaming",
+      "Poker City",
+      "Higgs Technology Co.",
+      "Limited",
+      "Happy Game",
+      "Happy Life",
+      "HIGGS TECHNOLOGY CO.",
+      "LIMITED",
+      "HIGGS TECHNOLOGY CO LIMITED",
+      "Higgs Technology Ltd."
+    ],
+    "developer_ids": [
+      "Higgs Games",
+      "Higgs Gaming",
+      "7579213553035722287",
+      "7699166371842506392",
+      "Poker City",
+      "Higgs Technology Co.",
+      "Limited",
+      "Happy Game",
+      "Happy Life",
+      "HIGGS TECHNOLOGY CO.",
+      "LIMITED",
+      "HIGGS TECHNOLOGY CO LIMITED",
+      "Higgs Technology Ltd."
+    ],
+    "publisher_rank": 144,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "SHI YI NETWORK TECHNOLOGY (SHANGHAI) CO., LTD",
+    "query": "SHI YI NETWORK TECHNOLOGY (SHANGHAI) CO., LTD",
+    "developer_names": [
+      "SHI YI NETWORK TECHNOLOGY (SHANGHAI) CO., LTD"
+    ],
+    "developer_ids": [
+      "669871978",
+      "1105222132",
+      "428474358",
+      "1144468315",
+      "966112995"
+    ],
+    "publisher_rank": 144,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Wemade Co., Ltd",
+    "query": "Wemade Co., Ltd",
+    "developer_names": [
+      "Wemade Co., Ltd",
+      "Wemade Co.",
+      "Ltd"
+    ],
+    "developer_ids": [
+      "6600380343446674744",
+      "Wemade Co.",
+      "Ltd"
+    ],
+    "publisher_rank": 145,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Wemade Co., Ltd",
+    "query": "Wemade Co., Ltd",
+    "developer_names": [
+      "Wemade Co., Ltd"
+    ],
+    "developer_ids": [
+      "467550766"
+    ],
+    "publisher_rank": 145,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Sparks Info",
+    "query": "Sparks Info",
+    "developer_names": [
+      "Sparks Info"
+    ],
+    "developer_ids": [
+      "7784042092088351158"
+    ],
+    "publisher_rank": 146,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Sparks Info",
+    "query": "Sparks Info",
+    "developer_names": [
+      "Sparks Info"
+    ],
+    "developer_ids": [
+      "1675413403"
+    ],
+    "publisher_rank": 146,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "HK HORTOR TECHNOLOGY LIMITED",
+    "query": "HK HORTOR TECHNOLOGY LIMITED",
+    "developer_names": [
+      "HK HORTOR TECHNOLOGY LIMITED",
+      "hortor games",
+      "THE HORTOR TECHNOLOGY PTE.LTD.",
+      "Hortor",
+      "Hortor Interactive",
+      "Hortor Games"
+    ],
+    "developer_ids": [
+      "5501147792080160928",
+      "hortor games",
+      "THE HORTOR TECHNOLOGY PTE.LTD.",
+      "Hortor",
+      "Hortor Interactive",
+      "Hortor Games"
+    ],
+    "publisher_rank": 147,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "HK HORTOR TECHNOLOGY LIMITED",
+    "query": "HK HORTOR TECHNOLOGY LIMITED",
+    "developer_names": [
+      "HK HORTOR TECHNOLOGY LIMITED"
+    ],
+    "developer_ids": [
+      "1873950719",
+      "1563356470",
+      "1652282647",
+      "971252960",
+      "1591171666",
+      "451113309"
+    ],
+    "publisher_rank": 147,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Shenzhen Zen-Game Technology CO.,LTD",
+    "query": "Shenzhen Zen-Game Technology CO.,LTD",
+    "developer_names": [
+      "Shenzhen Zen-Game Technology CO.,LTD",
+      "ZENGAME",
+      "ZENGAME INTERACTIVE LIMITED"
+    ],
+    "developer_ids": [
+      "5992907654803117276",
+      "7966139032346418553",
+      "ZENGAME",
+      "ZENGAME INTERACTIVE LIMITED"
+    ],
+    "publisher_rank": 148,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Shenzhen Zen-Game Technology CO.,LTD",
+    "query": "Shenzhen Zen-Game Technology CO.,LTD",
+    "developer_names": [
+      "Shenzhen Zen-Game Technology CO.,LTD"
+    ],
+    "developer_ids": [
+      "794759901",
+      "1450908316",
+      "886110634",
+      "1169913178",
+      "1747645120"
+    ],
+    "publisher_rank": 148,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Nintendo Co., Ltd.",
+    "query": "Nintendo Co., Ltd.",
+    "developer_names": [
+      "Nintendo Co., Ltd."
+    ],
+    "developer_ids": [
+      "7277267556905944956"
+    ],
+    "publisher_rank": 149,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Nintendo Co., Ltd.",
+    "query": "Nintendo Co., Ltd.",
+    "developer_names": [
+      "Nintendo Co., Ltd."
+    ],
+    "developer_ids": [
+      "1062496488"
+    ],
+    "publisher_rank": 149,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "google_play",
+    "label": "Funstage",
+    "query": "Funstage",
+    "developer_names": [
+      "Funstage"
+    ],
+    "developer_ids": [
+      "8128532516213169694"
+    ],
+    "publisher_rank": 150,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  },
+  {
+    "store": "app_store",
+    "label": "Funstage",
+    "query": "Funstage",
+    "developer_names": [
+      "Funstage"
+    ],
+    "developer_ids": [
+      "452677265",
+      "370358797",
+      "713998160"
+    ],
+    "publisher_rank": 150,
+    "company_region": "global",
+    "company_type": "publisher",
+    "company_scale": "mid",
+    "watch_priority": "p2"
+  }
+]

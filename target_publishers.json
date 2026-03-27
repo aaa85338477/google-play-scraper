@@ -1,0 +1,2576 @@
+{
+  "Tencent": {
+    "ios_ids": [
+      "1586101358",
+      "292374531",
+      "446324237",
+      "472208019",
+      "504515421",
+      "614694882",
+      "1190539723",
+      "473924491",
+      "542280115",
+      "1220872289",
+      "1450392010",
+      "912765941",
+      "656087454",
+      "1254318151",
+      "883065289",
+      "468349231",
+      "352684059",
+      "975814325",
+      "1071377994",
+      "1228038935",
+      "1221907420"
+    ],
+    "google_play_ids": [
+      "8638120915920097780",
+      "7413279381841434225",
+      "Image Future",
+      "Tencent Mobility Limited",
+      "Tencent Music Entertainment Hong Kong Limited",
+      "Tencent Technology (Shenzhen) Company Ltd.",
+      "熱酷遊戲",
+      "WeChat",
+      "Image Future Investment(HK) Limited",
+      "腾讯 Tencent",
+      "WeChat Tencent",
+      "xin bohuan",
+      "원광디지털대학교",
+      "WeChat International Pte. Ltd.",
+      "ODDM .Inc",
+      "Tencent Mobile International Ltd."
+    ],
+    "top": 1
+  },
+  "Century Games Pte. Ltd.": {
+    "ios_ids": [
+      "1540548141",
+      "1733003236",
+      "1839022330",
+      "495598783",
+      "670204628",
+      "1876134518",
+      "1018148248",
+      "1826082097"
+    ],
+    "google_play_ids": [
+      "6832375891198423999",
+      "Century Games Innovation Pte. Ltd.",
+      "OverBoost Studio",
+      "5790676279664405139",
+      "8152171058994793947",
+      "CQ Gaming"
+    ],
+    "top": 2
+  },
+  "Scopely, Inc.": {
+    "ios_ids": [
+      "305003647",
+      "1154563764",
+      "868961693"
+    ],
+    "google_play_ids": [
+      "9028773071151690823",
+      "DIGPRM Games",
+      "LLC",
+      "Phase One Games LLC"
+    ],
+    "top": 3
+  },
+  "Dream Games": {
+    "ios_ids": [
+      "1482155846"
+    ],
+    "google_play_ids": [
+      "Dream Games",
+      "Ltd.",
+      "Dream Games Ltd."
+    ],
+    "top": 4
+  },
+  "FUNFLY PTE. LTD.": {
+    "ios_ids": [
+      "1748704065",
+      "1708213916",
+      "1521130965",
+      "1638066191",
+      "1598076202",
+      "1575315579"
+    ],
+    "google_play_ids": [
+      "FUNFLY PTE. LTD.",
+      "UAC Studio",
+      "SILKWORLD GAME LIMITED",
+      "focus on fun studio",
+      "Onefun Games",
+      "WhatsFun",
+      "First Fun",
+      "Funfly Technology Limited",
+      "Travellet Online",
+      "FirstFun"
+    ],
+    "top": 5
+  },
+  "Roblox Corporation": {
+    "ios_ids": [
+      "431946155",
+      "1128154379",
+      "1112038924"
+    ],
+    "google_play_ids": [
+      "5360036014478858866",
+      "Guilded LLC",
+      "6526467086144818804",
+      "Loom.ai"
+    ],
+    "top": 6
+  },
+  "NetEase": {
+    "ios_ids": [
+      "656116440",
+      "1202760281",
+      "874255382",
+      "1485225410",
+      "735778224",
+      "1315923347",
+      "1243986796",
+      "840227969",
+      "1463919424",
+      "371634018",
+      "1547202758",
+      "515629538",
+      "1319771552",
+      "910462528",
+      "1783237924",
+      "1477590429",
+      "383629312",
+      "1232117200",
+      "1025633806",
+      "1196098565",
+      "1628256738",
+      "542108916",
+      "326251333",
+      "1658445220",
+      "1434686129",
+      "1299643059",
+      "1226382858",
+      "1026738029",
+      "965789237",
+      "617933253",
+      "1121906086"
+    ],
+    "google_play_ids": [
+      "NetEase Games",
+      "Exptional Global",
+      "5254120005112807906",
+      "Youdao (Hong Kong) Limited",
+      "网易(www.163.com)",
+      "5187385339385554524",
+      "Netease Games Global",
+      "Youdao.com",
+      "MAMBA INTERACTIVE ENTERTAINMENT LIMITED",
+      "NetEase Game",
+      "SHALL WE MANAGEMENT SERVICE LIMITED",
+      "NetEase"
+    ],
+    "top": 7
+  },
+  "Playrix": {
+    "ios_ids": [
+      "1162116447"
+    ],
+    "google_play_ids": [
+      "6598096594674427568",
+      "pxcyprus"
+    ],
+    "top": 8
+  },
+  "King": {
+    "ios_ids": [
+      "526656015"
+    ],
+    "google_play_ids": [
+      "6577204690045492686"
+    ],
+    "top": 9
+  },
+  "Supercell": {
+    "ios_ids": [
+      "488106216"
+    ],
+    "google_play_ids": [
+      "6715068722362591614"
+    ],
+    "top": 10
+  },
+  "miHoYo": {
+    "ios_ids": [
+      "1599719156",
+      "1467190250",
+      "1650344341",
+      "1057119378",
+      "737651310",
+      "1233055282",
+      "1143402986",
+      "467894518",
+      "1286705195"
+    ],
+    "google_play_ids": [
+      "4759911077617645855",
+      "7281312221908191506",
+      "SU",
+      "YU-WEI",
+      "COGNOSPHERE PTE. LTD.",
+      "5869687648793643753",
+      "miHoYo Limited"
+    ],
+    "top": 11
+  },
+  "Moon Active": {
+    "ios_ids": [
+      "470556954",
+      "520119067"
+    ],
+    "google_play_ids": [
+      "6898760406631171989",
+      "4765571944833116862",
+      "4728882188872393300"
+    ],
+    "top": 12
+  },
+  "Bandai Namco Entertainment Inc.": {
+    "ios_ids": [
+      "352305770",
+      "580781332",
+      "359834423",
+      "1041292556",
+      "949783532",
+      "1195775794",
+      "841925686",
+      "281656478",
+      "308869261",
+      "648288742"
+    ],
+    "google_play_ids": [
+      "Bandai Namco Entertainment Inc.",
+      "5701224935704459046",
+      "BANDAI CO.",
+      "LTD.",
+      "반다이남코코리아 주식회사",
+      "Bandai Namco Filmworks Inc.",
+      "BANDAI NAMCO Rights Marketing Inc.",
+      "5061905671140962852",
+      "BANDAI NAMCO Online Inc.",
+      "7242995029088679351",
+      "Bandai America Inc",
+      "Bandai America",
+      "BANDAI NAMCO Entertainment Inc."
+    ],
+    "top": 13
+  },
+  "Microfun Limited": {
+    "ios_ids": [
+      "1650531996",
+      "893059061",
+      "1717534358",
+      "1592945265",
+      "1208935482",
+      "1203124399"
+    ],
+    "google_play_ids": [
+      "8578810333255962286",
+      "Microfun Limited",
+      "MergeGames",
+      "GameDots",
+      "MICROFUN  LIMITED",
+      "Microfun",
+      "Inc."
+    ],
+    "top": 14
+  },
+  "The Pokemon Company": {
+    "ios_ids": [
+      "446737235",
+      "594261408"
+    ],
+    "google_play_ids": [
+      "The Pokémon Company",
+      "The Pokémon Company International",
+      "The Pokemon Company"
+    ],
+    "top": 15
+  },
+  "Playtika": {
+    "ios_ids": [
+      "447553567",
+      "504720043",
+      "1223338260",
+      "580824260",
+      "1413287363",
+      "868013621",
+      "592117366",
+      "342462146"
+    ],
+    "google_play_ids": [
+      "8370476508159322879",
+      "Playtika Santa Monica",
+      "7797209574326486135",
+      "Playtika UK – House of Fun Limited",
+      "Reworks Ltd.",
+      "Supertreat",
+      "4954326688245318746",
+      "7639378078513286726",
+      "PLAYTIKA UK - HOUSE OF FUN LIMITED",
+      "7887547651896089900",
+      "5419502119363831668",
+      "Reworks Ltd"
+    ],
+    "top": 16
+  },
+  "KONAMI": {
+    "ios_ids": [
+      "299580230",
+      "286115725"
+    ],
+    "google_play_ids": [
+      "KONAMI",
+      "Konami Digital Entertainment",
+      "Inc."
+    ],
+    "top": 17
+  },
+  "Peak Games": {
+    "ios_ids": [
+      "476160947"
+    ],
+    "google_play_ids": [
+      "7348725256760208886",
+      "8795996613429359757"
+    ],
+    "top": 18
+  },
+  "37GAMES": {
+    "ios_ids": [
+      "1055231096",
+      "1091188713",
+      "1516742703",
+      "1667803218",
+      "1652830936",
+      "1837105858",
+      "1457004705",
+      "1729056778",
+      "882640942",
+      "1304085689",
+      "1660689920",
+      "1495156477",
+      "1842081265",
+      "1611134134",
+      "1813829359",
+      "1504233969",
+      "1533376357",
+      "1586429691",
+      "1296168545",
+      "1455949636",
+      "1615695125",
+      "1270527988",
+      "1272004110",
+      "605266150",
+      "1101062973",
+      "1259674999",
+      "1540703105",
+      "1446874275",
+      "1625020963",
+      "1530536298",
+      "1693548360",
+      "1566495290",
+      "1540746184",
+      "843182346",
+      "1519965030",
+      "1560771403",
+      "1373137559",
+      "773053241"
+    ],
+    "google_play_ids": [
+      "6473421354871744170",
+      "8000555669283447187",
+      "37 Mobile Games",
+      "7794517992835530794",
+      "BLANCOZONE NETWORK CO.",
+      "LIMITED",
+      "5974880237768379405",
+      "9005317742187331378",
+      "7734083285346131529",
+      "俠米遊戲",
+      "7149137710830513409",
+      "4789323276850605658",
+      "絕妙遊戲M",
+      "Lucky8 Games",
+      "4911276338977614693",
+      "5440609750410092807",
+      "Embla Games Studio",
+      "5064480859600735470",
+      "G妹在線",
+      "BLANCOZONE KR",
+      "彩蛋遊戲",
+      "Flyburst",
+      "37GAMES ENTERTAINMENT",
+      "Megoo Games",
+      "8185960592824406976",
+      "G-CONG NETWORK",
+      "37Games-Oversea",
+      "Lucky K",
+      "37GAMES.ASIA",
+      "37GAMES.AISA",
+      "37 Mobile Games Oversea",
+      "37Games.Asia",
+      "Ambrine Studio",
+      "37Games.japan",
+      "37games",
+      "WangJing",
+      "37 Mobile Games JAPAN",
+      "37GAMES",
+      "37 Mobile Games Global",
+      "Ujoy",
+      "37 Mobile Games Kr",
+      "MightyCat Games",
+      "37 Mobile Games JP",
+      "gm99",
+      "37GAMES.JP",
+      "37games.Japan",
+      "絕妙遊戲",
+      "37games.Asia"
+    ],
+    "top": 19
+  },
+  "Niantic, Inc.": {
+    "ios_ids": [
+      "1037205060"
+    ],
+    "google_play_ids": [
+      "Niantic",
+      "Inc."
+    ],
+    "top": 20
+  },
+  "Zynga": {
+    "ios_ids": [
+      "295913422",
+      "791124596",
+      "1202264615",
+      "330281898",
+      "422679887"
+    ],
+    "google_play_ids": [
+      "6690081412016968981",
+      "Small Giant Games",
+      "8000319753740505601",
+      "7870377983463221056",
+      "Gram Games Limited",
+      "NaturalMotionGames Ltd"
+    ],
+    "top": 21
+  },
+  "Florere Game": {
+    "ios_ids": [
+      "1777735839"
+    ],
+    "google_play_ids": [
+      "Florere Game"
+    ],
+    "top": 22
+  },
+  "GARENA INTERNATIONAL I": {
+    "ios_ids": [
+      "1335627134",
+      "1047094789",
+      "513828660",
+      "1096472396",
+      "1549162089",
+      "1222857606",
+      "1569575029"
+    ],
+    "google_play_ids": [
+      "GARENA INTERNATIONAL I",
+      "Garena Mobile Private",
+      "Garena Mobile Private Limited",
+      "6104947996812526680",
+      "Garena Games Online",
+      "MOBA GAMES PRIVATE LIMITED",
+      "Good Mobile Games Private",
+      "Garena International I",
+      "GARENA GAMES PRIVATE LIMITED",
+      "Good Mobile Games Private Limited",
+      "GARENA INTERNATIONAL I PRIVATE LIMITED",
+      "Garena Online",
+      "MOBA Games Private Limited"
+    ],
+    "top": 23
+  },
+  "Paper Games": {
+    "ios_ids": [
+      "946033492",
+      "1646211490",
+      "1169846771",
+      "1385024492",
+      "1447235763"
+    ],
+    "google_play_ids": [
+      "7714041244156962232",
+      "8621696561674850641",
+      "5071739339608028104",
+      "Papergames(Japan)",
+      "YU JUE",
+      "InFold Games",
+      "Papergames",
+      "Nikki Games",
+      "Paper Games",
+      "InFold Pte. Ltd."
+    ],
+    "top": 24
+  },
+  "Product Madness": {
+    "ios_ids": [
+      "525894639"
+    ],
+    "google_play_ids": [
+      "5696323743535622294",
+      "Product Madness"
+    ],
+    "top": 25
+  },
+  "Netmarble": {
+    "ios_ids": [
+      "930364579"
+    ],
+    "google_play_ids": [
+      "5258410538530331508"
+    ],
+    "top": 26
+  },
+  "Aniplex Inc.": {
+    "ios_ids": [
+      "884966694"
+    ],
+    "google_play_ids": [
+      "Aniplex Inc."
+    ],
+    "top": 27
+  },
+  "ELECTRONIC ARTS": {
+    "ios_ids": [
+      "284800461",
+      "284832145"
+    ],
+    "google_play_ids": [
+      "6605125519975771237",
+      "4826430855807055421"
+    ],
+    "top": 28
+  },
+  "SciPlay": {
+    "ios_ids": [
+      "310624343",
+      "486692023",
+      "445097381",
+      "1052764694",
+      "354731085"
+    ],
+    "google_play_ids": [
+      "7621977556026971856",
+      "6013035672701439729",
+      "Scientific Games Interactive (IL)",
+      "Scientific Games Interactive",
+      "Scientific Games Corporation",
+      "Spicerack Media"
+    ],
+    "top": 29
+  },
+  "FunPlus International AG": {
+    "ios_ids": [
+      "1343106322",
+      "1289632878",
+      "1731671311",
+      "1274268964",
+      "886541729",
+      "960546279"
+    ],
+    "google_play_ids": [
+      "FunPlus International AG",
+      "Puzala",
+      "KingsGroup Holdings",
+      "Triathlon HK",
+      "QJ Games",
+      "FunPlus International",
+      "KingsGroup International AG",
+      "Funplus Interactive (Hong Kong ) Limited",
+      "Puzza",
+      "Chiseled Games Limited",
+      "Globalgamejourney Limited"
+    ],
+    "top": 30
+  },
+  "Cygames, Inc.": {
+    "ios_ids": [
+      "561598806"
+    ],
+    "google_play_ids": [
+      "Cygames",
+      "Inc."
+    ],
+    "top": 31
+  },
+  "SpinX Games Limited": {
+    "ios_ids": [
+      "1545873689",
+      "1186162194",
+      "1241617493"
+    ],
+    "google_play_ids": [
+      "5793980904747267349",
+      "SpinX Games Limited",
+      "8454058997475921489",
+      "GRANDE GAMES LIMITED"
+    ],
+    "top": 32
+  },
+  "NCSOFT": {
+    "ios_ids": [
+      "293317095",
+      "337863458",
+      "1304189137",
+      "366614626",
+      "1138886628"
+    ],
+    "google_play_ids": [
+      "5253789853304707629",
+      "NC Japan K.K.",
+      "5747755017262623270",
+      "NTREEV SOFT",
+      "NCSOFT Games",
+      "NC TAIWAN"
+    ],
+    "top": 33
+  },
+  "HABBY": {
+    "ios_ids": [
+      "1422308796",
+      "1628270360",
+      "1501478260",
+      "1787091657"
+    ],
+    "google_play_ids": [
+      "7972143603605848622",
+      "Habby",
+      "Oliplay Technology Co.",
+      "Ltd."
+    ],
+    "top": 34
+  },
+  "NEXON Company": {
+    "ios_ids": [
+      "523546006",
+      "866964623",
+      "504822446",
+      "520995277"
+    ],
+    "google_play_ids": [
+      "7175795338936881781",
+      "Nexon (Thailand)",
+      "5561174420506036639",
+      "NEXON"
+    ],
+    "top": 35
+  },
+  "LilithGames": {
+    "ios_ids": [
+      "982119759",
+      "1478872809",
+      "1605558679",
+      "1481453487",
+      "1696267009",
+      "1590319961"
+    ],
+    "google_play_ids": [
+      "6526849192653249949",
+      "FARLIGHT",
+      "LILITH TECHNOLOGY HONG KONG LIMITED",
+      "Lilith Games SG Pte. Ltd.",
+      "LILITH GAMES SG PTE. LTD."
+    ],
+    "top": 36
+  },
+  "SuperPlay": {
+    "ios_ids": [
+      "1484468650"
+    ],
+    "google_play_ids": [
+      "6163102761666559735",
+      "SuperPlay."
+    ],
+    "top": 37
+  },
+  "XFLAG, Inc.": {
+    "ios_ids": [
+      "1106824482"
+    ],
+    "google_play_ids": [
+      "7496506598896213811"
+    ],
+    "top": 38
+  },
+  "RiverGame": {
+    "ios_ids": [
+      "1717022676",
+      "1452494069",
+      "1655797752",
+      "1734552841",
+      "1469399538"
+    ],
+    "google_play_ids": [
+      "RiverGame",
+      "River Game",
+      "Topwar Studio",
+      "Green Mushroom"
+    ],
+    "top": 39
+  },
+  "Alibaba Group": {
+    "ios_ids": [
+      "1645853327",
+      "1014466415",
+      "726037046",
+      "1807514588",
+      "1600858986",
+      "1597411546",
+      "744923901",
+      "1822209568",
+      "1584059801",
+      "1025705471",
+      "1530758359",
+      "1516453497",
+      "1645835031",
+      "948517913",
+      "1787373603",
+      "1804500591",
+      "511837736",
+      "1075782061",
+      "390860328",
+      "785946887",
+      "1758251675",
+      "578838486",
+      "475259018",
+      "665061177",
+      "789732890",
+      "539411035",
+      "1177355285",
+      "1473950519",
+      "863832310",
+      "436672032",
+      "387682729"
+    ],
+    "google_play_ids": [
+      "Alibaba Mobile",
+      "5209823851140033458",
+      "6773114849598584416",
+      "Accio.com",
+      "Taobao",
+      "1688.com",
+      "Alibaba Cloud",
+      "ALIEXPRESS CIS HOLDING PTE. LTD",
+      "8666392712762951754",
+      "QookkaGames",
+      "口碑（上海）信息技术有限公司",
+      "VMate Mage UAKA short-video",
+      "Alibaba.com (Ru)",
+      "淘宝",
+      "SialiaGames",
+      "UCWeb",
+      "VMate Inc.",
+      "Alibaba Group"
+    ],
+    "top": 40
+  },
+  "MOONTON": {
+    "ios_ids": [
+      "1795681969",
+      "1811064883",
+      "1630286143",
+      "1706091894",
+      "910435102",
+      "1742109154",
+      "1711000447"
+    ],
+    "google_play_ids": [
+      "8532907581042995001",
+      "Vizta Games",
+      "Skystone Games Pte. Ltd.",
+      "MOONTON STUDIO",
+      "Skystone Games"
+    ],
+    "top": 41
+  },
+  "Activision Publishing, Inc.": {
+    "ios_ids": [
+      "285005466"
+    ],
+    "google_play_ids": [
+      "Activision Publishing",
+      "Inc.",
+      "6686843829714097468",
+      "7352154005287549568",
+      "7761425617423814507",
+      "6304076786970923315"
+    ],
+    "top": 42
+  },
+  "TG Inc.": {
+    "ios_ids": [
+      "1050386041"
+    ],
+    "google_play_ids": [
+      "8247472115258417018",
+      "TOP GAMES INC.",
+      "TG Inc."
+    ],
+    "top": 43
+  },
+  "Yostar Games": {
+    "ios_ids": [
+      "1242186074",
+      "1411126548",
+      "1641235411",
+      "1782838982",
+      "1674540911"
+    ],
+    "google_play_ids": [
+      "6554603750168358328",
+      "5501543544118454799",
+      "8149611443935782416",
+      "Yostar",
+      "Inc.",
+      "5635477978503001293",
+      "Yostar Limited."
+    ],
+    "top": 44
+  },
+  "SQUARE ENIX": {
+    "ios_ids": [
+      "300186801",
+      "578072799"
+    ],
+    "google_play_ids": [
+      "8026010256970589886",
+      "6569532485639608036",
+      "SQUARE ENIX LTD",
+      "4949621155772591939",
+      "SQUARE ENIX PVT.LTD.",
+      "SQUARE ENIX Ltd",
+      "SQUARE ENIX INC"
+    ],
+    "top": 45
+  },
+  "4399": {
+    "ios_ids": [
+      "1688367866",
+      "1604321544",
+      "502212463",
+      "1594777650",
+      "967114195",
+      "1396412376",
+      "1301799802",
+      "1298961541",
+      "1631320611",
+      "1323413721",
+      "1703914972",
+      "1435995183",
+      "1657979674",
+      "780153891",
+      "1713487399",
+      "797345902",
+      "1022702047",
+      "930102865",
+      "1113943835"
+    ],
+    "google_play_ids": [
+      "6950662405203913165",
+      "TTHmobi",
+      "5321013986587887822",
+      "Rhinos",
+      "7315419339265800962",
+      "5998266804311920815",
+      "SPARKGAME LIMITED",
+      "8976517434642708993",
+      "Spark Game",
+      "4399 Co.",
+      "Ltd.",
+      "Phoenix VN",
+      "4399EN GAME",
+      "4399 NET LIMITED",
+      "8212562760980308422",
+      "9017093023566815707",
+      "SPOTLIGHT NETWORK LIMITED",
+      "四三九九",
+      "4399 Games",
+      "4399.com",
+      "4399en game"
+    ],
+    "top": 46
+  },
+  "HK KURO GAMES LIMITED": {
+    "ios_ids": [
+      "1723145160",
+      "1692119400",
+      "1571685288"
+    ],
+    "google_play_ids": [
+      "6751239034997003943",
+      "8670778571117015724"
+    ],
+    "top": 47
+  },
+  "Camel Games": {
+    "ios_ids": [
+      "1603183695",
+      "1179626508",
+      "1654881293",
+      "1300436103",
+      "1298915028",
+      "542910776"
+    ],
+    "google_play_ids": [
+      "5233897994951847421",
+      "Camel Games Limited",
+      "Hong Kong Ke Mo software Co.",
+      "Limited",
+      "WoF Games",
+      "CamelStudio",
+      "7150668333233092058",
+      "Camel Games",
+      "Inc"
+    ],
+    "top": 48
+  },
+  "Rollic Games": {
+    "ios_ids": [
+      "1452111779",
+      "1614418901",
+      "1590849793",
+      "1561638383"
+    ],
+    "google_play_ids": [
+      "6018074114375198913",
+      "ByteTyper OU",
+      "Rollic Games",
+      "ByteTyper"
+    ],
+    "top": 49
+  },
+  "Tuyoo Games": {
+    "ios_ids": [
+      "1021847690",
+      "1688147465",
+      "1556005350",
+      "1561915739",
+      "1617990591",
+      "1633206547",
+      "1490823604",
+      "1566267365"
+    ],
+    "google_play_ids": [
+      "ARK GAME LIMITED",
+      "5023235651255710418",
+      "6530926507313072138",
+      "Ace Unique Game Limited",
+      "Tuyoo Games",
+      "ACE GAME INTERNATIONAL LIMITED",
+      "HK TUYOO TECHNOLOGY LIMITED",
+      "TUYOO POKER ONLINE (HK) LIMITED",
+      "7198059765943546780",
+      "TUYOO GAME"
+    ],
+    "top": 50
+  },
+  "Com2uS Corp.": {
+    "ios_ids": [
+      "299175870",
+      "299302366",
+      "646209316",
+      "1641203717",
+      "336755947",
+      "355472980",
+      "1178527367"
+    ],
+    "google_play_ids": [
+      "6850516909323484758",
+      "8817065164862761736",
+      "8370361226290054499",
+      "Com2uS Japan Inc.",
+      "Com2uS TYGEM Corporation",
+      "GAMEVIL COM2US PLATFORM Inc.",
+      "Gamevilcom2usplatform",
+      "Com2uS Platform Corporation",
+      "5374431039651315752",
+      "TongYangOnline"
+    ],
+    "top": 51
+  },
+  "VERTEX GAMES PTE. LTD.": {
+    "ios_ids": [
+      "1652468982",
+      "955409331",
+      "1437617948"
+    ],
+    "google_play_ids": [
+      "VERTEX GAMES PTE. LTD.",
+      "JoyCastle",
+      "Solitaire Card Games Free",
+      "Solitaire Games Maker",
+      "Gluon Interactive Ltd.",
+      "Vertex Games PTE. LTD."
+    ],
+    "top": 52
+  },
+  "乐元素": {
+    "ios_ids": [
+      "791491181",
+      "574733038",
+      "1021442110",
+      "1701764679",
+      "1426209560",
+      "658964752",
+      "493235661",
+      "445329835",
+      "1548914593"
+    ],
+    "google_play_ids": [
+      "8342237356707988495",
+      "pomelo company limited",
+      "5143272543571380181"
+    ],
+    "top": 53
+  },
+  "Miniclip.com": {
+    "ios_ids": [
+      "337457683",
+      "1190815537",
+      "471259040",
+      "1579865033",
+      "400201469",
+      "1114062186",
+      "604044223",
+      "972448637",
+      "488094583",
+      "1191480727",
+      "541407124",
+      "1057968964",
+      "997700104",
+      "1238111292"
+    ],
+    "google_play_ids": [
+      "5933611429942957630",
+      "7363891306616760846",
+      "7473634688510685864",
+      "8964310704118504564",
+      "5498003471817844893",
+      "8065963838441938591",
+      "7184623397550987805",
+      "6388091340693855706",
+      "6991603797333969024",
+      "7268898997815915359",
+      "6046135866055090068",
+      "7849730008707515899",
+      "5680049482645835516",
+      "9067039168887832129",
+      "6248802720099859869",
+      "6629455289349118297",
+      "5057058873634489942",
+      "Crunchy Avocado Chips",
+      "SYBO Games",
+      "Free Bubble Shooter Games",
+      "Bubble Shooter Pop!",
+      "Match 3 Bubble Games",
+      "Masomo Gaming",
+      "Ilyon Kids Playground",
+      "Dramaton",
+      "Ilyon Trivia Games",
+      "Bubble Shooter Artworks",
+      "Bubble Shooter Games by Ilyon",
+      "AppyNation Ltd."
+    ],
+    "top": 54
+  },
+  "Plarium Global Ltd": {
+    "ios_ids": [
+      "489487383",
+      "1053231049"
+    ],
+    "google_play_ids": [
+      "5766366711041032164",
+      "5001298899523389669",
+      "Plarium  LLC"
+    ],
+    "top": 55
+  },
+  "LINE Corporation": {
+    "ios_ids": [
+      "359067226",
+      "966142319",
+      "1563230457",
+      "1661324301",
+      "1492856568",
+      "1437606204",
+      "913948811",
+      "1046762513",
+      "978249202"
+    ],
+    "google_play_ids": [
+      "4919265583026901892",
+      "LINE Digital Frontier Corporation",
+      "LINE MUSIC CORPORATION",
+      "LINE NEXT Corp.",
+      "LINE Pay Taiwan Limited",
+      "LINE Euro-Americas Corp.",
+      "©LINE Plus Corporation",
+      "LINE COMPANY (THAILAND) LIMITED",
+      "LINE TAIWAN LIMITED",
+      "LINE MUSIC"
+    ],
+    "top": 56
+  },
+  "GungHo Online Entertainment, Inc.": {
+    "ios_ids": [
+      "403963903",
+      "1019335866"
+    ],
+    "google_play_ids": [
+      "7849776799175690127",
+      "5256951659267379160"
+    ],
+    "top": 57
+  },
+  "IGG": {
+    "ios_ids": [
+      "1303288190",
+      "1451258474",
+      "455640811",
+      "954975110"
+    ],
+    "google_play_ids": [
+      "8895734616362643252",
+      "幻想娛樂科技股份有限公司",
+      "IGG.COM",
+      "幻想娛樂科技"
+    ],
+    "top": 58
+  },
+  "Scorewarrior": {
+    "ios_ids": [
+      "1274132544"
+    ],
+    "google_play_ids": [
+      "9087509962033752464",
+      "Scorewarrior"
+    ],
+    "top": 59
+  },
+  "bilibili": {
+    "ios_ids": [
+      "736535969",
+      "928380301",
+      "1382536367",
+      "1108397778",
+      "1548857484",
+      "1517062288",
+      "1478403457"
+    ],
+    "google_play_ids": [
+      "8877266805427887698",
+      "BALABOOM PTE. LTD.",
+      "哔哩哔哩弹幕网",
+      "哔哩哔哩",
+      "BILIBILI HK",
+      "bilibili",
+      "株式会社ビリビリ",
+      "BILIBILI"
+    ],
+    "top": 60
+  },
+  "Tap4fun (Hong Kong) Limited": {
+    "ios_ids": [
+      "446315550",
+      "489418653",
+      "1439307723",
+      "500556134",
+      "1629633462",
+      "1777794929"
+    ],
+    "google_play_ids": [
+      "4842317878838679117",
+      "5087171922673557639",
+      "8045268998734167543",
+      "6569453306640017516",
+      "Tap4fun Corp.",
+      "Ltd.",
+      "HOX SG PTE. LTD.",
+      "YoFun.LTD",
+      "tap4fun",
+      "6860045433664063908",
+      "Seagame"
+    ],
+    "top": 61
+  },
+  "SEGA": {
+    "ios_ids": [
+      "302946768",
+      "281966698",
+      "541834318"
+    ],
+    "google_play_ids": [
+      "7891990035506213180",
+      "SEGA CORPORATION",
+      "SEGA　CORPORATION",
+      "SEGA　 CORPORATION"
+    ],
+    "top": 62
+  },
+  "Magic Tavern, Inc.": {
+    "ios_ids": [
+      "1399403555",
+      "1111095414"
+    ],
+    "google_play_ids": [
+      "7994336349840708503",
+      "Magic Tavern",
+      "Inc."
+    ],
+    "top": 63
+  },
+  "X.D. Network": {
+    "ios_ids": [
+      "1810952934",
+      "929034871",
+      "1310407757",
+      "1563750317",
+      "1666430308",
+      "727420859",
+      "1178857169"
+    ],
+    "google_play_ids": [
+      "5440507456444391869",
+      "6330309011255539991",
+      "7401370038771571034",
+      "7012903250586157610",
+      "7061793672440066856",
+      "CHEN MING-YUEH",
+      "XD Entertainment Pte Ltd",
+      "CHEN SHIN HSIUNG",
+      "X.D. Network"
+    ],
+    "top": 64
+  },
+  "雷霆游戏": {
+    "ios_ids": [
+      "1031897588",
+      "696521940",
+      "1512565013",
+      "1676220745",
+      "1284300915",
+      "901738792",
+      "1249150547",
+      "1434798393"
+    ],
+    "google_play_ids": [
+      "LTGAMES GLOBAL",
+      "5555212361646746302",
+      "LT games",
+      "LTGAME GLOBAL",
+      "7638875499705349244",
+      "BOLTRAY GAMES",
+      "LAVAGaming",
+      "JYSGaming",
+      "JYSGames",
+      "Leiting Games"
+    ],
+    "top": 65
+  },
+  "Double Down Interactive LLC": {
+    "ios_ids": [
+      "485126027"
+    ],
+    "google_play_ids": [
+      "5819088965110992860",
+      "Double Down Interactive LLC"
+    ],
+    "top": 66
+  },
+  "Zeroo Gravity Games": {
+    "ios_ids": [
+      "1588007114"
+    ],
+    "google_play_ids": [
+      "6285385060368291276",
+      "Zeroo Gravity Games"
+    ],
+    "top": 67
+  },
+  "Hainan Shengchang Network Technology Co., Ltd.": {
+    "ios_ids": [
+      "1695534339"
+    ],
+    "google_play_ids": [],
+    "top": 68
+  },
+  "Blizzard Entertainment, Inc.": {
+    "ios_ids": [
+      "306862900"
+    ],
+    "google_play_ids": [
+      "8636572569301896616",
+      "Blizzard",
+      "Blizzard Entertainment",
+      "Inc."
+    ],
+    "top": 69
+  },
+  "Long Tech Network Limited": {
+    "ios_ids": [
+      "1040083066",
+      "1784406172",
+      "1128387277",
+      "1180931800",
+      "1514564892"
+    ],
+    "google_play_ids": [
+      "Long Tech Network Limited",
+      "LIFE GAME PTE. LTD.",
+      "LIFE IS A GAME LIMITED",
+      "im30.net",
+      "Make Time More Interesting Network Limited",
+      "IM30 TECHNOLOGY LIMITED",
+      "Neuron Network Limited",
+      "6090857969104390434"
+    ],
+    "top": 70
+  },
+  "ponos corporation": {
+    "ios_ids": [
+      "297248421"
+    ],
+    "google_play_ids": [
+      "PONOS Corporation",
+      "5525924818463575153"
+    ],
+    "top": 71
+  },
+  "Kakao Games Corp.": {
+    "ios_ids": [
+      "362057950",
+      "1002306740",
+      "407744771",
+      "1266185413",
+      "415597320",
+      "1435127192",
+      "526273463",
+      "1258016943",
+      "1159411932",
+      "644335616",
+      "298572967",
+      "1472304147"
+    ],
+    "google_play_ids": [
+      "6236189329207394247",
+      "Kakao Corp.",
+      "7486299358955135916",
+      "8912845857975433354",
+      "Kakao Mobility Corp.",
+      "kakaopay corp.",
+      "KakaoBank Corp.",
+      "Kakao Style Corp.",
+      "Kong Studios",
+      "Inc.",
+      "Kakao VX Corp.",
+      "Loen Entertainment",
+      "KakaoTalk Theme",
+      "croquis.com",
+      "Kakao Page Corp.",
+      "Kakao Games Corp.",
+      "Kakao Commerce",
+      "카카오뱅크",
+      "Kakao Corporation",
+      "Kakao M Corp."
+    ],
+    "top": 72
+  },
+  "Devsisters Corporation": {
+    "ios_ids": [
+      "311464410"
+    ],
+    "google_play_ids": [
+      "7767058403001139720"
+    ],
+    "top": 73
+  },
+  "Wooga": {
+    "ios_ids": [
+      "461402737"
+    ],
+    "google_play_ids": [
+      "5187629073610793871"
+    ],
+    "top": 74
+  },
+  "Riot Games, Inc": {
+    "ios_ids": [
+      "346988044",
+      "1764685949"
+    ],
+    "google_play_ids": [
+      "Riot Games",
+      "Inc",
+      "RIOT GAMES SERVICES PTE. LTD."
+    ],
+    "top": 75
+  },
+  "PLAYSTUDIOS US, LLC": {
+    "ios_ids": [
+      "624795774"
+    ],
+    "google_play_ids": [
+      "6266607152549785498",
+      "PlayStudios",
+      "6550734437960579461"
+    ],
+    "top": 76
+  },
+  "Yotta Games": {
+    "ios_ids": [
+      "1664028939",
+      "1470593249",
+      "910814521",
+      "1530324468",
+      "978992297",
+      "1235569397"
+    ],
+    "google_play_ids": [
+      "Phantix Games",
+      "WESTLAKE TECHNOLOGIES CO.",
+      "PTE. LTD",
+      "YottaGames",
+      "YOTTA GAMES",
+      "6528811196348758064",
+      "7049348108305522338",
+      "VOYAGERONE PTE. LTD.",
+      "YOTTA GAMES PTE LTD",
+      "Xiao Junyun"
+    ],
+    "top": 77
+  },
+  "Jam City, Inc.": {
+    "ios_ids": [
+      "290671617",
+      "405176113",
+      "373788528"
+    ],
+    "google_play_ids": [
+      "5509190841173705883",
+      "TinyCo"
+    ],
+    "top": 78
+  },
+  "Nexters (GDEV)": {
+    "ios_ids": [
+      "660706304"
+    ],
+    "google_play_ids": [
+      "8107855987752203465",
+      "Vangelina Savva"
+    ],
+    "top": 79
+  },
+  "Big Fish Games, Inc": {
+    "ios_ids": [
+      "292594310",
+      "1871196798",
+      "1865983885",
+      "1269668575",
+      "920182716"
+    ],
+    "google_play_ids": [
+      "5779864456489890910",
+      "BFG Entertainmnent Inc",
+      "8355317828905497231",
+      "Big Fish Games",
+      "4647361560738614803",
+      "7 Hits Games"
+    ],
+    "top": 80
+  },
+  "EWORLD": {
+    "ios_ids": [
+      "1554999509",
+      "1679513448",
+      "1478407605",
+      "1731758003",
+      "1622549166",
+      "1606899915"
+    ],
+    "google_play_ids": [
+      "SINGAPORE JUST GAME TECHNOLOGY PTE. LTD.",
+      "4779445317914863788",
+      "8955960418774897395",
+      "ESTARGAMES",
+      "IYAGAMES",
+      "SINGAPORE JUST FUN TECHNOLOGY PTE. LTD."
+    ],
+    "top": 81
+  },
+  "MYGAMES MENA FZ LLC": {
+    "ios_ids": [
+      "1754968548",
+      "1292570999",
+      "875810767",
+      "1748573674",
+      "1633448217",
+      "442143178",
+      "1539932298",
+      "652136894"
+    ],
+    "google_play_ids": [
+      "4752267657972454045",
+      "6354966239220109675",
+      "MY.GAMES VENTURE CAPITAL LTD",
+      "6208681972014538218",
+      "5496590613422638755",
+      "7645543627560774556",
+      "MAPS.ME (CYPRUS) LTD",
+      "MYGAMES MENA FZ LLC",
+      "PIXONIC",
+      "MGL MY.COM (CYPRUS) LIMITED"
+    ],
+    "top": 82
+  },
+  "Mojang": {
+    "ios_ids": [
+      "479516146"
+    ],
+    "google_play_ids": [
+      "4772240228547998649",
+      "Mojang"
+    ],
+    "top": 83
+  },
+  "Huuuge Games - Play Together": {
+    "ios_ids": [
+      "1222929957",
+      "1644070469",
+      "1471349552",
+      "314395447"
+    ],
+    "google_play_ids": [
+      "8992197787187790047",
+      "Coffee Break Games",
+      "8478335903866170260",
+      "Fun Monkey Ltd",
+      "8024798716054605949",
+      "4724408783534569859",
+      "Gamelion Studios",
+      "7636126946971633584",
+      "5440522347396167156"
+    ],
+    "top": 84
+  },
+  "Giant Network": {
+    "ios_ids": [
+      "542097913",
+      "1478410146",
+      "1502193073",
+      "938550955"
+    ],
+    "google_play_ids": [
+      "7930803962176246587",
+      "Giant Game",
+      "6341813657055536512",
+      "Giant Interactive Group",
+      "Giant Network",
+      "Giant Global",
+      "Giant       Global"
+    ],
+    "top": 85
+  },
+  "Metacore Games Oy": {
+    "ios_ids": [
+      "974585521"
+    ],
+    "google_play_ids": [
+      "7240594971851857167",
+      "Everywear Games Oy"
+    ],
+    "top": 86
+  },
+  "iKame Games - Zego Studio": {
+    "ios_ids": [
+      "1637372610",
+      "1543651631",
+      "1671721506",
+      "1592281460",
+      "1673696926"
+    ],
+    "google_play_ids": [
+      "4900731214850202819",
+      "4764343509860143092",
+      "4711295997770640883",
+      "iKame Global JSC",
+      "Zego Global Pte Ltd",
+      "5891027934210113676",
+      "8097407929876428583",
+      "Zego Global Pte"
+    ],
+    "top": 87
+  },
+  "Melsoft Games Ltd": {
+    "ios_ids": [
+      "438182507"
+    ],
+    "google_play_ids": [
+      "7512418058857457125",
+      "MelSoft",
+      "5280080061020002660"
+    ],
+    "top": 88
+  },
+  "Wildlife Studios": {
+    "ios_ids": [
+      "1721431484",
+      "618574061",
+      "1479050267",
+      "429363358"
+    ],
+    "google_play_ids": [
+      "8119287488360456150",
+      "Fun Games for Free",
+      "Fun Games For Free",
+      "8186084684070471579",
+      "7486557340409834297",
+      "Fun Games For Free Ltd",
+      "Top Free Games."
+    ],
+    "top": 89
+  },
+  "VOODOO": {
+    "ios_ids": [
+      "714804730",
+      "956239526",
+      "657096670"
+    ],
+    "google_play_ids": [
+      "VOODOO",
+      "8672611700495170178",
+      "BeReal",
+      "App Advisory"
+    ],
+    "top": 90
+  },
+  "Rovio Entertainment Oy": {
+    "ios_ids": [
+      "298910979",
+      "985584975"
+    ],
+    "google_play_ids": [
+      "9133452689932095671",
+      "Dark Matter Oy"
+    ],
+    "top": 91
+  },
+  "KOEI TECMO GAMES CO., LTD.": {
+    "ios_ids": [
+      "335308086"
+    ],
+    "google_play_ids": [
+      "KOEI TECMO GAMES CO.",
+      "LTD."
+    ],
+    "top": 92
+  },
+  "KamaGames": {
+    "ios_ids": [
+      "312479206",
+      "1487774398"
+    ],
+    "google_play_ids": [
+      "5335705331407041492",
+      "KamaGames-Korea",
+      "6179794243705556952",
+      "KamaGames Korea"
+    ],
+    "top": 93
+  },
+  "Toca Boca": {
+    "ios_ids": [
+      "419103351"
+    ],
+    "google_play_ids": [
+      "8567646723268777320"
+    ],
+    "top": 94
+  },
+  "VIZOR APPS LTD.": {
+    "ios_ids": [
+      "1568120076",
+      "1098184645"
+    ],
+    "google_play_ids": [
+      "8530020481101400394",
+      "5685833084663736990",
+      "VIZOR APPS LTD."
+    ],
+    "top": 95
+  },
+  "Bingchuan Network": {
+    "ios_ids": [
+      "1605575568",
+      "1478697635",
+      "1668975668",
+      "1756431119",
+      "1539597804",
+      "1584278644"
+    ],
+    "google_play_ids": [
+      "4623555298708963451",
+      "K3GAMES",
+      "7641042387181882567",
+      "Glacier Game",
+      "8309053968004433310",
+      "Glaciers Game"
+    ],
+    "top": 96
+  },
+  "ONEMT": {
+    "ios_ids": [
+      "1698286192",
+      "1450598084",
+      "1621059825",
+      "896047171"
+    ],
+    "google_play_ids": [
+      "8451548922865108776",
+      "8999084889030602957",
+      "ONEMT HONG KONG LIMITED",
+      "ONEMT SGP",
+      "ONEMT Ltd",
+      "7006382305291329295"
+    ],
+    "top": 97
+  },
+  "游酷盛世科技(北京)有限公司": {
+    "ios_ids": [
+      "1447922832"
+    ],
+    "google_play_ids": [],
+    "top": 98
+  },
+  "Mattel163 Limited": {
+    "ios_ids": [
+      "1344700141",
+      "1731961465"
+    ],
+    "google_play_ids": [
+      "Mattel163 Limited"
+    ],
+    "top": 99
+  },
+  "Gravity Game Vision Limited": {
+    "ios_ids": [
+      "1618358914",
+      "1588175760",
+      "1183164104",
+      "1475616326",
+      "399169590",
+      "1479016358",
+      "1453001973",
+      "1465084004"
+    ],
+    "google_play_ids": [
+      "8503167265868140693",
+      "7607104298320040017",
+      "7827533453560141672",
+      "6262333202706287552",
+      "Gravity Game Tech",
+      "6411727115793723050",
+      "6004709299668521231",
+      "Gravity Communications Co.",
+      "Ltd",
+      "GRAVITY Co.",
+      "Gravity Game Hub",
+      "GRAVITY GAME ARISE Co.",
+      "Ltd.",
+      "8767773366125402032",
+      "Gravity Communications Co..",
+      "9039637452829796984",
+      "4887640545618306758"
+    ],
+    "top": 100
+  },
+  "SayGames Ltd": {
+    "ios_ids": [
+      "1551847165",
+      "1278916211",
+      "1584815374",
+      "1405039362"
+    ],
+    "google_play_ids": [
+      "6392896734092635573",
+      "SayGames Ltd",
+      "GoLeft spol. s r. o.",
+      "SayGames",
+      "6298813763312919073",
+      "Autumn Knock Games"
+    ],
+    "top": 101
+  },
+  "網銀國際 股份有限 公司": {
+    "ios_ids": [
+      "409060861"
+    ],
+    "google_play_ids": [
+      "7898821361707275817"
+    ],
+    "top": 102
+  },
+  "杭州游卡网络技术有限公司": {
+    "ios_ids": [
+      "1089864561",
+      "1429480422",
+      "1221765434",
+      "1812609600",
+      "1186188470"
+    ],
+    "google_play_ids": [
+      "杭州游卡网络技术有限公司"
+    ],
+    "top": 103
+  },
+  "Homa": {
+    "ios_ids": [
+      "1508492426",
+      "1316437775",
+      "1592085359"
+    ],
+    "google_play_ids": [
+      "4656343638685426415",
+      "HOMA GAMES",
+      "Homa Games",
+      "Emesh Inc"
+    ],
+    "top": 104
+  },
+  "Candivore": {
+    "ios_ids": [
+      "1362025075"
+    ],
+    "google_play_ids": [
+      "6187525518349627915",
+      "Candivore"
+    ],
+    "top": 105
+  },
+  "KRAFTON, Inc.": {
+    "ios_ids": [
+      "852927650",
+      "1366526330"
+    ],
+    "google_play_ids": [
+      "4685442390253494069",
+      "KRAFTON",
+      "Inc.",
+      "PUBG CORPORATION",
+      "Bluehole"
+    ],
+    "top": 106
+  },
+  "Gamehaus Network": {
+    "ios_ids": [
+      "1562307552",
+      "1664707862",
+      "1181305700",
+      "1148842807",
+      "1619749576",
+      "1528150846",
+      "1287034099",
+      "1499936244",
+      "1532005308",
+      "1211579881",
+      "1471084051",
+      "1546336252",
+      "1311141261",
+      "1129171898",
+      "1382108509",
+      "1446858202"
+    ],
+    "google_play_ids": [
+      "Gamehaus Network",
+      "QY Games",
+      "7133304247214104051",
+      "5817729045804332618",
+      "Fantacy XClub",
+      "Epoch-Games",
+      "Gamepromo ltd",
+      "Slots Gamer",
+      "7924010181222684681",
+      "5055903126271026691",
+      "Unstoppable games",
+      "6219363235627026479",
+      "Elestorm Casino",
+      "Dafish games",
+      "GameDay Dev Team",
+      "wayne2016",
+      "Avid.ly Games",
+      "Game Up Entertainment",
+      "Fishing Carnival",
+      "avid.ly games",
+      "Avid.ly Entertainment",
+      "Gaminpower",
+      "Avid.ly",
+      "HONGKONG ZEFENG TECHNOLOGY CO.",
+      "LIMITED",
+      "Dataverse games",
+      "6035104825005107893",
+      "Elestorm Casino - Best Bingo Game",
+      "Hot Casino",
+      "GAMEHAUS PTE. LTD."
+    ],
+    "top": 107
+  },
+  "1SOFT": {
+    "ios_ids": [
+      "1439862247",
+      "1649029526",
+      "1662088347",
+      "1620655465",
+      "1795833978",
+      "1436458898"
+    ],
+    "google_play_ids": [
+      "7627571908184472902",
+      "7468795961400459851",
+      "5293766053124296887",
+      "4889071845520145564",
+      "7594991822386633020",
+      "5010210823072680001",
+      "6342368821866045726",
+      "6229681369417821587",
+      "7945041308701688258",
+      "TechArts Games",
+      "FALCON JSC",
+      "1Soft Go Global"
+    ],
+    "top": 108
+  },
+  "Happibits": {
+    "ios_ids": [
+      "1597889315"
+    ],
+    "google_play_ids": [
+      "Happibits Game"
+    ],
+    "top": 109
+  },
+  "HaoPlay Limited": {
+    "ios_ids": [
+      "1518979561",
+      "1618718019",
+      "1538377668",
+      "1661611605"
+    ],
+    "google_play_ids": [
+      "8515655196792319830",
+      "6720028475101379940",
+      "6362534608787522762",
+      "6880335665997995903",
+      "HaoPlay USA",
+      "Young Phoenix Co.",
+      "Limited",
+      "HaoPlay"
+    ],
+    "top": 110
+  },
+  "GRYPHLINE": {
+    "ios_ids": [
+      "1701568466",
+      "1719937631",
+      "1304907587"
+    ],
+    "google_play_ids": [
+      "7204391758476304499"
+    ],
+    "top": 111
+  },
+  "AppQuantum": {
+    "ios_ids": [
+      "1464501653"
+    ],
+    "google_play_ids": [
+      "4629548824296547330",
+      "AppQuantum"
+    ],
+    "top": 112
+  },
+  "Guangzhou Duoyi Network Co., Ltd.": {
+    "ios_ids": [
+      "412411824",
+      "1069228117",
+      "1595550589",
+      "1635722267",
+      "1620481294",
+      "1441411913",
+      "1635312536"
+    ],
+    "google_play_ids": [
+      "Duoyi (Hong Kong)  Interactive Entertainment-OLD",
+      "Duoyi (Hong Kong)  Interactive Entertainment",
+      "Duoyi (Hong Kong) Interactive Entertainment"
+    ],
+    "top": 113
+  },
+  "NHN Corp.": {
+    "ios_ids": [
+      "708107055",
+      "1298381858",
+      "380298670"
+    ],
+    "google_play_ids": [
+      "9081645972946213311",
+      "NHN comico Corporation",
+      "NHN hangame Corp.",
+      "NHN JAPAN Corporation"
+    ],
+    "top": 114
+  },
+  "Bytedance": {
+    "ios_ids": [
+      "1322881000",
+      "1170416082",
+      "1497663561",
+      "764976186",
+      "1701815329",
+      "1658937908",
+      "1313126203",
+      "1698257573",
+      "1616151889",
+      "912289441",
+      "484926831",
+      "1479664692",
+      "1580509304",
+      "1545102302",
+      "1188276632",
+      "1442182648",
+      "1611329263",
+      "1449445582",
+      "1479391423",
+      "1498607142"
+    ],
+    "google_play_ids": [
+      "TikTok Pte. Ltd.",
+      "Bytedance Pte. Ltd.",
+      "SPRING (SG) PTE. LTD.",
+      "POLIGON",
+      "7173436862811536298",
+      "4703595805112017538",
+      "Beijing Chuntian Zhiyun Technology Co.",
+      "Ltd.",
+      "Beijing Zhending Technology Co.",
+      "Lemon",
+      "Inc.",
+      "Nuverse",
+      "TikTok PTE.ltd.",
+      "Bytedance PTE. Ltd.",
+      "Helo Holdings Limited",
+      "BYTEDANCE PTE.LTD",
+      "Poligon",
+      "Nuverse KK",
+      "8066565653576764776",
+      "Ohayoo",
+      "POLIGON PTE. LTD.",
+      "Beijing Bytedance Technology Co.",
+      "Nuverse Games",
+      "6072458830644956088",
+      "Vigo Video",
+      "Bytedance K.K",
+      "TikTok Inc.",
+      "POLIGON PTE. LTD",
+      "POLIGON PTE LTD.",
+      "Douyin",
+      "5299725221209516149"
+    ],
+    "top": 115
+  },
+  "Yalla Group": {
+    "ios_ids": [
+      "1444567250",
+      "1712055048",
+      "1610685845",
+      "1669203075"
+    ],
+    "google_play_ids": [
+      "Aviva Sun",
+      "Metaverse Technology FZ-LLC",
+      "Yalla Technology FZ-LLC",
+      "7952134190952403359",
+      "7398573015863307963",
+      "Fyxtech HK Limited"
+    ],
+    "top": 116
+  },
+  "Smilegate, Inc.": {
+    "ios_ids": [
+      "588277915"
+    ],
+    "google_play_ids": [
+      "5153970434677900725"
+    ],
+    "top": 117
+  },
+  "Boombox Games LTD": {
+    "ios_ids": [
+      "1529787666"
+    ],
+    "google_play_ids": [
+      "6499205192421311786"
+    ],
+    "top": 118
+  },
+  "International Games System Co., Ltd.": {
+    "ios_ids": [
+      "402387648"
+    ],
+    "google_play_ids": [
+      "International Games System Co.",
+      "Ltd."
+    ],
+    "top": 119
+  },
+  "Rudel inc.": {
+    "ios_ids": [
+      "648301876"
+    ],
+    "google_play_ids": [
+      "Rudel inc."
+    ],
+    "top": 120
+  },
+  "StarFortune": {
+    "ios_ids": [
+      "1568415099",
+      "1628516807"
+    ],
+    "google_play_ids": [
+      "6712852036678955591",
+      "4922179359616923865"
+    ],
+    "top": 121
+  },
+  "DeNA Co., Ltd.": {
+    "ios_ids": [
+      "431078943",
+      "463267379",
+      "1780719528",
+      "881149457",
+      "581481118"
+    ],
+    "google_play_ids": [
+      "5614074995304947897",
+      "mobage",
+      "蝌蚪互動娛樂科技有限公司",
+      "DeNA HONG KONG LIMITED",
+      "DeNA Corp.",
+      "DeNA Co.",
+      "Ltd. Manga Box",
+      "DeNA Global Publishing",
+      "Program Twenty Three"
+    ],
+    "top": 122
+  },
+  "Kabam Games, Inc.": {
+    "ios_ids": [
+      "1453908357",
+      "445459903"
+    ],
+    "google_play_ids": [
+      "5584164941825017957",
+      "9199344989204994692"
+    ],
+    "top": 123
+  },
+  "Leniu Technology Co., Limited": {
+    "ios_ids": [
+      "1670293385",
+      "1681977869",
+      "1570607406"
+    ],
+    "google_play_ids": [
+      "5206326662801424535",
+      "Leniu Technology Co.",
+      "Limited",
+      "7507294784301118061",
+      "Leniu Games",
+      "lnhwgame"
+    ],
+    "top": 124
+  },
+  "JJWorld(Beijing) Network Technology Company Limited": {
+    "ios_ids": [
+      "472885643"
+    ],
+    "google_play_ids": [],
+    "top": 125
+  },
+  "Elex": {
+    "ios_ids": [
+      "1493742816",
+      "424770549",
+      "624476126",
+      "807340020"
+    ],
+    "google_play_ids": [
+      "6711335536439627375",
+      "Elex Wireless",
+      "Elex",
+      "Galaxy Play Technology Limited"
+    ],
+    "top": 126
+  },
+  "Warner Bros. International Enterprises": {
+    "ios_ids": [
+      "298372283",
+      "299948604"
+    ],
+    "google_play_ids": [
+      "Warner Bros. International Enterprises"
+    ],
+    "top": 127
+  },
+  "Ludia Inc.": {
+    "ios_ids": [
+      "293912963"
+    ],
+    "google_play_ids": [
+      "4725338541424081298",
+      "6650389988837544544",
+      "Ludia Inc."
+    ],
+    "top": 128
+  },
+  "2K": {
+    "ios_ids": [
+      "324563547"
+    ],
+    "google_play_ids": [
+      "6681606924556273560"
+    ],
+    "top": 129
+  },
+  "1.11": {
+    "ios_ids": [
+      "1060433596",
+      "1247721322"
+    ],
+    "google_play_ids": [
+      "7769366979601471884",
+      "0.1%"
+    ],
+    "top": 130
+  },
+  "Crowdstar Inc": {
+    "ios_ids": [
+      "321598392"
+    ],
+    "google_play_ids": [
+      "Crowdstar Inc"
+    ],
+    "top": 131
+  },
+  "Beijing Wei Wo Le Yuan Information and Technology Co., Ltd": {
+    "ios_ids": [
+      "1043817467"
+    ],
+    "google_play_ids": [],
+    "top": 132
+  },
+  "Grand Games A.Ş.": {
+    "ios_ids": [
+      "1742757639"
+    ],
+    "google_play_ids": [
+      "6430038787206489041"
+    ],
+    "top": 133
+  },
+  "WFS, Inc.": {
+    "ios_ids": [
+      "858357083",
+      "403482783",
+      "1434641297"
+    ],
+    "google_play_ids": [
+      "7573454388742517884",
+      "GREE",
+      "Inc.",
+      "GREE Inc.",
+      "GREE Inc",
+      "GREE Entertainment",
+      "funplex",
+      "Inc"
+    ],
+    "top": 134
+  },
+  "AZUR GAMES": {
+    "ios_ids": [
+      "1478916023",
+      "1296347323",
+      "1462267626",
+      "1231732979",
+      "460975962"
+    ],
+    "google_play_ids": [
+      "8232174611457920989",
+      "5464069849262017456",
+      "Jerboa Games",
+      "GameClay",
+      "6606463368796872625",
+      "RED BUTTON LLC",
+      "Ararat Games"
+    ],
+    "top": 135
+  },
+  "Chess.com": {
+    "ios_ids": [
+      "329218552"
+    ],
+    "google_play_ids": [
+      "5068259210636929122"
+    ],
+    "top": 136
+  },
+  "Shiyue Network": {
+    "ios_ids": [
+      "1745113163",
+      "1555236170",
+      "1852431406",
+      "1809372699",
+      "1519717387",
+      "1459503569",
+      "1721505144",
+      "1452104937",
+      "1612239762",
+      "1501305764",
+      "1637868869"
+    ],
+    "google_play_ids": [
+      "BLUE PLANET JOY",
+      "5888404278348200704",
+      "5032781655350152511",
+      "Sygames",
+      "SY2019",
+      "ShiYue Joy"
+    ],
+    "top": 137
+  },
+  "Beach Bum Ltd.": {
+    "ios_ids": [
+      "1076918346"
+    ],
+    "google_play_ids": [
+      "6496128650038483596"
+    ],
+    "top": 138
+  },
+  "DoubleUGames": {
+    "ios_ids": [
+      "642727746"
+    ],
+    "google_play_ids": [
+      "DoubleUGames"
+    ],
+    "top": 139
+  },
+  "Budge Studios": {
+    "ios_ids": [
+      "390712652"
+    ],
+    "google_play_ids": [
+      "7489594886728593506"
+    ],
+    "top": 140
+  },
+  "SPGFun": {
+    "ios_ids": [
+      "1406651575",
+      "1578671848",
+      "1629172529",
+      "1470032733",
+      "1687253948",
+      "1296148231"
+    ],
+    "google_play_ids": [
+      "SPGFun",
+      "7523714556490296414",
+      "5377912203767081650",
+      "Huang Jie",
+      "SUMMERFUN",
+      "SummertimeGame",
+      "SUMMERFUN PTE. LTD.",
+      "SummerfunGame",
+      "SPGGame",
+      "springgame"
+    ],
+    "top": 141
+  },
+  "NEOWIZ": {
+    "ios_ids": [
+      "392281430",
+      "967101223",
+      "356831200",
+      "1693198561",
+      "1133373707",
+      "949800192"
+    ],
+    "google_play_ids": [
+      "7923366608034857427",
+      "7754474998603501355",
+      "5895086175148238138",
+      "NEOWIZ ABLE STUDIO",
+      "GameOn Co.",
+      "Ltd.",
+      "NEOWIZ PLAY STUDIO",
+      "5720721090409394019"
+    ],
+    "top": 142
+  },
+  "YOOZOO": {
+    "ios_ids": [
+      "1436268048",
+      "525667853",
+      "930452495",
+      "1138202144",
+      "1252470561",
+      "1136569322",
+      "1423041750",
+      "1112060887"
+    ],
+    "google_play_ids": [
+      "Yoozoo (Singapore) Pte. Ltd",
+      "Yoozoo (Hongkong)",
+      "YOOZOO Inc.",
+      "YOUZU(SINGAPORE)PTE.LTD.",
+      "GTarcade",
+      "6365129696809078934",
+      "Youzu Stars",
+      "YOOZOO GAMES KOREA CO.",
+      "LTD.",
+      "Youzu (Singapore) Pte. Ltd",
+      "Youzu Games HONGKONG LIMITED",
+      "Yoozoo Global"
+    ],
+    "top": 143
+  },
+  "SHI YI NETWORK TECHNOLOGY (SHANGHAI) CO., LTD": {
+    "ios_ids": [
+      "669871978",
+      "1105222132",
+      "428474358",
+      "1144468315",
+      "966112995"
+    ],
+    "google_play_ids": [
+      "Higgs Games",
+      "Higgs Gaming",
+      "7579213553035722287",
+      "7699166371842506392",
+      "Poker City",
+      "Higgs Technology Co.",
+      "Limited",
+      "Happy Game",
+      "Happy Life",
+      "HIGGS TECHNOLOGY CO.",
+      "LIMITED",
+      "HIGGS TECHNOLOGY CO LIMITED",
+      "Higgs Technology Ltd."
+    ],
+    "top": 144
+  },
+  "Wemade Co., Ltd": {
+    "ios_ids": [
+      "467550766"
+    ],
+    "google_play_ids": [
+      "6600380343446674744",
+      "Wemade Co.",
+      "Ltd"
+    ],
+    "top": 145
+  },
+  "Sparks Info": {
+    "ios_ids": [
+      "1675413403"
+    ],
+    "google_play_ids": [
+      "7784042092088351158"
+    ],
+    "top": 146
+  },
+  "HK HORTOR TECHNOLOGY LIMITED": {
+    "ios_ids": [
+      "1873950719",
+      "1563356470",
+      "1652282647",
+      "971252960",
+      "1591171666",
+      "451113309"
+    ],
+    "google_play_ids": [
+      "5501147792080160928",
+      "hortor games",
+      "THE HORTOR TECHNOLOGY PTE.LTD.",
+      "Hortor",
+      "Hortor Interactive",
+      "Hortor Games"
+    ],
+    "top": 147
+  },
+  "Shenzhen Zen-Game Technology CO.,LTD": {
+    "ios_ids": [
+      "794759901",
+      "1450908316",
+      "886110634",
+      "1169913178",
+      "1747645120"
+    ],
+    "google_play_ids": [
+      "5992907654803117276",
+      "7966139032346418553",
+      "ZENGAME",
+      "ZENGAME INTERACTIVE LIMITED"
+    ],
+    "top": 148
+  },
+  "Nintendo Co., Ltd.": {
+    "ios_ids": [
+      "1062496488"
+    ],
+    "google_play_ids": [
+      "7277267556905944956"
+    ],
+    "top": 149
+  },
+  "Funstage": {
+    "ios_ids": [
+      "452677265",
+      "370358797",
+      "713998160"
+    ],
+    "google_play_ids": [
+      "8128532516213169694"
+    ],
+    "top": 150
+  }
+}

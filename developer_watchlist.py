@@ -1,5 +1,6 @@
 ﻿from __future__ import annotations
 
+import asyncio
 import json
 from datetime import datetime, timezone
 from pathlib import Path
@@ -323,6 +324,20 @@ def monitor_core_developers(
         "raw_count": len(discovered_apps),
         "deduped_count": len(deduped_apps),
     }
+
+
+def monitor_core_developers_fast(
+    targets: list[dict[str, Any]] | None = None,
+    *,
+    concurrency: int = 10,
+) -> dict[str, Any]:
+    watch_targets = targets or CORE_DEVELOPERS
+    try:
+        from async_monitoring import monitor_targets_async
+        return asyncio.run(monitor_targets_async(watch_targets, concurrency=concurrency))
+    except Exception:
+        return monitor_core_developers(watch_targets)
+
 
 
 def extract_monitored_app_ids(apps: list[dict[str, Any]]) -> list[str]:

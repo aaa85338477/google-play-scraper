@@ -1,4 +1,4 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 import importlib
 import json
@@ -8,6 +8,8 @@ from datetime import datetime, timedelta, timezone
 from typing import Any
 
 import requests
+
+from monitoring_labels import infer_market_signal
 
 try:
     from google_play_scraper import app as gp_app
@@ -57,6 +59,7 @@ class GameRecord:
     url: str | None = None
     source: str | None = None
     genre_verified: bool = True
+    market_signal: str | None = None
 
     def to_dict(self) -> dict[str, Any]:
         return {
@@ -75,6 +78,7 @@ class GameRecord:
             "url": self.url,
             "source": self.source,
             "genre_verified": self.genre_verified,
+            "market_signal": self.market_signal,
         }
 
 
@@ -146,6 +150,10 @@ def is_app_store_game(lookup_item: dict[str, Any]) -> bool:
     )
 
 
+def build_market_signal(*, title: str | None, description: str | None, url: str | None) -> str:
+    return infer_market_signal(title=title, description=description, url=url)
+
+
 def fetch_app_store_games(
     age_days: int = DEFAULT_MAX_GAME_AGE_DAYS,
 ) -> tuple[list[dict[str, Any]], dict[str, Any]]:
@@ -190,6 +198,11 @@ def fetch_app_store_games(
             url=item.get("url"),
             source=APP_STORE_SOURCE,
             genre_verified=True,
+            market_signal=build_market_signal(
+                title=item.get("name"),
+                description=lookup_item.get("description"),
+                url=item.get("url"),
+            ),
         )
         games.append(record.to_dict())
 
@@ -402,6 +415,11 @@ def fetch_google_play_games(
             url=f"https://play.google.com/store/apps/details?id={app_id}",
             source=source,
             genre_verified=True,
+            market_signal=build_market_signal(
+                title=details.get("title"),
+                description=details.get("description"),
+                url=f"https://play.google.com/store/apps/details?id={app_id}",
+            ),
         )
         games.append(record.to_dict())
 
@@ -431,7 +449,7 @@ def heuristic_gameplay_summary(game: dict[str, Any]) -> str:
     traits: list[str] = []
     lowered = cleaned.lower()
     keyword_pairs = [
-        ("multiplayer", "可能有多人协作或对战卖点"),
+        ("multiplayer", "可能包含多人合作或对抗卖点"),
         ("puzzle", "偏解谜或关卡挑战"),
         ("strategy", "强调策略搭配"),
         ("idle", "带放置成长节奏"),
@@ -443,8 +461,8 @@ def heuristic_gameplay_summary(game: dict[str, Any]) -> str:
     for keyword, label in keyword_pairs:
         if keyword in lowered:
             traits.append(label)
-    trait_text = "，".join(traits[:3]) if traits else "题材和循环还需要人工复核"
-    return f"{lead}。核心判断：{trait_text}。"
+    trait_text = "；".join(traits[:3]) if traits else "题材和循环还需要人工复核"
+    return f"{lead}。核心印象：{trait_text}。"
 
 
 def call_llm(messages: list[dict[str, str]]) -> str | None:
@@ -488,6 +506,7 @@ def generate_gameplay_summary(game: dict[str, Any]) -> str:
             "ratings": game.get("ratings"),
             "description": game.get("description"),
             "released_at": game.get("released_at"),
+            "market_signal": game.get("market_signal"),
         },
         ensure_ascii=False,
     )
@@ -513,7 +532,7 @@ def fallback_markdown(game: dict[str, Any], summary: str) -> str:
 
     return f"""# {game.get('title')}
 
-> 选题判断：这款游戏适合放进“近期新游观察”类稿件中。
+> 选题判断：这款游戏适合放进“近期值得关注的新游”观察稿件中。
 
 ## 一句话看点
 
@@ -524,23 +543,24 @@ def fallback_markdown(game: dict[str, Any], summary: str) -> str:
 - 平台：{game.get('store')}
 - 开发者：{game.get('developer') or '未知'}
 - 上线时间：{game.get('released_at') or '未知'}
+- 发行信号：{game.get('market_signal') or 'unknown'}
 - 商店评分：{rating_text}
 - 商业化：{monetization_text}
 - 商店链接：{game.get('url') or '暂无'}
 
 ## 值得关注的原因
 
-1. 这款产品足够新，适合放进“近几天新游”选题框架里。
-2. 商店页已经提供了基本的题材、玩法与视觉信息，足够支撑一版快稿。
-3. 可以结合截图做“玩法机制 + 美术风格 + 受众判断”的三段式表达。
+1. 这款产品具备明确题材和玩法表达，适合进入新游观察池。
+2. 商店页已经提供了基础卖点、截图和评分信息，足够支撑一版初稿。
+3. 可以结合截图快速判断美术包装、核心循环和受众人群。
 
 ## 稿件正文
 
-最近上新的游戏里，值得留意的一款是《{game.get('title')}》。
+最近值得留意的一款产品是《{game.get('title')}》。
 
-从商店公开信息看，这款产品最值得优先提炼的卖点是：{summary}
+从商店公开信息来看，这款游戏当前最值得优先提炼的内容是：{summary}
 
-如果要做成公众号稿件，建议第一段先交代题材与核心循环，第二段补上线时间、评分与商业化信息，第三段落到“适合谁玩、是否值得现在就试”。
+如果要整理成公众号稿件，建议第一段先交代题材和核心玩法，第二段补充上线时间、评分和商业化信息，第三段再落到“适合谁玩、值不值得继续追踪”。
 
 ## 配图建议
 

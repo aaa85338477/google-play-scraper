@@ -20,6 +20,8 @@ BITABLE_FIELDS_URL_TEMPLATE = (
 )
 REQUEST_TIMEOUT = 30
 DEFAULT_PAGE_SIZE = 500
+FIRST_SEEN_FIELD_NAME = "First_Seen_At"
+
 RICH_FIELD_NAMES = [
     "App_ID",
     "Raw_App_ID",
@@ -174,6 +176,32 @@ def extract_app_ids(records: list[dict[str, Any]], field_name: str = "App_ID") -
     return app_ids
 
 
+def extract_first_seen_map(
+    records: list[dict[str, Any]],
+    id_field_name: str = "App_ID",
+    first_seen_field_name: str = FIRST_SEEN_FIELD_NAME,
+) -> dict[str, str]:
+    first_seen_map: dict[str, str] = {}
+
+    for record in records:
+        fields = record.get("fields", {})
+        app_id = normalize_text(fields.get(id_field_name))
+        first_seen_at = normalize_text(fields.get(first_seen_field_name))
+        if app_id and first_seen_at:
+            first_seen_map[app_id] = first_seen_at
+
+    return first_seen_map
+
+
+def get_first_seen_map() -> dict[str, str]:
+    tenant_access_token = get_tenant_access_token()
+    if not tenant_access_token:
+        return {}
+
+    records = list_bitable_records(tenant_access_token)
+    return extract_first_seen_map(records)
+
+
 def get_existing_app_ids() -> list[str]:
     tenant_access_token = get_tenant_access_token()
     if not tenant_access_token:
@@ -270,7 +298,7 @@ def build_game_record_fields(game: dict[str, Any]) -> dict[str, str]:
         "Watch_Priority": normalize_text(game.get("watch_priority")),
         "Release_Date": normalize_text(game.get("released_at")),
         "Source": source,
-        "First_Seen_At": datetime.now(timezone.utc).isoformat(),
+        FIRST_SEEN_FIELD_NAME: normalize_text(game.get("first_seen_at")) or datetime.now(timezone.utc).isoformat(),
     }
     return {key: value for key, value in fields.items() if value}
 

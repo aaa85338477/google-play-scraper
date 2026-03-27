@@ -1,7 +1,7 @@
 ﻿from __future__ import annotations
 
 import json
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 from urllib.parse import quote_plus
@@ -30,7 +30,6 @@ REQUEST_TIMEOUT = 30
 CORE_DEVELOPERS_PATH = Path(__file__).with_name("core_developers.json")
 TAG_FIELDS = ["company_region", "company_type", "company_scale", "watch_priority"]
 RANK_FIELD = "publisher_rank"
-DEFAULT_MONITOR_MAX_APP_AGE_DAYS = 30
 
 
 def load_core_developers(config_path: Path = CORE_DEVELOPERS_PATH) -> list[dict[str, Any]]:
@@ -136,16 +135,6 @@ def serialize_release_date(released_at: datetime | None) -> str | None:
     return released_at.astimezone(timezone.utc).isoformat()
 
 
-def is_recent_release(
-    released_at: datetime | None,
-    age_days: int = DEFAULT_MONITOR_MAX_APP_AGE_DAYS,
-    now: datetime | None = None,
-) -> bool:
-    if released_at is None:
-        return False
-    current_time = now or datetime.now(timezone.utc)
-    threshold = current_time - timedelta(days=age_days)
-    return released_at >= threshold
 
 
 def enrich_monitored_app(base: dict[str, Any], target: dict[str, Any]) -> dict[str, Any]:
@@ -163,7 +152,6 @@ def enrich_monitored_app(base: dict[str, Any], target: dict[str, Any]) -> dict[s
 
 def fetch_google_play_developer_apps(
     target: dict[str, Any],
-    age_days: int = DEFAULT_MONITOR_MAX_APP_AGE_DAYS,
 ) -> list[dict[str, Any]]:
     if gp_search is None or gp_app is None:
         raise RuntimeError("google-play-scraper is not installed.")
@@ -192,8 +180,6 @@ def fetch_google_play_developer_apps(
             continue
         details = gp_app(app_id, lang=GOOGLE_PLAY_LANG, country=GOOGLE_PLAY_COUNTRY)
         released_at = parse_google_play_release_date(details)
-        if not is_recent_release(released_at, age_days=age_days):
-            continue
         app = {
             "store": "google_play",
             "developer_label": target["label"],
@@ -223,7 +209,6 @@ def fetch_google_play_developer_apps(
 
 def fetch_app_store_developer_apps(
     target: dict[str, Any],
-    age_days: int = DEFAULT_MONITOR_MAX_APP_AGE_DAYS,
 ) -> list[dict[str, Any]]:
     term = quote_plus(target["query"])
     url = APP_STORE_SEARCH_URL_TEMPLATE.format(
@@ -249,8 +234,6 @@ def fetch_app_store_developer_apps(
         ):
             continue
         released_at = parse_app_store_release_date(item)
-        if not is_recent_release(released_at, age_days=age_days):
-            continue
         app_id = str(item.get("trackId"))
         app = {
             "store": "app_store",
@@ -281,19 +264,17 @@ def fetch_app_store_developer_apps(
 
 def fetch_apps_for_target(
     target: dict[str, Any],
-    age_days: int = DEFAULT_MONITOR_MAX_APP_AGE_DAYS,
 ) -> list[dict[str, Any]]:
     if target["store"] == "google_play":
-        return fetch_google_play_developer_apps(target, age_days=age_days)
+        return fetch_google_play_developer_apps(target)
     if target["store"] == "app_store":
-        return fetch_app_store_developer_apps(target, age_days=age_days)
+        return fetch_app_store_developer_apps(target)
     raise ValueError(f"Unsupported store: {target['store']}")
 
 
 
 def monitor_core_developers(
     targets: list[dict[str, Any]] | None = None,
-    age_days: int = DEFAULT_MONITOR_MAX_APP_AGE_DAYS,
 ) -> dict[str, Any]:
     watch_targets = targets or CORE_DEVELOPERS
     discovered_apps: list[dict[str, Any]] = []
@@ -301,7 +282,7 @@ def monitor_core_developers(
 
     for target in watch_targets:
         try:
-            apps = fetch_apps_for_target(target, age_days=age_days)
+            apps = fetch_apps_for_target(target)
             target_summaries.append(
                 {
                     "label": target["label"],
@@ -344,7 +325,6 @@ def monitor_core_developers(
         "apps": deduped_apps,
         "raw_count": len(discovered_apps),
         "deduped_count": len(deduped_apps),
-        "max_age_days": age_days,
     }
 
 

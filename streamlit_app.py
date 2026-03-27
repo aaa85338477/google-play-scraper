@@ -6,7 +6,13 @@ from typing import Any
 import streamlit as st
 
 from developer_watchlist import CORE_DEVELOPERS, monitor_core_developers
-from feishu_bitable import RICH_FIELD_NAMES, sync_game_records_to_bitable
+from feishu_bitable import RICH_FIELD_NAMES, get_first_seen_map, sync_game_records_to_bitable
+from first_seen_tracker import (
+    filter_apps_by_first_seen_window,
+    load_first_seen_cache,
+    resolve_first_seen_for_apps,
+    save_first_seen_cache,
+)
 from monitoring_labels import market_signal_label
 
 TAG_FIELDS = ["company_region", "company_type", "company_scale", "watch_priority"]
@@ -22,7 +28,7 @@ TAG_VALUE_LABELS = {
     "company_scale": {"head": "头部", "mid": "中型", "small": "小型"},
     "watch_priority": {"p0": "P0 高优先级", "p1": "P1 重点观察", "p2": "P2 常规跟踪"},
 }
-DEFAULT_AGE_DAYS = 30
+DEFAULT_FIRST_DETECTED_DAYS = 8
 
 st.set_page_config(page_title="核心厂商监控台", page_icon=":video_game:", layout="wide")
 
@@ -95,7 +101,7 @@ def rank_bounds() -> tuple[int, int]:
 
 
 for key, default in {
-    "status_message": "点击左侧“监控核心厂商”，系统会按厂商名单和排名范围扫描双端新包，并且只保留最近 30 天内上线的应用。",
+    "status_message": "点击左侧“监控核心厂商”，系统会按厂商名单和排名范围扫描双端应用，再按首次检测到时间窗口展示结果。",
     "last_source": "",
     "last_counts": {"raw_count": 0, "filtered_count": 0},
     "monitor_snapshot": None,
@@ -106,6 +112,7 @@ for key, default in {
     "company_scale_filters": all_tag_options("company_scale"),
     "watch_priority_filters": all_tag_options("watch_priority"),
     "publisher_rank_range": rank_bounds(),
+    "first_detected_days": DEFAULT_FIRST_DETECTED_DAYS,
 }.items():
     if key not in st.session_state:
         st.session_state[key] = default
@@ -159,33 +166,52 @@ def target_stats(targets: list[dict[str, Any]]) -> dict[str, int]:
     }
 
 
+def enrich_with_first_seen(apps: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    cache_map = load_first_seen_cache()
+    feishu_map = get_first_seen_map()
+    known_map = {**cache_map, **feishu_map}
+    resolved_apps, resolved_map = resolve_first_seen_for_apps(apps, known_map)
+    save_first_seen_cache(resolved_map)
+    return resolved_apps
+
+
 def monitor_watchlist() -> None:
     targets = filtered_monitor_targets()
     if not targets:
-        st.session_state.status_message = "当前筛选条件下没有可监控的厂商目标，请调整左侧标签或排名范围。"
+        st.session_state.status_message = "当前筛选条件下没有可监控的厂商目标，请调整左侧标签、排名范围或首次检测窗口。"
         return
 
     try:
         with st.spinner("正在扫描核心厂商监控列表..."):
-            snapshot = monitor_core_developers(targets, age_days=DEFAULT_AGE_DAYS)
+            snapshot = monitor_core_developers(targets)
+            resolved_apps = enrich_with_first_seen(snapshot.get("apps", []))
+            filtered_apps = filter_apps_by_first_seen_window(
+                resolved_apps,
+                st.session_state.first_detected_days,
+            )
     except Exception as exc:
         st.session_state.status_message = f"核心厂商监控失败：{exc}"
         return
 
+    snapshot["apps"] = filtered_apps
+    snapshot["deduped_count"] = len(filtered_apps)
+    snapshot["first_detected_days"] = st.session_state.first_detected_days
+    snapshot["raw_detected_count"] = len(resolved_apps)
+
     st.session_state.monitor_snapshot = snapshot
     st.session_state.selected_app_id = None
     st.session_state.feishu_sync_result = None
-    st.session_state.last_source = f"核心厂商监控 / 最近 {snapshot.get('max_age_days', DEFAULT_AGE_DAYS)} 天"
+    st.session_state.last_source = f"核心厂商监控 / 首次检测 {st.session_state.first_detected_days} 天内"
     st.session_state.last_counts = {
-        "raw_count": snapshot.get("raw_count", 0),
+        "raw_count": snapshot.get("raw_detected_count", 0),
         "filtered_count": snapshot.get("deduped_count", 0),
     }
     min_rank, max_rank = st.session_state.publisher_rank_range
     st.session_state.status_message = (
         f"已完成 {len(snapshot.get('targets', []))} 个厂商目标的扫描，"
         f"排名范围 Top {min_rank} - Top {max_rank}，"
-        f"仅保留最近 {snapshot.get('max_age_days', DEFAULT_AGE_DAYS)} 天内上线的应用，"
-        f"共发现 {snapshot.get('deduped_count', 0)} 个去重后的应用。"
+        f"仅展示首次检测时间在最近 {st.session_state.first_detected_days} 天内的应用，"
+        f"共发现 {snapshot.get('deduped_count', 0)} 个结果。"
     )
 
 
@@ -238,13 +264,13 @@ def current_apps() -> list[dict[str, Any]]:
 
 
 st.title("核心厂商监控台")
-st.caption("运营监控工作台：按厂商名单和排名范围扫描双端新包，只保留最近 30 天上线的应用，并把结果同步到飞书多维表格。")
+st.caption("运营监控工作台：按厂商名单和排名范围扫描双端应用，并按首次检测到时间窗口展示结果，再把记录同步到飞书多维表格。")
 
 left_col, center_col, right_col = st.columns([1.15, 2.25, 1.75], gap="large")
 
 with left_col:
     st.markdown("### 控制栏")
-    st.caption("当前监控窗口固定为最近 30 天")
+    st.caption("首次检测时间窗口可调，范围为最近 1 到 30 天")
     st.markdown("### 厂商筛选")
     rank_min, rank_max = rank_bounds()
     st.slider(
@@ -254,7 +280,14 @@ with left_col:
         value=st.session_state.get("publisher_rank_range", (rank_min, rank_max)),
         key="publisher_rank_range",
     )
-    st.caption("只扫描排名落在该区间内的厂商；数字越小代表排名越靠前。")
+    st.slider(
+        "首次检测窗口（天）",
+        min_value=1,
+        max_value=30,
+        value=st.session_state.get("first_detected_days", DEFAULT_FIRST_DETECTED_DAYS),
+        key="first_detected_days",
+    )
+    st.caption("例如选择 8 天，则会展示首次检测时间在最近 8 天内的应用。")
     for field in TAG_FIELDS:
         options = all_tag_options(field)
         st.multiselect(
@@ -264,8 +297,16 @@ with left_col:
             key=f"{field}_filters",
             format_func=lambda value, current_field=field: format_tag_value(current_field, value),
         )
+    current_target_stats = target_stats(filtered_monitor_targets())
+    stat_left, stat_right = st.columns(2)
+    with stat_left:
+        st.metric("监控目标数", current_target_stats["target_count"])
+        st.metric("Google Play 目标", current_target_stats["google_play_count"])
+    with stat_right:
+        st.metric("覆盖厂商数", current_target_stats["publisher_count"])
+        st.metric("App Store 目标", current_target_stats["app_store_count"])
     st.markdown(
-        '<div class="sidebar-note">当前页面只使用方案三：先按左侧标签和排名筛出目标厂商，再逐个扫描新包，只保留最近 30 天内上线的应用，并为结果动态标注发行信号。</div>',
+        '<div class="sidebar-note">当前页面使用方案三：先按左侧标签和排名筛出目标厂商，再扫描厂商名下应用，并按首次检测时间窗口展示结果。首次检测时间优先读取飞书记忆，没有时会写入本地缓存作为兜底。</div>',
         unsafe_allow_html=True,
     )
     if st.button(f"监控核心厂商（{len(filtered_monitor_targets())} 个目标）", type="primary", width="stretch"):
@@ -280,16 +321,17 @@ with left_col:
         st.write(f"数据源：`{st.session_state.last_source}`")
     counts = st.session_state.last_counts
     if counts.get("raw_count"):
-        st.write(f"原始候选：`{counts['raw_count']}`")
-        st.write(f"最终结果：`{counts['filtered_count']}`")
+        st.write(f"原始检测：`{counts['raw_count']}`")
+        st.write(f"窗口结果：`{counts['filtered_count']}`")
 
     if st.session_state.monitor_snapshot is not None:
         snapshot = st.session_state.monitor_snapshot
         st.divider()
         st.markdown("### 厂商巡检")
         st.write(f"监控目标：`{len(snapshot.get('targets', []))}`")
-        st.write(f"发现应用：`{snapshot.get('deduped_count', 0)}`")
-        st.write(f"上线窗口：`最近 {snapshot.get('max_age_days', DEFAULT_AGE_DAYS)} 天`")
+        st.write(f"原始检测：`{snapshot.get('raw_detected_count', 0)}`")
+        st.write(f"窗口结果：`{snapshot.get('deduped_count', 0)}`")
+        st.write(f"首次检测窗口：`最近 {snapshot.get('first_detected_days', DEFAULT_FIRST_DETECTED_DAYS)} 天`")
         st.write(f"当前排名：`Top {st.session_state.publisher_rank_range[0]} - Top {st.session_state.publisher_rank_range[1]}`")
         failed_targets = [target for target in snapshot.get("targets", []) if not target.get("success")]
         if failed_targets:
@@ -311,7 +353,7 @@ with left_col:
         st.divider()
         st.markdown("### 飞书同步")
         if sync_result.get("success"):
-            st.success(f"已写入 {result.get('written_count', 0)} 条新记录")
+            st.success(f"已写入 {sync_result.get('written_count', 0)} 条新记录")
         else:
             st.error("同步失败，请检查飞书配置")
         st.write(f"历史记录数：`{len(sync_result.get('existing_app_ids', []))}`")
@@ -353,10 +395,13 @@ with center_col:
                     )
                     st.caption(f"厂商标签：{company_tag_summary(app)}")
                     st.caption(f"厂商排名：{rank_label(app)}")
+                    if app.get("first_seen_at"):
+                        st.caption(f"首次检测：{app['first_seen_at'][:10]}")
                     if app.get("released_at"):
-                        st.caption(f"上线时间：{app['released_at'][:10]}")
+                        st.caption(f"商店上线：{app['released_at'][:10]}")
                     st.caption(f"发行信号：{signal_label}")
-                    st.markdown(f'<div class="summary-box">{safe_summary}</div>', unsafe_allow_html=True)
+                    with st.expander("查看商店文案", expanded=False):
+                        st.markdown(f'<div class="summary-box">{safe_summary}</div>', unsafe_allow_html=True)
                     st.caption(f"监控键：{app['store']}::{app['app_id']}")
                 with card_right:
                     if st.button("查看详情", key=f"select_{app['store']}_{app['app_id']}", width="stretch"):
@@ -375,10 +420,12 @@ with right_col:
         st.write(f"平台：`{selected.get('store', 'unknown')}`")
         st.write(f"开发者：`{selected.get('developer_name') or '未知'}`")
         st.write(f"厂商排名：`{rank_label(selected)}`")
+        if selected.get("first_seen_at"):
+            st.write(f"首次检测：`{selected['first_seen_at'][:10]}`")
+        if selected.get("released_at"):
+            st.write(f"商店上线：`{selected['released_at'][:10]}`")
         st.write(f"发行信号：`{market_signal_label(selected.get('market_signal'))}`")
         st.write(f"厂商标签：`{company_tag_summary(selected)}`")
-        if selected.get("released_at"):
-            st.write(f"上线时间：`{selected['released_at'][:10]}`")
         if selected.get("url"):
             st.link_button("打开商店详情页", selected["url"], width="stretch")
         st.text_area(

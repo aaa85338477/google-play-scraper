@@ -104,16 +104,13 @@ def matches_target(item: dict[str, Any], *, name_field: str, id_fields: list[str
 
 
 def parse_app_store_release_date(item: dict[str, Any]) -> datetime | None:
-    for key in ("releaseDate", "currentVersionReleaseDate"):
-        value = item.get(key)
-        if not isinstance(value, str) or not value:
-            continue
-        normalized = value.replace("Z", "+00:00")
-        try:
-            return datetime.fromisoformat(normalized)
-        except ValueError:
-            continue
-    return None
+    value = item.get("releaseDate")
+    if not isinstance(value, str) or not value:
+        return None
+    try:
+        return datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except ValueError:
+        return None
 
 
 def parse_google_play_release_date(details: dict[str, Any]) -> datetime | None:

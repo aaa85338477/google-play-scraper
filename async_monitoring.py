@@ -1,4 +1,4 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 import asyncio
 from typing import Any
@@ -9,8 +9,7 @@ import aiohttp
 from developer_watchlist import (
     APP_STORE_SEARCH_LIMIT,
     APP_STORE_SEARCH_URL_TEMPLATE,
-    GOOGLE_PLAY_LANG,
-    GOOGLE_PLAY_SEARCH_LIMIT,
+    DEFAULT_SCAN_MODE,
     REQUEST_TIMEOUT,
     enrich_monitored_app,
     fetch_google_play_developer_apps,
@@ -19,6 +18,7 @@ from developer_watchlist import (
     merge_monitored_apps,
     normalize_country_codes,
     parse_app_store_release_date,
+    resolve_scan_countries,
     serialize_release_date,
 )
 
@@ -59,10 +59,12 @@ async def fetch_developer_apps(
     *,
     target: dict[str, Any] | None = None,
     countries: list[str] | None = None,
+    scan_mode: str = DEFAULT_SCAN_MODE,
     semaphore: asyncio.Semaphore | None = None,
 ) -> list[dict[str, Any]]:
     gate = semaphore or asyncio.Semaphore(1)
     monitor_countries = normalize_country_codes(countries)
+    discovery_countries, expansion_countries, all_countries = resolve_scan_countries(monitor_countries, scan_mode)
 
     async with gate:
         if platform == "app_store":
@@ -70,7 +72,7 @@ async def fetch_developer_apps(
                 raise ValueError("App Store async fetch requires session and target.")
 
             term = quote_plus(target["query"])
-            payloads = await asyncio.gather(
+            discovery_payloads = await asyncio.gather(
                 *[
                     fetch_json(
                         session,
@@ -80,14 +82,13 @@ async def fetch_developer_apps(
                             limit=APP_STORE_SEARCH_LIMIT,
                         ),
                     )
-                    for country in monitor_countries
+                    for country in discovery_countries
                 ]
             )
 
-            apps: list[dict[str, Any]] = []
-            for country, payload in zip(monitor_countries, payloads):
-                results = payload.get("results", [])
-                for item in results:
+            candidates: dict[str, dict[str, Any]] = {}
+            for country, payload in zip(discovery_countries, discovery_payloads):
+                for item in payload.get("results", []):
                     if not is_app_store_game_candidate(item):
                         continue
                     if not matches_target(
@@ -97,28 +98,71 @@ async def fetch_developer_apps(
                         target=target,
                     ):
                         continue
-                    released_at = parse_app_store_release_date(item)
                     app_id = str(item.get("trackId"))
-                    app = {
-                        "store": "app_store",
-                        "developer_label": target["label"],
-                        "developer_name": item.get("artistName") or target["label"],
-                        "developer_id": item.get("artistId") or item.get("sellerId"),
-                        "app_id": app_id,
-                        "title": item.get("trackName"),
-                        "url": item.get("trackViewUrl"),
-                        "icon_url": item.get("artworkUrl100"),
-                        "summary": item.get("description"),
-                        "released_at": serialize_release_date(released_at),
-                        "score": item.get("averageUserRating"),
-                        "ratings": item.get("userRatingCount"),
-                        "source_country": country,
-                        "observed_countries": [country],
-                        "first_observed_country": country,
-                        "seen_in_us": country == "us",
-                    }
-                    apps.append(enrich_monitored_app(app, target))
-            return merge_monitored_apps(apps, monitor_countries)
+                    existing = candidates.setdefault(
+                        app_id,
+                        {"base_item": item, "discovery_country": country, "observed_countries": []},
+                    )
+                    if country not in existing["observed_countries"]:
+                        existing["observed_countries"].append(country)
+
+            if scan_mode == "full" and candidates:
+                wanted_ids = set(candidates.keys())
+                expansion_payloads = await asyncio.gather(
+                    *[
+                        fetch_json(
+                            session,
+                            APP_STORE_SEARCH_URL_TEMPLATE.format(
+                                term=term,
+                                country=country,
+                                limit=APP_STORE_SEARCH_LIMIT,
+                            ),
+                        )
+                        for country in expansion_countries
+                    ]
+                )
+                for country, payload in zip(expansion_countries, expansion_payloads):
+                    for item in payload.get("results", []):
+                        app_id = str(item.get("trackId"))
+                        if app_id not in wanted_ids:
+                            continue
+                        if not is_app_store_game_candidate(item):
+                            continue
+                        if not matches_target(
+                            item,
+                            name_field="artistName",
+                            id_fields=["artistId", "artist_id", "sellerId", "seller_id"],
+                            target=target,
+                        ):
+                            continue
+                        if country not in candidates[app_id]["observed_countries"]:
+                            candidates[app_id]["observed_countries"].append(country)
+
+            apps: list[dict[str, Any]] = []
+            for app_id, candidate in candidates.items():
+                item = candidate["base_item"]
+                discovery_country = candidate["discovery_country"]
+                released_at = parse_app_store_release_date(item)
+                app = {
+                    "store": "app_store",
+                    "developer_label": target["label"],
+                    "developer_name": item.get("artistName") or target["label"],
+                    "developer_id": item.get("artistId") or item.get("sellerId"),
+                    "app_id": app_id,
+                    "title": item.get("trackName"),
+                    "url": item.get("trackViewUrl"),
+                    "icon_url": item.get("artworkUrl100"),
+                    "summary": item.get("description"),
+                    "released_at": serialize_release_date(released_at),
+                    "score": item.get("averageUserRating"),
+                    "ratings": item.get("userRatingCount"),
+                    "source_country": discovery_country,
+                    "observed_countries": list(candidate["observed_countries"]),
+                    "first_observed_country": discovery_country,
+                    "seen_in_us": "us" in candidate["observed_countries"],
+                }
+                apps.append(enrich_monitored_app(app, target))
+            return merge_monitored_apps(apps, all_countries)
 
         if platform == "google_play":
             last_error: Exception | None = None
@@ -127,7 +171,8 @@ async def fetch_developer_apps(
                     return await asyncio.to_thread(
                         fetch_google_play_developer_apps,
                         target or {"query": developer_id},
-                        monitor_countries,
+                        all_countries,
+                        scan_mode=scan_mode,
                     )
                 except Exception as exc:
                     last_error = exc
@@ -145,6 +190,7 @@ async def run_target(
     app_store_semaphore: asyncio.Semaphore,
     google_play_semaphore: asyncio.Semaphore,
     countries: list[str],
+    scan_mode: str,
 ) -> dict[str, Any]:
     try:
         if target["store"] == "app_store":
@@ -154,6 +200,7 @@ async def run_target(
                 "app_store",
                 target=target,
                 countries=countries,
+                scan_mode=scan_mode,
                 semaphore=app_store_semaphore,
             )
         elif target["store"] == "google_play":
@@ -163,6 +210,7 @@ async def run_target(
                 "google_play",
                 target=target,
                 countries=countries,
+                scan_mode=scan_mode,
                 semaphore=google_play_semaphore,
             )
         else:
@@ -205,8 +253,10 @@ async def monitor_targets_async(
     *,
     concurrency: int = DEFAULT_MAX_CONCURRENCY,
     countries: list[str] | None = None,
+    scan_mode: str = DEFAULT_SCAN_MODE,
 ) -> dict[str, Any]:
     monitor_countries = normalize_country_codes(countries)
+    discovery_countries, expansion_countries, active_countries = resolve_scan_countries(monitor_countries, scan_mode)
     timeout = aiohttp.ClientTimeout(total=REQUEST_TIMEOUT)
     connector = aiohttp.TCPConnector(limit=max(concurrency, 1))
     app_store_semaphore = asyncio.Semaphore(min(concurrency, APP_STORE_MAX_CONCURRENCY))
@@ -215,7 +265,7 @@ async def monitor_targets_async(
     async with aiohttp.ClientSession(timeout=timeout, connector=connector) as session:
         task_results = await asyncio.gather(
             *[
-                run_target(session, target, app_store_semaphore, google_play_semaphore, monitor_countries)
+                run_target(session, target, app_store_semaphore, google_play_semaphore, active_countries, scan_mode)
                 for target in targets
             ]
         )
@@ -226,12 +276,15 @@ async def monitor_targets_async(
         discovered_apps.extend(result.pop("apps", []))
         target_summaries.append(result)
 
-    deduped_apps = merge_monitored_apps(discovered_apps, monitor_countries)
+    deduped_apps = merge_monitored_apps(discovered_apps, active_countries)
     return {
         "targets": target_summaries,
         "apps": deduped_apps,
         "raw_count": len(discovered_apps),
         "deduped_count": len(deduped_apps),
         "concurrency": concurrency,
-        "countries": monitor_countries,
+        "countries": active_countries,
+        "discovery_countries": discovery_countries,
+        "expansion_countries": expansion_countries,
+        "scan_mode": scan_mode,
     }

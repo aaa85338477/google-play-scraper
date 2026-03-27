@@ -6,7 +6,12 @@ from typing import Any
 
 import streamlit as st
 
-from developer_watchlist import CORE_DEVELOPERS, DEFAULT_MONITOR_COUNTRIES, monitor_core_developers_fast
+from developer_watchlist import (
+    CORE_DEVELOPERS,
+    DEFAULT_MONITOR_COUNTRIES,
+    DEFAULT_SCAN_MODE,
+    monitor_core_developers_fast,
+)
 from feishu_bitable import RICH_FIELD_NAMES, sync_game_records_to_bitable
 from monitoring_labels import market_signal_label
 
@@ -35,6 +40,10 @@ COUNTRY_LABELS = {
     "tw": "中国台湾",
     "us": "美国",
 }
+SCAN_MODE_OPTIONS = {
+    "quick": "快速模式",
+    "full": "完整模式",
+}
 DEFAULT_RELEASE_WINDOW_DAYS = 8
 
 st.set_page_config(page_title="核心厂商监控台", page_icon=":video_game:", layout="wide")
@@ -48,9 +57,7 @@ st.markdown(
             radial-gradient(circle at 85% 15%, rgba(103, 190, 255, 0.18), transparent 26%),
             linear-gradient(180deg, #f8f4ec 0%, #f3efe7 100%);
     }
-    .stApp {
-        color: #1d2433;
-    }
+    .stApp { color: #1d2433; }
     .panel-card {
         background: rgba(255, 255, 255, 0.86);
         border: 1px solid rgba(29, 36, 51, 0.08);
@@ -60,17 +67,8 @@ st.markdown(
         margin-bottom: 16px;
         backdrop-filter: blur(8px);
     }
-    .game-title {
-        font-size: 1.1rem;
-        font-weight: 700;
-        color: #17324d;
-        margin-bottom: 4px;
-    }
-    .game-meta {
-        color: #5f6b7a;
-        font-size: 0.92rem;
-        margin-bottom: 8px;
-    }
+    .game-title { font-size: 1.1rem; font-weight: 700; color: #17324d; margin-bottom: 4px; }
+    .game-meta { color: #5f6b7a; font-size: 0.92rem; margin-bottom: 8px; }
     .summary-box {
         background: #f7f1e7;
         border-radius: 14px;
@@ -80,11 +78,7 @@ st.markdown(
         line-height: 1.55;
         min-height: 84px;
     }
-    .sidebar-note {
-        font-size: 0.9rem;
-        color: #5d6673;
-        line-height: 1.5;
-    }
+    .sidebar-note { font-size: 0.9rem; color: #5d6673; line-height: 1.5; }
     </style>
     """,
     unsafe_allow_html=True,
@@ -146,6 +140,7 @@ for key, default in {
     "publisher_rank_range": rank_bounds(),
     "release_window_days": DEFAULT_RELEASE_WINDOW_DAYS,
     "monitor_countries": list(DEFAULT_MONITOR_COUNTRIES),
+    "scan_mode": DEFAULT_SCAN_MODE,
 }.items():
     if key not in st.session_state:
         st.session_state[key] = default
@@ -196,6 +191,7 @@ def target_stats(targets: list[dict[str, Any]]) -> dict[str, int]:
 def monitor_watchlist() -> None:
     targets = filtered_monitor_targets()
     selected_countries = st.session_state.get("monitor_countries", list(DEFAULT_MONITOR_COUNTRIES))
+    scan_mode = st.session_state.get("scan_mode", DEFAULT_SCAN_MODE)
     if not targets:
         st.session_state.status_message = "当前筛选条件下没有可监控的厂商目标，请调整左侧标签、排名范围或首发时间窗口。"
         return
@@ -205,7 +201,12 @@ def monitor_watchlist() -> None:
 
     try:
         with st.spinner("正在扫描核心厂商监控列表..."):
-            snapshot = monitor_core_developers_fast(targets, concurrency=10, countries=selected_countries)
+            snapshot = monitor_core_developers_fast(
+                targets,
+                concurrency=10,
+                countries=selected_countries,
+                scan_mode=scan_mode,
+            )
             raw_apps = snapshot.get("apps", [])
             filtered_apps = [
                 app for app in raw_apps if within_release_window(app.get("released_at"), st.session_state.release_window_days)
@@ -218,12 +219,11 @@ def monitor_watchlist() -> None:
     snapshot["deduped_count"] = len(filtered_apps)
     snapshot["release_window_days"] = st.session_state.release_window_days
     snapshot["raw_detected_count"] = len(raw_apps)
-    snapshot["countries"] = selected_countries
 
     st.session_state.monitor_snapshot = snapshot
     st.session_state.selected_app_id = None
     st.session_state.feishu_sync_result = None
-    st.session_state.last_source = f"核心厂商监控 / 监控地区 {format_country_list(selected_countries)}"
+    st.session_state.last_source = f"核心厂商监控 / {SCAN_MODE_OPTIONS.get(scan_mode, scan_mode)} / 监控地区 {format_country_list(snapshot.get('countries', selected_countries))}"
     st.session_state.last_counts = {
         "raw_count": snapshot.get("raw_detected_count", 0),
         "filtered_count": snapshot.get("deduped_count", 0),
@@ -232,8 +232,9 @@ def monitor_watchlist() -> None:
     st.session_state.status_message = (
         f"已完成 {len(snapshot.get('targets', []))} 个厂商目标的扫描，"
         f"排名范围 Top {min_rank} - Top {max_rank}，"
-        f"监控地区为 {format_country_list(selected_countries)}，"
-        f"仅展示首次上架到商店时间在最近 {st.session_state.release_window_days} 天内的应用，"
+        f"当前为{SCAN_MODE_OPTIONS.get(scan_mode, scan_mode)}，"
+        f"发现池 {format_country_list(snapshot.get('discovery_countries', []))}，"
+        f"补扫池 {format_country_list(snapshot.get('expansion_countries', [])) if snapshot.get('expansion_countries') else '未启用'}，"
         f"共发现 {snapshot.get('deduped_count', 0)} 个结果。"
     )
 
@@ -287,29 +288,25 @@ def current_apps() -> list[dict[str, Any]]:
 
 
 st.title("核心厂商监控台")
-st.caption("运营监控工作台：按厂商名单和排名范围扫描双端应用，先看多地区可见性，再按商店首发时间窗口过滤结果。")
+st.caption("运营监控工作台：支持快速模式和完整模式。快速模式先扫高价值软发地区，完整模式再补扫其余国家。")
 
 left_col, center_col, right_col = st.columns([1.15, 2.25, 1.75], gap="large")
 
 with left_col:
     st.markdown("### 控制栏")
-    st.caption("第一步先做多地区可见性监控，首发时间窗口仍然按商店发布日期过滤")
+    st.radio(
+        "扫描模式",
+        options=list(SCAN_MODE_OPTIONS.keys()),
+        index=list(SCAN_MODE_OPTIONS.keys()).index(st.session_state.get("scan_mode", DEFAULT_SCAN_MODE)),
+        key="scan_mode",
+        format_func=lambda value: SCAN_MODE_OPTIONS[value],
+        horizontal=True,
+    )
+    st.caption("快速模式只扫少数高价值软发地区；完整模式会在命中候选后补扫其余国家。")
     st.markdown("### 厂商筛选")
     rank_min, rank_max = rank_bounds()
-    st.slider(
-        "排名范围",
-        min_value=rank_min,
-        max_value=rank_max,
-        value=st.session_state.get("publisher_rank_range", (rank_min, rank_max)),
-        key="publisher_rank_range",
-    )
-    st.slider(
-        "首次上架窗口（天）",
-        min_value=1,
-        max_value=30,
-        value=st.session_state.get("release_window_days", DEFAULT_RELEASE_WINDOW_DAYS),
-        key="release_window_days",
-    )
+    st.slider("排名范围", min_value=rank_min, max_value=rank_max, value=st.session_state.get("publisher_rank_range", (rank_min, rank_max)), key="publisher_rank_range")
+    st.slider("首次上架窗口（天）", min_value=1, max_value=30, value=st.session_state.get("release_window_days", DEFAULT_RELEASE_WINDOW_DAYS), key="release_window_days")
     st.multiselect(
         "监控地区",
         options=list(COUNTRY_LABELS.keys()),
@@ -317,7 +314,7 @@ with left_col:
         key="monitor_countries",
         format_func=format_country,
     )
-    st.caption("系统会在这些地区下查询同一个厂商目标，再把同一款应用合并成一条记录，展示它当前在哪些地区可见。")
+    st.caption("系统会先在发现池里找候选，再按模式决定是否补扫其他国家。")
     for field in TAG_FIELDS:
         options = all_tag_options(field)
         st.multiselect(
@@ -336,7 +333,7 @@ with left_col:
         st.metric("覆盖厂商数", current_target_stats["publisher_count"])
         st.metric("App Store 目标", current_target_stats["app_store_count"])
     st.markdown(
-        '<div class="sidebar-note">当前页面先做多地区可见性监控：按左侧标签和排名筛出目标厂商，再到多个地区查询厂商名下应用，并把同一款应用的可见地区合并展示。这里的“首次上架”仍然是商店发布日期，不是工具第一次发现它的时间。</div>',
+        '<div class="sidebar-note">当前版本做了性能优化：快速模式只扫少数高价值地区；完整模式才会补扫其余国家。Google Play 详情也按 app_id 去重，并加入本地缓存，避免重复请求。</div>',
         unsafe_allow_html=True,
     )
     if st.button(f"监控核心厂商（{len(filtered_monitor_targets())} 个目标）", type="primary", width="stretch"):
@@ -359,25 +356,14 @@ with left_col:
         st.divider()
         st.markdown("### 厂商巡检")
         st.write(f"监控目标：`{len(snapshot.get('targets', []))}`")
-        st.write(f"监控地区：`{format_country_list(snapshot.get('countries', []))}`")
+        st.write(f"扫描模式：`{SCAN_MODE_OPTIONS.get(snapshot.get('scan_mode'), snapshot.get('scan_mode'))}`")
+        st.write(f"发现池：`{format_country_list(snapshot.get('discovery_countries', []))}`")
+        st.write(f"补扫池：`{format_country_list(snapshot.get('expansion_countries', [])) if snapshot.get('expansion_countries') else '未启用'}`")
         st.write(f"原始检测：`{snapshot.get('raw_detected_count', 0)}`")
         st.write(f"窗口结果：`{snapshot.get('deduped_count', 0)}`")
-        st.write(f"首发窗口：`最近 {snapshot.get('release_window_days', DEFAULT_RELEASE_WINDOW_DAYS)} 天`")
-        st.write(f"当前排名：`Top {st.session_state.publisher_rank_range[0]} - Top {st.session_state.publisher_rank_range[1]}`")
         failed_targets = [target for target in snapshot.get("targets", []) if not target.get("success")]
         if failed_targets:
             st.warning(f"有 {len(failed_targets)} 个厂商巡检失败，请展开日志排查。")
-        with st.expander("查看监控配置"):
-            for target in filtered_monitor_targets()[:80]:
-                aliases = "、".join(target.get("developer_names", [])) or "未配置别名"
-                developer_ids = "、".join(target.get("developer_ids", [])) or "未配置开发者标识"
-                st.markdown(
-                    f"- `{target['store']}` / **{target['label']}** / {rank_label(target)}\n"
-                    f"  标签：{company_tag_summary(target)}\n"
-                    f"  查询词：`{target['query']}`\n"
-                    f"  名称白名单：{aliases}\n"
-                    f"  开发者标识：{developer_ids}"
-                )
 
     if st.session_state.feishu_sync_result is not None:
         sync_result = st.session_state.feishu_sync_result
@@ -400,10 +386,7 @@ with center_col:
     st.markdown("### 监控结果")
     apps = current_apps()
     if not apps:
-        st.markdown(
-            '<div class="panel-card">还没有可展示的监控结果。请先点击左侧“监控核心厂商”。</div>',
-            unsafe_allow_html=True,
-        )
+        st.markdown('<div class="panel-card">还没有可展示的监控结果。请先点击左侧“监控核心厂商”。</div>', unsafe_allow_html=True)
     else:
         for app in apps:
             safe_title = html.escape(app.get("title") or "未知应用")
@@ -420,10 +403,7 @@ with center_col:
                         st.image(app["icon_url"], width=92)
                 with card_mid:
                     st.markdown(f'<div class="game-title">{safe_title}</div>', unsafe_allow_html=True)
-                    st.markdown(
-                        f'<div class="game-meta">{safe_developer} · {safe_store} · 监控来源：{safe_source}</div>',
-                        unsafe_allow_html=True,
-                    )
+                    st.markdown(f'<div class="game-meta">{safe_developer} · {safe_store} · 监控来源：{safe_source}</div>', unsafe_allow_html=True)
                     st.caption(f"厂商标签：{company_tag_summary(app)}")
                     st.caption(f"厂商排名：{rank_label(app)}")
                     if app.get("released_at"):

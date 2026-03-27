@@ -1,7 +1,8 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 import asyncio
 import json
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -28,10 +29,69 @@ GOOGLE_PLAY_SEARCH_LIMIT = 120
 APP_STORE_COUNTRY = "us"
 APP_STORE_SEARCH_LIMIT = 200
 DEFAULT_MONITOR_COUNTRIES = ["ca", "au", "nz", "sg", "ph", "my", "id", "hk", "tw", "us"]
+DISCOVERY_COUNTRIES = ["sg", "ca", "au", "hk", "tw"]
+EXPANSION_COUNTRIES = ["ph", "my", "id", "nz", "us"]
+DEFAULT_SCAN_MODE = "quick"
+CACHE_TTL_SECONDS = 6 * 60 * 60
 REQUEST_TIMEOUT = 30
 CORE_DEVELOPERS_PATH = Path(__file__).with_name("core_developers.json")
 TAG_FIELDS = ["company_region", "company_type", "company_scale", "watch_priority"]
 RANK_FIELD = "publisher_rank"
+
+_REQUEST_CACHE: dict[tuple[Any, ...], tuple[float, Any]] = {}
+
+
+def get_cache_value(key: tuple[Any, ...]) -> Any | None:
+    cached = _REQUEST_CACHE.get(key)
+    if not cached:
+        return None
+    expires_at, value = cached
+    if expires_at < time.time():
+        _REQUEST_CACHE.pop(key, None)
+        return None
+    return value
+
+
+def set_cache_value(key: tuple[Any, ...], value: Any, ttl_seconds: int = CACHE_TTL_SECONDS) -> Any:
+    _REQUEST_CACHE[key] = (time.time() + ttl_seconds, value)
+    return value
+
+
+def cached_requests_json(url: str, *, timeout: int = REQUEST_TIMEOUT) -> dict[str, Any]:
+    key = ("requests_json", url)
+    cached = get_cache_value(key)
+    if cached is not None:
+        return cached
+    response = requests.get(url, timeout=timeout)
+    response.raise_for_status()
+    return set_cache_value(key, response.json())
+
+
+def cached_google_play_search(query: str, country: str) -> list[dict[str, Any]]:
+    if gp_search is None:
+        raise RuntimeError("google-play-scraper is not installed.")
+    key = ("gp_search", query.casefold(), country, GOOGLE_PLAY_LANG, GOOGLE_PLAY_SEARCH_LIMIT)
+    cached = get_cache_value(key)
+    if cached is not None:
+        return cached
+    results = gp_search(
+        query,
+        lang=GOOGLE_PLAY_LANG,
+        country=country,
+        n_hits=GOOGLE_PLAY_SEARCH_LIMIT,
+    )
+    return set_cache_value(key, results)
+
+
+def cached_google_play_app(app_id: str, country: str) -> dict[str, Any]:
+    if gp_app is None:
+        raise RuntimeError("google-play-scraper is not installed.")
+    key = ("gp_app", app_id, country, GOOGLE_PLAY_LANG)
+    cached = get_cache_value(key)
+    if cached is not None:
+        return cached
+    details = gp_app(app_id, lang=GOOGLE_PLAY_LANG, country=country)
+    return set_cache_value(key, details)
 
 
 def load_core_developers(config_path: Path = CORE_DEVELOPERS_PATH) -> list[dict[str, Any]]:
@@ -79,6 +139,20 @@ def normalize_country_codes(countries: list[str] | None) -> list[str]:
         seen.add(value)
         normalized.append(value)
     return normalized or list(DEFAULT_MONITOR_COUNTRIES)
+
+
+def resolve_scan_countries(
+    countries: list[str] | None = None,
+    scan_mode: str = DEFAULT_SCAN_MODE,
+) -> tuple[list[str], list[str], list[str]]:
+    normalized = normalize_country_codes(countries)
+    discovery_defaults = [country for country in DISCOVERY_COUNTRIES if country in normalized]
+    if not discovery_defaults:
+        discovery_defaults = normalized[: min(len(normalized), 5)]
+    if scan_mode == "full":
+        expansion = [country for country in normalized if country not in discovery_defaults]
+        return discovery_defaults, expansion, discovery_defaults + expansion
+    return discovery_defaults, [], discovery_defaults
 
 
 def is_google_play_game_candidate(item: dict[str, Any]) -> bool:
@@ -201,21 +275,18 @@ def enrich_monitored_app(base: dict[str, Any], target: dict[str, Any]) -> dict[s
 def fetch_google_play_developer_apps(
     target: dict[str, Any],
     countries: list[str] | None = None,
+    *,
+    scan_mode: str = DEFAULT_SCAN_MODE,
 ) -> list[dict[str, Any]]:
     if gp_search is None or gp_app is None:
         raise RuntimeError("google-play-scraper is not installed.")
 
     query = target["query"]
-    monitor_countries = normalize_country_codes(countries)
+    discovery_countries, expansion_countries, all_countries = resolve_scan_countries(countries, scan_mode)
 
-    apps: list[dict[str, Any]] = []
-    for country in monitor_countries:
-        results = gp_search(
-            query,
-            lang=GOOGLE_PLAY_LANG,
-            country=country,
-            n_hits=GOOGLE_PLAY_SEARCH_LIMIT,
-        )
+    candidates: dict[str, dict[str, Any]] = {}
+    for country in discovery_countries:
+        results = cached_google_play_search(query, country)
         for item in results:
             if not is_google_play_game_candidate(item):
                 continue
@@ -229,52 +300,75 @@ def fetch_google_play_developer_apps(
             app_id = item.get("appId") or item.get("app_id")
             if not app_id:
                 continue
-            details = gp_app(app_id, lang=GOOGLE_PLAY_LANG, country=country)
-            released_at = parse_google_play_release_date(details)
-            app = {
-                "store": "google_play",
-                "developer_label": target["label"],
-                "developer_name": details.get("developer") or item.get("developer") or target["label"],
-                "developer_id": item.get("developerId") or item.get("developer_id"),
-                "app_id": app_id,
-                "title": details.get("title") or item.get("title"),
-                "url": f"https://play.google.com/store/apps/details?id={app_id}",
-                "icon_url": details.get("icon") or item.get("icon"),
-                "summary": details.get("description") or item.get("summary"),
-                "released_at": serialize_release_date(released_at),
-                "score": details.get("score"),
-                "ratings": details.get("ratings"),
-                "source_country": country,
-                "observed_countries": [country],
-                "first_observed_country": country,
-                "seen_in_us": country == "us",
-            }
-            apps.append(enrich_monitored_app(app, target))
+            existing = candidates.setdefault(
+                app_id,
+                {
+                    "search_item": item,
+                    "discovery_country": country,
+                    "observed_countries": [],
+                },
+            )
+            if country not in existing["observed_countries"]:
+                existing["observed_countries"].append(country)
 
-    return merge_monitored_apps(apps, monitor_countries)
+    apps: list[dict[str, Any]] = []
+    for app_id, candidate in candidates.items():
+        discovery_country = candidate["discovery_country"]
+        item = candidate["search_item"]
+        details = cached_google_play_app(app_id, discovery_country)
+        released_at = parse_google_play_release_date(details)
+        observed_countries = list(candidate["observed_countries"])
+
+        if scan_mode == "full":
+            for country in expansion_countries:
+                try:
+                    cached_google_play_app(app_id, country)
+                    if country not in observed_countries:
+                        observed_countries.append(country)
+                except Exception:
+                    continue
+
+        app = {
+            "store": "google_play",
+            "developer_label": target["label"],
+            "developer_name": details.get("developer") or item.get("developer") or target["label"],
+            "developer_id": item.get("developerId") or item.get("developer_id"),
+            "app_id": app_id,
+            "title": details.get("title") or item.get("title"),
+            "url": f"https://play.google.com/store/apps/details?id={app_id}",
+            "icon_url": details.get("icon") or item.get("icon"),
+            "summary": details.get("description") or item.get("summary"),
+            "released_at": serialize_release_date(released_at),
+            "score": details.get("score"),
+            "ratings": details.get("ratings"),
+            "source_country": discovery_country,
+            "observed_countries": observed_countries,
+            "first_observed_country": discovery_country,
+            "seen_in_us": "us" in observed_countries,
+        }
+        apps.append(enrich_monitored_app(app, target))
+
+    return merge_monitored_apps(apps, all_countries)
 
 
 def fetch_app_store_developer_apps(
     target: dict[str, Any],
     countries: list[str] | None = None,
+    *,
+    scan_mode: str = DEFAULT_SCAN_MODE,
 ) -> list[dict[str, Any]]:
-    monitor_countries = normalize_country_codes(countries)
+    discovery_countries, expansion_countries, all_countries = resolve_scan_countries(countries, scan_mode)
     term = quote_plus(target["query"])
 
-    apps: list[dict[str, Any]] = []
-    for country in monitor_countries:
+    candidates: dict[str, dict[str, Any]] = {}
+    for country in discovery_countries:
         url = APP_STORE_SEARCH_URL_TEMPLATE.format(
             term=term,
             country=country,
             limit=APP_STORE_SEARCH_LIMIT,
         )
-
-        response = requests.get(url, timeout=REQUEST_TIMEOUT)
-        response.raise_for_status()
-        payload = response.json()
-        results = payload.get("results", [])
-
-        for item in results:
+        payload = cached_requests_json(url)
+        for item in payload.get("results", []):
             if not is_app_store_game_candidate(item):
                 continue
             if not matches_target(
@@ -284,39 +378,81 @@ def fetch_app_store_developer_apps(
                 target=target,
             ):
                 continue
-            released_at = parse_app_store_release_date(item)
             app_id = str(item.get("trackId"))
-            app = {
-                "store": "app_store",
-                "developer_label": target["label"],
-                "developer_name": item.get("artistName") or target["label"],
-                "developer_id": item.get("artistId") or item.get("sellerId"),
-                "app_id": app_id,
-                "title": item.get("trackName"),
-                "url": item.get("trackViewUrl"),
-                "icon_url": item.get("artworkUrl100"),
-                "summary": item.get("description"),
-                "released_at": serialize_release_date(released_at),
-                "score": item.get("averageUserRating"),
-                "ratings": item.get("userRatingCount"),
-                "source_country": country,
-                "observed_countries": [country],
-                "first_observed_country": country,
-                "seen_in_us": country == "us",
-            }
-            apps.append(enrich_monitored_app(app, target))
+            existing = candidates.setdefault(
+                app_id,
+                {
+                    "base_item": item,
+                    "discovery_country": country,
+                    "observed_countries": [],
+                },
+            )
+            if country not in existing["observed_countries"]:
+                existing["observed_countries"].append(country)
 
-    return merge_monitored_apps(apps, monitor_countries)
+    if scan_mode == "full" and candidates:
+        wanted_ids = set(candidates.keys())
+        for country in expansion_countries:
+            url = APP_STORE_SEARCH_URL_TEMPLATE.format(
+                term=term,
+                country=country,
+                limit=APP_STORE_SEARCH_LIMIT,
+            )
+            payload = cached_requests_json(url)
+            for item in payload.get("results", []):
+                app_id = str(item.get("trackId"))
+                if app_id not in wanted_ids:
+                    continue
+                if not is_app_store_game_candidate(item):
+                    continue
+                if not matches_target(
+                    item,
+                    name_field="artistName",
+                    id_fields=["artistId", "artist_id", "sellerId", "seller_id"],
+                    target=target,
+                ):
+                    continue
+                if country not in candidates[app_id]["observed_countries"]:
+                    candidates[app_id]["observed_countries"].append(country)
+
+    apps: list[dict[str, Any]] = []
+    for app_id, candidate in candidates.items():
+        item = candidate["base_item"]
+        discovery_country = candidate["discovery_country"]
+        released_at = parse_app_store_release_date(item)
+        app = {
+            "store": "app_store",
+            "developer_label": target["label"],
+            "developer_name": item.get("artistName") or target["label"],
+            "developer_id": item.get("artistId") or item.get("sellerId"),
+            "app_id": app_id,
+            "title": item.get("trackName"),
+            "url": item.get("trackViewUrl"),
+            "icon_url": item.get("artworkUrl100"),
+            "summary": item.get("description"),
+            "released_at": serialize_release_date(released_at),
+            "score": item.get("averageUserRating"),
+            "ratings": item.get("userRatingCount"),
+            "source_country": discovery_country,
+            "observed_countries": list(candidate["observed_countries"]),
+            "first_observed_country": discovery_country,
+            "seen_in_us": "us" in candidate["observed_countries"],
+        }
+        apps.append(enrich_monitored_app(app, target))
+
+    return merge_monitored_apps(apps, all_countries)
 
 
 def fetch_apps_for_target(
     target: dict[str, Any],
     countries: list[str] | None = None,
+    *,
+    scan_mode: str = DEFAULT_SCAN_MODE,
 ) -> list[dict[str, Any]]:
     if target["store"] == "google_play":
-        return fetch_google_play_developer_apps(target, countries=countries)
+        return fetch_google_play_developer_apps(target, countries=countries, scan_mode=scan_mode)
     if target["store"] == "app_store":
-        return fetch_app_store_developer_apps(target, countries=countries)
+        return fetch_app_store_developer_apps(target, countries=countries, scan_mode=scan_mode)
     raise ValueError(f"Unsupported store: {target['store']}")
 
 
@@ -324,15 +460,16 @@ def monitor_core_developers(
     targets: list[dict[str, Any]] | None = None,
     *,
     countries: list[str] | None = None,
+    scan_mode: str = DEFAULT_SCAN_MODE,
 ) -> dict[str, Any]:
     watch_targets = targets or CORE_DEVELOPERS
-    monitor_countries = normalize_country_codes(countries)
+    discovery_countries, expansion_countries, active_countries = resolve_scan_countries(countries, scan_mode)
     discovered_apps: list[dict[str, Any]] = []
     target_summaries: list[dict[str, Any]] = []
 
     for target in watch_targets:
         try:
-            apps = fetch_apps_for_target(target, countries=monitor_countries)
+            apps = fetch_apps_for_target(target, countries=active_countries, scan_mode=scan_mode)
             target_summaries.append(
                 {
                     "label": target["label"],
@@ -375,7 +512,10 @@ def monitor_core_developers(
         "apps": deduped_apps,
         "raw_count": len(discovered_apps),
         "deduped_count": len(deduped_apps),
-        "countries": monitor_countries,
+        "countries": active_countries,
+        "discovery_countries": discovery_countries,
+        "expansion_countries": expansion_countries,
+        "scan_mode": scan_mode,
     }
 
 
@@ -384,20 +524,22 @@ def monitor_core_developers_fast(
     *,
     concurrency: int = 10,
     countries: list[str] | None = None,
+    scan_mode: str = DEFAULT_SCAN_MODE,
 ) -> dict[str, Any]:
     watch_targets = targets or CORE_DEVELOPERS
-    monitor_countries = normalize_country_codes(countries)
+    _, _, active_countries = resolve_scan_countries(countries, scan_mode)
     try:
         from async_monitoring import monitor_targets_async
         return asyncio.run(
             monitor_targets_async(
                 watch_targets,
                 concurrency=concurrency,
-                countries=monitor_countries,
+                countries=active_countries,
+                scan_mode=scan_mode,
             )
         )
     except Exception:
-        return monitor_core_developers(watch_targets, countries=monitor_countries)
+        return monitor_core_developers(watch_targets, countries=active_countries, scan_mode=scan_mode)
 
 
 def extract_monitored_app_ids(apps: list[dict[str, Any]]) -> list[str]:

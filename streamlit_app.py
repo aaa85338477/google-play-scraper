@@ -320,7 +320,7 @@ with left_col:
     st.markdown(
         (
             '<div class="sidebar-note">榜单抓取会保留“官方分类明确为游戏”且“最近 N 天内上线”的项目。'
-            '厂商监控会先按左侧标签筛出目标厂商，再逐个扫描新包，并为结果动态标注发行信号。</div>'
+            '厂商监控会先按左侧标签筛出目标厂商，再逐个扫描新包，只保留最近 30 天内上线的应用，并为结果动态标注发行信号。</div>'
         ),
         unsafe_allow_html=True,
     )
@@ -351,6 +351,7 @@ with left_col:
         st.markdown("### 厂商巡检")
         st.write(f"监控目标：`{len(snapshot.get('targets', []))}`")
         st.write(f"发现应用：`{snapshot.get('deduped_count', 0)}`")
+        st.write(f"上线窗口：`最近 {snapshot.get('max_age_days', 30)} 天`")
         failed_targets = [target for target in snapshot.get("targets", []) if not target.get("success")]
         if failed_targets:
             st.warning(f"有 {len(failed_targets)} 个厂商巡检失败，请展开日志排查。")
@@ -488,4 +489,6 @@ with right_col:
                 """
             ).strip()
         )
+
+
 

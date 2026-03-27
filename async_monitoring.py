@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 
 import asyncio
 from typing import Any
@@ -7,16 +7,17 @@ from urllib.parse import quote_plus
 import aiohttp
 
 from developer_watchlist import (
-    APP_STORE_COUNTRY,
     APP_STORE_SEARCH_LIMIT,
     APP_STORE_SEARCH_URL_TEMPLATE,
-    GOOGLE_PLAY_COUNTRY,
     GOOGLE_PLAY_LANG,
+    GOOGLE_PLAY_SEARCH_LIMIT,
     REQUEST_TIMEOUT,
     enrich_monitored_app,
     fetch_google_play_developer_apps,
     is_app_store_game_candidate,
     matches_target,
+    merge_monitored_apps,
+    normalize_country_codes,
     parse_app_store_release_date,
     serialize_release_date,
 )
@@ -57,57 +58,77 @@ async def fetch_developer_apps(
     platform: str,
     *,
     target: dict[str, Any] | None = None,
+    countries: list[str] | None = None,
     semaphore: asyncio.Semaphore | None = None,
 ) -> list[dict[str, Any]]:
     gate = semaphore or asyncio.Semaphore(1)
+    monitor_countries = normalize_country_codes(countries)
 
     async with gate:
         if platform == "app_store":
             if session is None or target is None:
                 raise ValueError("App Store async fetch requires session and target.")
+
             term = quote_plus(target["query"])
-            url = APP_STORE_SEARCH_URL_TEMPLATE.format(
-                term=term,
-                country=APP_STORE_COUNTRY,
-                limit=APP_STORE_SEARCH_LIMIT,
+            payloads = await asyncio.gather(
+                *[
+                    fetch_json(
+                        session,
+                        APP_STORE_SEARCH_URL_TEMPLATE.format(
+                            term=term,
+                            country=country,
+                            limit=APP_STORE_SEARCH_LIMIT,
+                        ),
+                    )
+                    for country in monitor_countries
+                ]
             )
-            payload = await fetch_json(session, url)
-            results = payload.get("results", [])
+
             apps: list[dict[str, Any]] = []
-            for item in results:
-                if not is_app_store_game_candidate(item):
-                    continue
-                if not matches_target(
-                    item,
-                    name_field="artistName",
-                    id_fields=["artistId", "artist_id", "sellerId", "seller_id"],
-                    target=target,
-                ):
-                    continue
-                released_at = parse_app_store_release_date(item)
-                app_id = str(item.get("trackId"))
-                app = {
-                    "store": "app_store",
-                    "developer_label": target["label"],
-                    "developer_name": item.get("artistName") or target["label"],
-                    "developer_id": item.get("artistId") or item.get("sellerId"),
-                    "app_id": app_id,
-                    "title": item.get("trackName"),
-                    "url": item.get("trackViewUrl"),
-                    "icon_url": item.get("artworkUrl100"),
-                    "summary": item.get("description"),
-                    "released_at": serialize_release_date(released_at),
-                    "score": item.get("averageUserRating"),
-                    "ratings": item.get("userRatingCount"),
-                }
-                apps.append(enrich_monitored_app(app, target))
-            return dedupe_apps(apps)
+            for country, payload in zip(monitor_countries, payloads):
+                results = payload.get("results", [])
+                for item in results:
+                    if not is_app_store_game_candidate(item):
+                        continue
+                    if not matches_target(
+                        item,
+                        name_field="artistName",
+                        id_fields=["artistId", "artist_id", "sellerId", "seller_id"],
+                        target=target,
+                    ):
+                        continue
+                    released_at = parse_app_store_release_date(item)
+                    app_id = str(item.get("trackId"))
+                    app = {
+                        "store": "app_store",
+                        "developer_label": target["label"],
+                        "developer_name": item.get("artistName") or target["label"],
+                        "developer_id": item.get("artistId") or item.get("sellerId"),
+                        "app_id": app_id,
+                        "title": item.get("trackName"),
+                        "url": item.get("trackViewUrl"),
+                        "icon_url": item.get("artworkUrl100"),
+                        "summary": item.get("description"),
+                        "released_at": serialize_release_date(released_at),
+                        "score": item.get("averageUserRating"),
+                        "ratings": item.get("userRatingCount"),
+                        "source_country": country,
+                        "observed_countries": [country],
+                        "first_observed_country": country,
+                        "seen_in_us": country == "us",
+                    }
+                    apps.append(enrich_monitored_app(app, target))
+            return merge_monitored_apps(apps, monitor_countries)
 
         if platform == "google_play":
             last_error: Exception | None = None
             for attempt in range(DEFAULT_RETRIES + 1):
                 try:
-                    return await asyncio.to_thread(fetch_google_play_developer_apps, target or {"query": developer_id})
+                    return await asyncio.to_thread(
+                        fetch_google_play_developer_apps,
+                        target or {"query": developer_id},
+                        monitor_countries,
+                    )
                 except Exception as exc:
                     last_error = exc
                     if attempt >= DEFAULT_RETRIES:
@@ -123,6 +144,7 @@ async def run_target(
     target: dict[str, Any],
     app_store_semaphore: asyncio.Semaphore,
     google_play_semaphore: asyncio.Semaphore,
+    countries: list[str],
 ) -> dict[str, Any]:
     try:
         if target["store"] == "app_store":
@@ -131,6 +153,7 @@ async def run_target(
                 target["query"],
                 "app_store",
                 target=target,
+                countries=countries,
                 semaphore=app_store_semaphore,
             )
         elif target["store"] == "google_play":
@@ -139,6 +162,7 @@ async def run_target(
                 target["query"],
                 "google_play",
                 target=target,
+                countries=countries,
                 semaphore=google_play_semaphore,
             )
         else:
@@ -180,7 +204,9 @@ async def monitor_targets_async(
     targets: list[dict[str, Any]],
     *,
     concurrency: int = DEFAULT_MAX_CONCURRENCY,
+    countries: list[str] | None = None,
 ) -> dict[str, Any]:
+    monitor_countries = normalize_country_codes(countries)
     timeout = aiohttp.ClientTimeout(total=REQUEST_TIMEOUT)
     connector = aiohttp.TCPConnector(limit=max(concurrency, 1))
     app_store_semaphore = asyncio.Semaphore(min(concurrency, APP_STORE_MAX_CONCURRENCY))
@@ -189,7 +215,7 @@ async def monitor_targets_async(
     async with aiohttp.ClientSession(timeout=timeout, connector=connector) as session:
         task_results = await asyncio.gather(
             *[
-                run_target(session, target, app_store_semaphore, google_play_semaphore)
+                run_target(session, target, app_store_semaphore, google_play_semaphore, monitor_countries)
                 for target in targets
             ]
         )
@@ -200,23 +226,12 @@ async def monitor_targets_async(
         discovered_apps.extend(result.pop("apps", []))
         target_summaries.append(result)
 
-    deduped_apps = dedupe_apps(discovered_apps)
+    deduped_apps = merge_monitored_apps(discovered_apps, monitor_countries)
     return {
         "targets": target_summaries,
         "apps": deduped_apps,
         "raw_count": len(discovered_apps),
         "deduped_count": len(deduped_apps),
         "concurrency": concurrency,
+        "countries": monitor_countries,
     }
-
-
-def dedupe_apps(apps: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    deduped: list[dict[str, Any]] = []
-    seen_keys: set[tuple[str, str]] = set()
-    for app in apps:
-        key = (str(app.get("store")), str(app.get("app_id")))
-        if key in seen_keys:
-            continue
-        seen_keys.add(key)
-        deduped.append(app)
-    return deduped

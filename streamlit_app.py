@@ -6,7 +6,7 @@ from typing import Any
 
 import streamlit as st
 
-from developer_watchlist import CORE_DEVELOPERS, monitor_core_developers_fast
+from developer_watchlist import CORE_DEVELOPERS, DEFAULT_MONITOR_COUNTRIES, monitor_core_developers_fast
 from feishu_bitable import RICH_FIELD_NAMES, sync_game_records_to_bitable
 from monitoring_labels import market_signal_label
 
@@ -22,6 +22,18 @@ TAG_VALUE_LABELS = {
     "company_type": {"publisher": "发行商", "developer": "研发商", "platform": "平台", "indie_studio": "独立工作室"},
     "company_scale": {"head": "头部", "mid": "中型", "small": "小型"},
     "watch_priority": {"p0": "P0 高优先级", "p1": "P1 重点观察", "p2": "P2 常规跟踪"},
+}
+COUNTRY_LABELS = {
+    "ca": "加拿大",
+    "au": "澳大利亚",
+    "nz": "新西兰",
+    "sg": "新加坡",
+    "ph": "菲律宾",
+    "my": "马来西亚",
+    "id": "印度尼西亚",
+    "hk": "中国香港",
+    "tw": "中国台湾",
+    "us": "美国",
 }
 DEFAULT_RELEASE_WINDOW_DAYS = 8
 
@@ -100,19 +112,28 @@ def all_tag_options(field: str) -> list[str]:
     return [value for value in values if value]
 
 
-def all_rank_values() -> list[int]:
-    return sorted({target["publisher_rank"] for target in CORE_DEVELOPERS if isinstance(target.get("publisher_rank"), int)})
-
-
 def rank_bounds() -> tuple[int, int]:
-    ranks = [rank for rank in all_rank_values() if 1 <= rank <= 150]
-    if not ranks:
-        return (1, 150)
     return (1, 150)
 
 
+def format_tag_value(field: str, value: str | None) -> str:
+    mapping = TAG_VALUE_LABELS.get(field, {})
+    normalized = str(value or "")
+    return mapping.get(normalized, normalized or "未标注")
+
+
+def format_country(code: str | None) -> str:
+    normalized = str(code or "").strip().casefold()
+    return COUNTRY_LABELS.get(normalized, normalized.upper() if normalized else "未标注")
+
+
+def format_country_list(countries: list[str] | None) -> str:
+    values = [format_country(country) for country in (countries or [])]
+    return " / ".join(values) if values else "暂无"
+
+
 for key, default in {
-    "status_message": "点击左侧“监控核心厂商”，系统会按厂商名单和排名范围扫描双端应用，再按首次上架到商店的时间窗口展示结果。",
+    "status_message": "点击左侧“监控核心厂商”，系统会按厂商名单和排名范围扫描双端应用，并记录它们当前在哪些监控地区可见，再按首次上架到商店的时间窗口展示结果。",
     "last_source": "",
     "last_counts": {"raw_count": 0, "filtered_count": 0},
     "monitor_snapshot": None,
@@ -124,15 +145,10 @@ for key, default in {
     "watch_priority_filters": all_tag_options("watch_priority"),
     "publisher_rank_range": rank_bounds(),
     "release_window_days": DEFAULT_RELEASE_WINDOW_DAYS,
+    "monitor_countries": list(DEFAULT_MONITOR_COUNTRIES),
 }.items():
     if key not in st.session_state:
         st.session_state[key] = default
-
-
-def format_tag_value(field: str, value: str | None) -> str:
-    mapping = TAG_VALUE_LABELS.get(field, {})
-    normalized = str(value or "")
-    return mapping.get(normalized, normalized or "未标注")
 
 
 def company_tag_summary(item: dict[str, Any]) -> str:
@@ -179,13 +195,17 @@ def target_stats(targets: list[dict[str, Any]]) -> dict[str, int]:
 
 def monitor_watchlist() -> None:
     targets = filtered_monitor_targets()
+    selected_countries = st.session_state.get("monitor_countries", list(DEFAULT_MONITOR_COUNTRIES))
     if not targets:
         st.session_state.status_message = "当前筛选条件下没有可监控的厂商目标，请调整左侧标签、排名范围或首发时间窗口。"
+        return
+    if not selected_countries:
+        st.session_state.status_message = "请至少选择一个监控地区。"
         return
 
     try:
         with st.spinner("正在扫描核心厂商监控列表..."):
-            snapshot = monitor_core_developers_fast(targets, concurrency=10)
+            snapshot = monitor_core_developers_fast(targets, concurrency=10, countries=selected_countries)
             raw_apps = snapshot.get("apps", [])
             filtered_apps = [
                 app for app in raw_apps if within_release_window(app.get("released_at"), st.session_state.release_window_days)
@@ -198,11 +218,12 @@ def monitor_watchlist() -> None:
     snapshot["deduped_count"] = len(filtered_apps)
     snapshot["release_window_days"] = st.session_state.release_window_days
     snapshot["raw_detected_count"] = len(raw_apps)
+    snapshot["countries"] = selected_countries
 
     st.session_state.monitor_snapshot = snapshot
     st.session_state.selected_app_id = None
     st.session_state.feishu_sync_result = None
-    st.session_state.last_source = f"核心厂商监控 / 首次上架 {st.session_state.release_window_days} 天内"
+    st.session_state.last_source = f"核心厂商监控 / 监控地区 {format_country_list(selected_countries)}"
     st.session_state.last_counts = {
         "raw_count": snapshot.get("raw_detected_count", 0),
         "filtered_count": snapshot.get("deduped_count", 0),
@@ -211,6 +232,7 @@ def monitor_watchlist() -> None:
     st.session_state.status_message = (
         f"已完成 {len(snapshot.get('targets', []))} 个厂商目标的扫描，"
         f"排名范围 Top {min_rank} - Top {max_rank}，"
+        f"监控地区为 {format_country_list(selected_countries)}，"
         f"仅展示首次上架到商店时间在最近 {st.session_state.release_window_days} 天内的应用，"
         f"共发现 {snapshot.get('deduped_count', 0)} 个结果。"
     )
@@ -265,13 +287,13 @@ def current_apps() -> list[dict[str, Any]]:
 
 
 st.title("核心厂商监控台")
-st.caption("运营监控工作台：按厂商名单和排名范围扫描双端应用，并按首次上架到商店的时间窗口展示结果。")
+st.caption("运营监控工作台：按厂商名单和排名范围扫描双端应用，先看多地区可见性，再按商店首发时间窗口过滤结果。")
 
 left_col, center_col, right_col = st.columns([1.15, 2.25, 1.75], gap="large")
 
 with left_col:
     st.markdown("### 控制栏")
-    st.caption("首发时间窗口可调，范围为最近 1 到 30 天")
+    st.caption("第一步先做多地区可见性监控，首发时间窗口仍然按商店发布日期过滤")
     st.markdown("### 厂商筛选")
     rank_min, rank_max = rank_bounds()
     st.slider(
@@ -288,7 +310,14 @@ with left_col:
         value=st.session_state.get("release_window_days", DEFAULT_RELEASE_WINDOW_DAYS),
         key="release_window_days",
     )
-    st.caption("例如选择 8 天，则会展示首次上架到商店时间在最近 8 天内的应用。")
+    st.multiselect(
+        "监控地区",
+        options=list(COUNTRY_LABELS.keys()),
+        default=st.session_state.get("monitor_countries", list(DEFAULT_MONITOR_COUNTRIES)),
+        key="monitor_countries",
+        format_func=format_country,
+    )
+    st.caption("系统会在这些地区下查询同一个厂商目标，再把同一款应用合并成一条记录，展示它当前在哪些地区可见。")
     for field in TAG_FIELDS:
         options = all_tag_options(field)
         st.multiselect(
@@ -307,7 +336,7 @@ with left_col:
         st.metric("覆盖厂商数", current_target_stats["publisher_count"])
         st.metric("App Store 目标", current_target_stats["app_store_count"])
     st.markdown(
-        '<div class="sidebar-note">当前页面使用方案三：先按左侧标签和排名筛出目标厂商，再扫描厂商名下应用，并按应用首次上架到商店的时间窗口展示结果。这里的时间口径是商店首发时间，不是工具第一次看到的时间。</div>',
+        '<div class="sidebar-note">当前页面先做多地区可见性监控：按左侧标签和排名筛出目标厂商，再到多个地区查询厂商名下应用，并把同一款应用的可见地区合并展示。这里的“首次上架”仍然是商店发布日期，不是工具第一次发现它的时间。</div>',
         unsafe_allow_html=True,
     )
     if st.button(f"监控核心厂商（{len(filtered_monitor_targets())} 个目标）", type="primary", width="stretch"):
@@ -330,6 +359,7 @@ with left_col:
         st.divider()
         st.markdown("### 厂商巡检")
         st.write(f"监控目标：`{len(snapshot.get('targets', []))}`")
+        st.write(f"监控地区：`{format_country_list(snapshot.get('countries', []))}`")
         st.write(f"原始检测：`{snapshot.get('raw_detected_count', 0)}`")
         st.write(f"窗口结果：`{snapshot.get('deduped_count', 0)}`")
         st.write(f"首发窗口：`最近 {snapshot.get('release_window_days', DEFAULT_RELEASE_WINDOW_DAYS)} 天`")
@@ -398,6 +428,9 @@ with center_col:
                     st.caption(f"厂商排名：{rank_label(app)}")
                     if app.get("released_at"):
                         st.caption(f"首次上架：{app['released_at'][:10]}")
+                    st.caption(f"可见地区：{format_country_list(app.get('observed_countries'))}")
+                    st.caption(f"首次命中地区：{format_country(app.get('first_observed_country'))}")
+                    st.caption(f"是否进入美区：{'是' if app.get('seen_in_us') else '否'}")
                     st.caption(f"发行信号：{signal_label}")
                     with st.expander("查看商店文案", expanded=False):
                         st.markdown(f'<div class="summary-box">{safe_summary}</div>', unsafe_allow_html=True)
@@ -421,6 +454,9 @@ with right_col:
         st.write(f"厂商排名：`{rank_label(selected)}`")
         if selected.get("released_at"):
             st.write(f"首次上架：`{selected['released_at'][:10]}`")
+        st.write(f"可见地区：`{format_country_list(selected.get('observed_countries'))}`")
+        st.write(f"首次命中地区：`{format_country(selected.get('first_observed_country'))}`")
+        st.write(f"是否进入美区：`{'是' if selected.get('seen_in_us') else '否'}`")
         st.write(f"发行信号：`{market_signal_label(selected.get('market_signal'))}`")
         st.write(f"厂商标签：`{company_tag_summary(selected)}`")
         if selected.get("url"):
@@ -432,4 +468,4 @@ with right_col:
             label_visibility="collapsed",
             key=f"detail_{selected['store']}_{selected['app_id']}",
         )
-        st.caption("飞书同步会优先写完整记录；如果你当前表里只有 `App_ID`，系统也会自动降级为只写这一列。")
+        st.caption("飞书同步暂时仍以新增记录为主；多地区可见性字段已经会跟着当前结果一起带过去，后续再补自动更新逻辑。")

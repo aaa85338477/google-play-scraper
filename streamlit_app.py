@@ -88,10 +88,10 @@ def all_rank_values() -> list[int]:
 
 
 def rank_bounds() -> tuple[int, int]:
-    ranks = all_rank_values()
+    ranks = [rank for rank in all_rank_values() if 1 <= rank <= 150]
     if not ranks:
-        return (1, 9999)
-    return (ranks[0], ranks[-1])
+        return (1, 150)
+    return (1, 150)
 
 
 for key, default in {

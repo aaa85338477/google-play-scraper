@@ -19,6 +19,16 @@ def normalize_text(value: object) -> str:
     return str(value).strip()
 
 
+def normalize_rank(value: object) -> int | None:
+    normalized = normalize_text(value)
+    if not normalized:
+        return None
+    try:
+        return int(float(normalized))
+    except ValueError:
+        return None
+
+
 def is_text_identifier(value: str) -> bool:
     normalized = normalize_text(value)
     return bool(normalized) and not DIGITS_ONLY_RE.fullmatch(normalized)
@@ -36,11 +46,11 @@ def dedupe_preserve_order(values: list[str]) -> list[str]:
     return result
 
 
-def load_target_publishers(path: Path) -> dict[str, dict[str, list[str]]]:
+def load_target_publishers(path: Path) -> dict[str, dict[str, object]]:
     return json.loads(path.read_text(encoding="utf-8-sig"))
 
 
-def build_core_developers(target_publishers: dict[str, dict[str, list[str]]]) -> list[dict[str, Any]]:
+def build_core_developers(target_publishers: dict[str, dict[str, object]]) -> list[dict[str, Any]]:
     targets: list[dict[str, Any]] = []
 
     for publisher_name, stores in target_publishers.items():
@@ -49,6 +59,7 @@ def build_core_developers(target_publishers: dict[str, dict[str, list[str]]]) ->
             continue
 
         tags = resolve_company_tags(label)
+        publisher_rank = normalize_rank(stores.get("top"))
         ios_ids = dedupe_preserve_order(stores.get("ios_ids", []))
         google_play_ids = dedupe_preserve_order(stores.get("google_play_ids", []))
         google_play_names = [value for value in google_play_ids if is_text_identifier(value)]
@@ -61,6 +72,7 @@ def build_core_developers(target_publishers: dict[str, dict[str, list[str]]]) ->
                     "query": label,
                     "developer_names": dedupe_preserve_order([label, *google_play_names]),
                     "developer_ids": google_play_ids,
+                    "publisher_rank": publisher_rank,
                     **tags,
                 }
             )
@@ -73,6 +85,7 @@ def build_core_developers(target_publishers: dict[str, dict[str, list[str]]]) ->
                     "query": label,
                     "developer_names": [label],
                     "developer_ids": ios_ids,
+                    "publisher_rank": publisher_rank,
                     **tags,
                 }
             )

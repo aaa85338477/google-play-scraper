@@ -13,7 +13,8 @@
       "SayGames",
       "6298813763312919073",
       "Autumn Knock Games"
-    ]
+    ],
+    "top": 101
   },
   "網銀國際 股份有限 公司": {
     "ios_ids": [
@@ -21,7 +22,8 @@
     ],
     "google_play_ids": [
       "7898821361707275817"
-    ]
+    ],
+    "top": 102
   },
   "杭州游卡网络技术有限公司": {
     "ios_ids": [
@@ -33,7 +35,8 @@
     ],
     "google_play_ids": [
       "杭州游卡网络技术有限公司"
-    ]
+    ],
+    "top": 103
   },
   "Homa": {
     "ios_ids": [
@@ -46,7 +49,8 @@
       "HOMA GAMES",
       "Homa Games",
       "Emesh Inc"
-    ]
+    ],
+    "top": 104
   },
   "Candivore": {
     "ios_ids": [
@@ -55,7 +59,8 @@
     "google_play_ids": [
       "6187525518349627915",
       "Candivore"
-    ]
+    ],
+    "top": 105
   },
   "KRAFTON, Inc.": {
     "ios_ids": [
@@ -68,7 +73,8 @@
       "Inc.",
       "PUBG CORPORATION",
       "Bluehole"
-    ]
+    ],
+    "top": 106
   },
   "Gamehaus Network": {
     "ios_ids": [
@@ -120,7 +126,8 @@
       "Elestorm Casino - Best Bingo Game",
       "Hot Casino",
       "GAMEHAUS PTE. LTD."
-    ]
+    ],
+    "top": 107
   },
   "1SOFT": {
     "ios_ids": [
@@ -144,7 +151,8 @@
       "TechArts Games",
       "FALCON JSC",
       "1Soft Go Global"
-    ]
+    ],
+    "top": 108
   },
   "Happibits": {
     "ios_ids": [
@@ -152,7 +160,8 @@
     ],
     "google_play_ids": [
       "Happibits Game"
-    ]
+    ],
+    "top": 109
   },
   "HaoPlay Limited": {
     "ios_ids": [
@@ -170,7 +179,8 @@
       "Young Phoenix Co.",
       "Limited",
       "HaoPlay"
-    ]
+    ],
+    "top": 110
   },
   "GRYPHLINE": {
     "ios_ids": [
@@ -180,7 +190,8 @@
     ],
     "google_play_ids": [
       "7204391758476304499"
-    ]
+    ],
+    "top": 111
   },
   "AppQuantum": {
     "ios_ids": [
@@ -189,7 +200,8 @@
     "google_play_ids": [
       "4629548824296547330",
       "AppQuantum"
-    ]
+    ],
+    "top": 112
   },
   "Guangzhou Duoyi Network Co., Ltd.": {
     "ios_ids": [
@@ -205,7 +217,8 @@
       "Duoyi (Hong Kong)  Interactive Entertainment-OLD",
       "Duoyi (Hong Kong)  Interactive Entertainment",
       "Duoyi (Hong Kong) Interactive Entertainment"
-    ]
+    ],
+    "top": 113
   },
   "NHN Corp.": {
     "ios_ids": [
@@ -218,7 +231,8 @@
       "NHN comico Corporation",
       "NHN hangame Corp.",
       "NHN JAPAN Corporation"
-    ]
+    ],
+    "top": 114
   },
   "Bytedance": {
     "ios_ids": [
@@ -275,7 +289,8 @@
       "POLIGON PTE LTD.",
       "Douyin",
       "5299725221209516149"
-    ]
+    ],
+    "top": 115
   },
   "Yalla Group": {
     "ios_ids": [
@@ -291,7 +306,8 @@
       "7952134190952403359",
       "7398573015863307963",
       "Fyxtech HK Limited"
-    ]
+    ],
+    "top": 116
   },
   "Smilegate, Inc.": {
     "ios_ids": [
@@ -299,7 +315,8 @@
     ],
     "google_play_ids": [
       "5153970434677900725"
-    ]
+    ],
+    "top": 117
   },
   "Boombox Games LTD": {
     "ios_ids": [
@@ -307,7 +324,8 @@
     ],
     "google_play_ids": [
       "6499205192421311786"
-    ]
+    ],
+    "top": 118
   },
   "International Games System Co., Ltd.": {
     "ios_ids": [
@@ -316,7 +334,8 @@
     "google_play_ids": [
       "International Games System Co.",
       "Ltd."
-    ]
+    ],
+    "top": 119
   },
   "Rudel inc.": {
     "ios_ids": [
@@ -324,7 +343,8 @@
     ],
     "google_play_ids": [
       "Rudel inc."
-    ]
+    ],
+    "top": 120
   },
   "StarFortune": {
     "ios_ids": [
@@ -334,7 +354,8 @@
     "google_play_ids": [
       "6712852036678955591",
       "4922179359616923865"
-    ]
+    ],
+    "top": 121
   },
   "DeNA Co., Ltd.": {
     "ios_ids": [
@@ -354,7 +375,8 @@
       "Ltd. Manga Box",
       "DeNA Global Publishing",
       "Program Twenty Three"
-    ]
+    ],
+    "top": 122
   },
   "Kabam Games, Inc.": {
     "ios_ids": [
@@ -364,7 +386,8 @@
     "google_play_ids": [
       "5584164941825017957",
       "9199344989204994692"
-    ]
+    ],
+    "top": 123
   },
   "Leniu Technology Co., Limited": {
     "ios_ids": [
@@ -379,13 +402,15 @@
       "7507294784301118061",
       "Leniu Games",
       "lnhwgame"
-    ]
+    ],
+    "top": 124
   },
   "JJWorld(Beijing) Network Technology Company Limited": {
     "ios_ids": [
       "472885643"
     ],
-    "google_play_ids": []
+    "google_play_ids": [],
+    "top": 125
   },
   "Elex": {
     "ios_ids": [
@@ -399,7 +424,8 @@
       "Elex Wireless",
       "Elex",
       "Galaxy Play Technology Limited"
-    ]
+    ],
+    "top": 126
   },
   "Warner Bros. International Enterprises": {
     "ios_ids": [
@@ -408,7 +434,8 @@
     ],
     "google_play_ids": [
       "Warner Bros. International Enterprises"
-    ]
+    ],
+    "top": 127
   },
   "Ludia Inc.": {
     "ios_ids": [
@@ -418,7 +445,8 @@
       "4725338541424081298",
       "6650389988837544544",
       "Ludia Inc."
-    ]
+    ],
+    "top": 128
   },
   "2K": {
     "ios_ids": [
@@ -426,7 +454,8 @@
     ],
     "google_play_ids": [
       "6681606924556273560"
-    ]
+    ],
+    "top": 129
   },
   "1.11": {
     "ios_ids": [
@@ -436,7 +465,8 @@
     "google_play_ids": [
       "7769366979601471884",
       "0.1%"
-    ]
+    ],
+    "top": 130
   },
   "Crowdstar Inc": {
     "ios_ids": [
@@ -444,13 +474,15 @@
     ],
     "google_play_ids": [
       "Crowdstar Inc"
-    ]
+    ],
+    "top": 131
   },
   "Beijing Wei Wo Le Yuan Information and Technology Co., Ltd": {
     "ios_ids": [
       "1043817467"
     ],
-    "google_play_ids": []
+    "google_play_ids": [],
+    "top": 132
   },
   "Grand Games A.Ş.": {
     "ios_ids": [
@@ -458,7 +490,8 @@
     ],
     "google_play_ids": [
       "6430038787206489041"
-    ]
+    ],
+    "top": 133
   },
   "WFS, Inc.": {
     "ios_ids": [
@@ -475,7 +508,8 @@
       "GREE Entertainment",
       "funplex",
       "Inc"
-    ]
+    ],
+    "top": 134
   },
   "AZUR GAMES": {
     "ios_ids": [
@@ -493,7 +527,8 @@
       "6606463368796872625",
       "RED BUTTON LLC",
       "Ararat Games"
-    ]
+    ],
+    "top": 135
   },
   "Chess.com": {
     "ios_ids": [
@@ -501,7 +536,8 @@
     ],
     "google_play_ids": [
       "5068259210636929122"
-    ]
+    ],
+    "top": 136
   },
   "Shiyue Network": {
     "ios_ids": [
@@ -524,7 +560,8 @@
       "Sygames",
       "SY2019",
       "ShiYue Joy"
-    ]
+    ],
+    "top": 137
   },
   "Beach Bum Ltd.": {
     "ios_ids": [
@@ -532,7 +569,8 @@
     ],
     "google_play_ids": [
       "6496128650038483596"
-    ]
+    ],
+    "top": 138
   },
   "DoubleUGames": {
     "ios_ids": [
@@ -540,7 +578,8 @@
     ],
     "google_play_ids": [
       "DoubleUGames"
-    ]
+    ],
+    "top": 139
   },
   "Budge Studios": {
     "ios_ids": [
@@ -548,7 +587,8 @@
     ],
     "google_play_ids": [
       "7489594886728593506"
-    ]
+    ],
+    "top": 140
   },
   "SPGFun": {
     "ios_ids": [
@@ -570,7 +610,8 @@
       "SummerfunGame",
       "SPGGame",
       "springgame"
-    ]
+    ],
+    "top": 141
   },
   "NEOWIZ": {
     "ios_ids": [
@@ -590,7 +631,8 @@
       "Ltd.",
       "NEOWIZ PLAY STUDIO",
       "5720721090409394019"
-    ]
+    ],
+    "top": 142
   },
   "YOOZOO": {
     "ios_ids": [
@@ -616,7 +658,8 @@
       "Youzu (Singapore) Pte. Ltd",
       "Youzu Games HONGKONG LIMITED",
       "Yoozoo Global"
-    ]
+    ],
+    "top": 143
   },
   "SHI YI NETWORK TECHNOLOGY (SHANGHAI) CO., LTD": {
     "ios_ids": [
@@ -640,7 +683,8 @@
       "LIMITED",
       "HIGGS TECHNOLOGY CO LIMITED",
       "Higgs Technology Ltd."
-    ]
+    ],
+    "top": 144
   },
   "Wemade Co., Ltd": {
     "ios_ids": [
@@ -650,7 +694,8 @@
       "6600380343446674744",
       "Wemade Co.",
       "Ltd"
-    ]
+    ],
+    "top": 145
   },
   "Sparks Info": {
     "ios_ids": [
@@ -658,7 +703,8 @@
     ],
     "google_play_ids": [
       "7784042092088351158"
-    ]
+    ],
+    "top": 146
   },
   "HK HORTOR TECHNOLOGY LIMITED": {
     "ios_ids": [
@@ -676,7 +722,8 @@
       "Hortor",
       "Hortor Interactive",
       "Hortor Games"
-    ]
+    ],
+    "top": 147
   },
   "Shenzhen Zen-Game Technology CO.,LTD": {
     "ios_ids": [
@@ -691,7 +738,8 @@
       "7966139032346418553",
       "ZENGAME",
       "ZENGAME INTERACTIVE LIMITED"
-    ]
+    ],
+    "top": 148
   },
   "Nintendo Co., Ltd.": {
     "ios_ids": [
@@ -699,7 +747,8 @@
     ],
     "google_play_ids": [
       "7277267556905944956"
-    ]
+    ],
+    "top": 149
   },
   "Funstage": {
     "ios_ids": [
@@ -709,6 +758,7 @@
     ],
     "google_play_ids": [
       "8128532516213169694"
-    ]
+    ],
+    "top": 150
   }
 }

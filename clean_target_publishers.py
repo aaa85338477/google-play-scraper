@@ -11,6 +11,7 @@ import xml.etree.ElementTree as ET
 
 EXPECTED_PUBLISHER_FIELD = "publisher_name"
 EXPECTED_STORE_ID_FIELD = "store_publisher_id"
+EXPECTED_RANK_FIELD = "top"
 XLSX_NS = {
     "a": "http://schemas.openxmlformats.org/spreadsheetml/2006/main",
     "r": "http://schemas.openxmlformats.org/officeDocument/2006/relationships",
@@ -23,6 +24,16 @@ def normalize_text(value: object) -> str:
     if value is None:
         return ""
     return str(value).strip()
+
+
+def parse_rank(value: object) -> int | None:
+    normalized = normalize_text(value)
+    if not normalized:
+        return None
+    try:
+        return int(float(normalized))
+    except ValueError:
+        return None
 
 
 def classify_store_id(store_id: str) -> str:
@@ -126,8 +137,8 @@ def iter_rows(path: Path) -> Iterator[dict[str, str]]:
     raise ValueError(f"Unsupported input format: {path.suffix}")
 
 
-def build_target_publishers(rows: Iterator[dict[str, str]]) -> dict[str, dict[str, list[str]]]:
-    target_publishers: dict[str, dict[str, list[str]]] = {}
+def build_target_publishers(rows: Iterator[dict[str, str]]) -> dict[str, dict[str, object]]:
+    target_publishers: dict[str, dict[str, object]] = {}
 
     for row in rows:
         publisher_name = normalize_text(row.get(EXPECTED_PUBLISHER_FIELD))
@@ -136,8 +147,13 @@ def build_target_publishers(rows: Iterator[dict[str, str]]) -> dict[str, dict[st
 
         publisher_bucket = target_publishers.setdefault(
             publisher_name,
-            {"ios_ids": [], "google_play_ids": []},
+            {"ios_ids": [], "google_play_ids": [], "top": None},
         )
+
+        rank = parse_rank(row.get(EXPECTED_RANK_FIELD))
+        current_rank = publisher_bucket.get("top")
+        if rank is not None and (current_rank is None or rank < current_rank):
+            publisher_bucket["top"] = rank
 
         for store_id in split_store_publisher_ids(row.get(EXPECTED_STORE_ID_FIELD)):
             bucket_name = classify_store_id(store_id)
@@ -145,14 +161,14 @@ def build_target_publishers(rows: Iterator[dict[str, str]]) -> dict[str, dict[st
                 continue
             publisher_bucket[bucket_name].append(store_id)
 
-    for publisher_name, buckets in target_publishers.items():
+    for buckets in target_publishers.values():
         buckets["ios_ids"] = dedupe_preserve_order(buckets["ios_ids"])
         buckets["google_play_ids"] = dedupe_preserve_order(buckets["google_play_ids"])
 
     return target_publishers
 
 
-def save_target_publishers(data: dict[str, dict[str, list[str]]], output_path: Path) -> None:
+def save_target_publishers(data: dict[str, dict[str, object]], output_path: Path) -> None:
     output_path.write_text(
         json.dumps(data, ensure_ascii=False, indent=2),
         encoding="utf-8",

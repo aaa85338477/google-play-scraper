@@ -11,6 +11,16 @@ def normalize_text(value: object) -> str:
     return str(value).strip()
 
 
+def normalize_rank(value: object) -> int | None:
+    normalized = normalize_text(value)
+    if not normalized:
+        return None
+    try:
+        return int(float(normalized))
+    except ValueError:
+        return None
+
+
 def dedupe_preserve_order(values: list[str]) -> list[str]:
     result: list[str] = []
     seen: set[str] = set()
@@ -23,31 +33,44 @@ def dedupe_preserve_order(values: list[str]) -> list[str]:
     return result
 
 
-def load_target_publishers(path: Path) -> dict[str, dict[str, list[str]]]:
+def load_target_publishers(path: Path) -> dict[str, dict[str, object]]:
     return json.loads(path.read_text(encoding="utf-8-sig"))
 
 
+def merge_store_bucket(base_store: dict[str, object], incoming_store: dict[str, object]) -> dict[str, object]:
+    base_rank = normalize_rank(base_store.get("top"))
+    incoming_rank = normalize_rank(incoming_store.get("top"))
+    if base_rank is None:
+        merged_rank = incoming_rank
+    elif incoming_rank is None:
+        merged_rank = base_rank
+    else:
+        merged_rank = min(base_rank, incoming_rank)
+
+    return {
+        "ios_ids": dedupe_preserve_order(list(base_store.get("ios_ids", [])) + list(incoming_store.get("ios_ids", []))),
+        "google_play_ids": dedupe_preserve_order(list(base_store.get("google_play_ids", [])) + list(incoming_store.get("google_play_ids", []))),
+        "top": merged_rank,
+    }
+
+
 def merge_target_publishers(
-    base: dict[str, dict[str, list[str]]],
-    incoming: dict[str, dict[str, list[str]]],
-) -> dict[str, dict[str, list[str]]]:
+    base: dict[str, dict[str, object]],
+    incoming: dict[str, dict[str, object]],
+) -> dict[str, dict[str, object]]:
     merged = {
-        publisher: {
-            "ios_ids": dedupe_preserve_order(stores.get("ios_ids", [])),
-            "google_play_ids": dedupe_preserve_order(stores.get("google_play_ids", [])),
-        }
+        publisher: merge_store_bucket({}, stores)
         for publisher, stores in base.items()
     }
 
     for publisher, stores in incoming.items():
-        bucket = merged.setdefault(publisher, {"ios_ids": [], "google_play_ids": []})
-        bucket["ios_ids"] = dedupe_preserve_order(bucket["ios_ids"] + list(stores.get("ios_ids", [])))
-        bucket["google_play_ids"] = dedupe_preserve_order(bucket["google_play_ids"] + list(stores.get("google_play_ids", [])))
+        bucket = merged.get(publisher, {"ios_ids": [], "google_play_ids": [], "top": None})
+        merged[publisher] = merge_store_bucket(bucket, stores)
 
     return merged
 
 
-def save_target_publishers(data: dict[str, dict[str, list[str]]], path: Path) -> None:
+def save_target_publishers(data: dict[str, dict[str, object]], path: Path) -> None:
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
 
 

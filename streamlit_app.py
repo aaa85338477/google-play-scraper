@@ -22,6 +22,7 @@ TAG_VALUE_LABELS = {
     "company_scale": {"head": "头部", "mid": "中型", "small": "小型"},
     "watch_priority": {"p0": "P0 高优先级", "p1": "P1 重点观察", "p2": "P2 常规跟踪"},
 }
+DEFAULT_AGE_DAYS = 30
 
 st.set_page_config(page_title="核心厂商监控台", page_icon=":video_game:", layout="wide")
 
@@ -82,8 +83,19 @@ def all_tag_options(field: str) -> list[str]:
     return [value for value in values if value]
 
 
+def all_rank_values() -> list[int]:
+    return sorted({target["publisher_rank"] for target in CORE_DEVELOPERS if isinstance(target.get("publisher_rank"), int)})
+
+
+def rank_bounds() -> tuple[int, int]:
+    ranks = all_rank_values()
+    if not ranks:
+        return (1, 9999)
+    return (ranks[0], ranks[-1])
+
+
 for key, default in {
-    "status_message": "点击左侧“监控核心厂商”，系统会按厂商名单扫描双端新包，并且只保留最近 30 天内上线的应用。",
+    "status_message": "点击左侧“监控核心厂商”，系统会按厂商名单和排名范围扫描双端新包，并且只保留最近 30 天内上线的应用。",
     "last_source": "",
     "last_counts": {"raw_count": 0, "filtered_count": 0},
     "monitor_snapshot": None,
@@ -93,6 +105,7 @@ for key, default in {
     "company_type_filters": all_tag_options("company_type"),
     "company_scale_filters": all_tag_options("company_scale"),
     "watch_priority_filters": all_tag_options("watch_priority"),
+    "publisher_rank_range": rank_bounds(),
 }.items():
     if key not in st.session_state:
         st.session_state[key] = default
@@ -114,24 +127,47 @@ def company_tag_summary(item: dict[str, Any]) -> str:
     return " / ".join(parts)
 
 
+def rank_label(item: dict[str, Any]) -> str:
+    rank = item.get("publisher_rank")
+    return f"Top {rank}" if isinstance(rank, int) else "未标注"
+
+
 def filtered_monitor_targets() -> list[dict[str, Any]]:
     targets = CORE_DEVELOPERS
     for field in TAG_FIELDS:
         selected_values = st.session_state.get(f"{field}_filters", [])
         if selected_values:
             targets = [target for target in targets if target.get(field) in selected_values]
-    return targets
+
+    min_rank, max_rank = st.session_state.get("publisher_rank_range", rank_bounds())
+    return [
+        target
+        for target in targets
+        if isinstance(target.get("publisher_rank"), int) and min_rank <= target["publisher_rank"] <= max_rank
+    ]
+
+
+def target_stats(targets: list[dict[str, Any]]) -> dict[str, int]:
+    publisher_count = len({target.get("label") for target in targets if target.get("label")})
+    google_play_count = sum(1 for target in targets if target.get("store") == "google_play")
+    app_store_count = sum(1 for target in targets if target.get("store") == "app_store")
+    return {
+        "target_count": len(targets),
+        "publisher_count": publisher_count,
+        "google_play_count": google_play_count,
+        "app_store_count": app_store_count,
+    }
 
 
 def monitor_watchlist() -> None:
     targets = filtered_monitor_targets()
     if not targets:
-        st.session_state.status_message = "当前筛选条件下没有可监控的厂商目标，请调整左侧标签筛选。"
+        st.session_state.status_message = "当前筛选条件下没有可监控的厂商目标，请调整左侧标签或排名范围。"
         return
 
     try:
         with st.spinner("正在扫描核心厂商监控列表..."):
-            snapshot = monitor_core_developers(targets, age_days=30)
+            snapshot = monitor_core_developers(targets, age_days=DEFAULT_AGE_DAYS)
     except Exception as exc:
         st.session_state.status_message = f"核心厂商监控失败：{exc}"
         return
@@ -139,14 +175,16 @@ def monitor_watchlist() -> None:
     st.session_state.monitor_snapshot = snapshot
     st.session_state.selected_app_id = None
     st.session_state.feishu_sync_result = None
-    st.session_state.last_source = f"核心厂商监控 / 最近 {snapshot.get('max_age_days', 30)} 天"
+    st.session_state.last_source = f"核心厂商监控 / 最近 {snapshot.get('max_age_days', DEFAULT_AGE_DAYS)} 天"
     st.session_state.last_counts = {
         "raw_count": snapshot.get("raw_count", 0),
         "filtered_count": snapshot.get("deduped_count", 0),
     }
+    min_rank, max_rank = st.session_state.publisher_rank_range
     st.session_state.status_message = (
         f"已完成 {len(snapshot.get('targets', []))} 个厂商目标的扫描，"
-        f"仅保留最近 {snapshot.get('max_age_days', 30)} 天内上线的应用，"
+        f"排名范围 Top {min_rank} - Top {max_rank}，"
+        f"仅保留最近 {snapshot.get('max_age_days', DEFAULT_AGE_DAYS)} 天内上线的应用，"
         f"共发现 {snapshot.get('deduped_count', 0)} 个去重后的应用。"
     )
 
@@ -200,7 +238,7 @@ def current_apps() -> list[dict[str, Any]]:
 
 
 st.title("核心厂商监控台")
-st.caption("运营监控工作台：按厂商名单扫描双端新包，只保留最近 30 天上线的应用，并把结果同步到飞书多维表格。")
+st.caption("运营监控工作台：按厂商名单和排名范围扫描双端新包，只保留最近 30 天上线的应用，并把结果同步到飞书多维表格。")
 
 left_col, center_col, right_col = st.columns([1.15, 2.25, 1.75], gap="large")
 
@@ -208,6 +246,15 @@ with left_col:
     st.markdown("### 控制栏")
     st.caption("当前监控窗口固定为最近 30 天")
     st.markdown("### 厂商筛选")
+    rank_min, rank_max = rank_bounds()
+    st.slider(
+        "排名范围",
+        min_value=rank_min,
+        max_value=rank_max,
+        value=st.session_state.get("publisher_rank_range", (rank_min, rank_max)),
+        key="publisher_rank_range",
+    )
+    st.caption("只扫描排名落在该区间内的厂商；数字越小代表排名越靠前。")
     for field in TAG_FIELDS:
         options = all_tag_options(field)
         st.multiselect(
@@ -218,7 +265,7 @@ with left_col:
             format_func=lambda value, current_field=field: format_tag_value(current_field, value),
         )
     st.markdown(
-        '<div class="sidebar-note">当前页面只使用方案三：先按左侧标签筛出目标厂商，再逐个扫描新包，只保留最近 30 天内上线的应用，并为结果动态标注发行信号。</div>',
+        '<div class="sidebar-note">当前页面只使用方案三：先按左侧标签和排名筛出目标厂商，再逐个扫描新包，只保留最近 30 天内上线的应用，并为结果动态标注发行信号。</div>',
         unsafe_allow_html=True,
     )
     if st.button(f"监控核心厂商（{len(filtered_monitor_targets())} 个目标）", type="primary", width="stretch"):
@@ -242,7 +289,8 @@ with left_col:
         st.markdown("### 厂商巡检")
         st.write(f"监控目标：`{len(snapshot.get('targets', []))}`")
         st.write(f"发现应用：`{snapshot.get('deduped_count', 0)}`")
-        st.write(f"上线窗口：`最近 {snapshot.get('max_age_days', 30)} 天`")
+        st.write(f"上线窗口：`最近 {snapshot.get('max_age_days', DEFAULT_AGE_DAYS)} 天`")
+        st.write(f"当前排名：`Top {st.session_state.publisher_rank_range[0]} - Top {st.session_state.publisher_rank_range[1]}`")
         failed_targets = [target for target in snapshot.get("targets", []) if not target.get("success")]
         if failed_targets:
             st.warning(f"有 {len(failed_targets)} 个厂商巡检失败，请展开日志排查。")
@@ -251,7 +299,7 @@ with left_col:
                 aliases = "、".join(target.get("developer_names", [])) or "未配置别名"
                 developer_ids = "、".join(target.get("developer_ids", [])) or "未配置开发者标识"
                 st.markdown(
-                    f"- `{target['store']}` / **{target['label']}**\n"
+                    f"- `{target['store']}` / **{target['label']}** / {rank_label(target)}\n"
                     f"  标签：{company_tag_summary(target)}\n"
                     f"  查询词：`{target['query']}`\n"
                     f"  名称白名单：{aliases}\n"
@@ -263,7 +311,7 @@ with left_col:
         st.divider()
         st.markdown("### 飞书同步")
         if sync_result.get("success"):
-            st.success(f"已写入 {sync_result.get('written_count', 0)} 条新记录")
+            st.success(f"已写入 {result.get('written_count', 0)} 条新记录")
         else:
             st.error("同步失败，请检查飞书配置")
         st.write(f"历史记录数：`{len(sync_result.get('existing_app_ids', []))}`")
@@ -304,6 +352,7 @@ with center_col:
                         unsafe_allow_html=True,
                     )
                     st.caption(f"厂商标签：{company_tag_summary(app)}")
+                    st.caption(f"厂商排名：{rank_label(app)}")
                     if app.get("released_at"):
                         st.caption(f"上线时间：{app['released_at'][:10]}")
                     st.caption(f"发行信号：{signal_label}")
@@ -325,6 +374,7 @@ with right_col:
         st.success(f"当前查看：{selected.get('title') or '未知应用'}")
         st.write(f"平台：`{selected.get('store', 'unknown')}`")
         st.write(f"开发者：`{selected.get('developer_name') or '未知'}`")
+        st.write(f"厂商排名：`{rank_label(selected)}`")
         st.write(f"发行信号：`{market_signal_label(selected.get('market_signal'))}`")
         st.write(f"厂商标签：`{company_tag_summary(selected)}`")
         if selected.get("released_at"):

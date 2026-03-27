@@ -29,6 +29,7 @@ APP_STORE_SEARCH_LIMIT = 200
 REQUEST_TIMEOUT = 30
 CORE_DEVELOPERS_PATH = Path(__file__).with_name("core_developers.json")
 TAG_FIELDS = ["company_region", "company_type", "company_scale", "watch_priority"]
+RANK_FIELD = "publisher_rank"
 DEFAULT_MONITOR_MAX_APP_AGE_DAYS = 30
 
 
@@ -48,6 +49,7 @@ def load_core_developers(config_path: Path = CORE_DEVELOPERS_PATH) -> list[dict[
                 "query": target["query"],
                 "developer_names": developer_names,
                 "developer_ids": developer_ids,
+                "publisher_rank": target.get("publisher_rank"),
                 **tags,
             }
         )
@@ -155,6 +157,7 @@ def enrich_monitored_app(base: dict[str, Any], target: dict[str, Any]) -> dict[s
             url=base.get("url"),
         ),
         **{field: target.get(field) for field in TAG_FIELDS},
+        "publisher_rank": target.get("publisher_rank"),
     }
 
 
@@ -306,6 +309,7 @@ def monitor_core_developers(
                     "developer_names": target.get("developer_names", []),
                     "developer_ids": target.get("developer_ids", []),
                     **{field: target.get(field) for field in TAG_FIELDS},
+                    "publisher_rank": target.get("publisher_rank"),
                     "app_count": len(apps),
                     "success": True,
                 }
@@ -319,6 +323,7 @@ def monitor_core_developers(
                     "developer_names": target.get("developer_names", []),
                     "developer_ids": target.get("developer_ids", []),
                     **{field: target.get(field) for field in TAG_FIELDS},
+                    "publisher_rank": target.get("publisher_rank"),
                     "app_count": 0,
                     "success": False,
                     "error": str(exc),

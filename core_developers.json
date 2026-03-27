@@ -38,6 +38,7 @@
       "ODDM .Inc",
       "Tencent Mobile International Ltd."
     ],
+    "publisher_rank": null,
     "company_region": "cn",
     "company_type": "publisher",
     "company_scale": "head",
@@ -73,6 +74,7 @@
       "1228038935",
       "1221907420"
     ],
+    "publisher_rank": null,
     "company_region": "cn",
     "company_type": "publisher",
     "company_scale": "head",
@@ -96,6 +98,7 @@
       "8152171058994793947",
       "CQ Gaming"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -118,6 +121,7 @@
       "1018148248",
       "1826082097"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -139,6 +143,7 @@
       "LLC",
       "Phase One Games LLC"
     ],
+    "publisher_rank": null,
     "company_region": "west",
     "company_type": "publisher",
     "company_scale": "head",
@@ -156,6 +161,7 @@
       "1154563764",
       "868961693"
     ],
+    "publisher_rank": null,
     "company_region": "west",
     "company_type": "publisher",
     "company_scale": "head",
@@ -175,6 +181,7 @@
       "Ltd.",
       "Dream Games Ltd."
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -190,6 +197,7 @@
     "developer_ids": [
       "1482155846"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -223,6 +231,7 @@
       "Travellet Online",
       "FirstFun"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -243,6 +252,7 @@
       "1598076202",
       "1575315579"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -263,6 +273,7 @@
       "6526467086144818804",
       "Loom.ai"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -280,6 +291,7 @@
       "1128154379",
       "1112038924"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -315,6 +327,7 @@
       "SHALL WE MANAGEMENT SERVICE LIMITED",
       "NetEase"
     ],
+    "publisher_rank": null,
     "company_region": "cn",
     "company_type": "publisher",
     "company_scale": "head",
@@ -360,6 +373,7 @@
       "617933253",
       "1121906086"
     ],
+    "publisher_rank": null,
     "company_region": "cn",
     "company_type": "publisher",
     "company_scale": "head",
@@ -377,6 +391,7 @@
       "6598096594674427568",
       "pxcyprus"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "head",
@@ -392,6 +407,7 @@
     "developer_ids": [
       "1162116447"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "head",
@@ -407,6 +423,7 @@
     "developer_ids": [
       "6577204690045492686"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -422,6 +439,7 @@
     "developer_ids": [
       "526656015"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -437,6 +455,7 @@
     "developer_ids": [
       "6715068722362591614"
     ],
+    "publisher_rank": null,
     "company_region": "west",
     "company_type": "developer",
     "company_scale": "head",
@@ -452,6 +471,7 @@
     "developer_ids": [
       "488106216"
     ],
+    "publisher_rank": null,
     "company_region": "west",
     "company_type": "developer",
     "company_scale": "head",
@@ -477,6 +497,7 @@
       "5869687648793643753",
       "miHoYo Limited"
     ],
+    "publisher_rank": null,
     "company_region": "cn",
     "company_type": "developer",
     "company_scale": "head",
@@ -500,6 +521,7 @@
       "467894518",
       "1286705195"
     ],
+    "publisher_rank": null,
     "company_region": "cn",
     "company_type": "developer",
     "company_scale": "head",
@@ -517,6 +539,7 @@
       "4765571944833116862",
       "4728882188872393300"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -533,6 +556,7 @@
       "470556954",
       "520119067"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -569,6 +593,7 @@
       "Bandai America",
       "BANDAI NAMCO Entertainment Inc."
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -593,6 +618,7 @@
       "308869261",
       "648288742"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -619,6 +645,7 @@
       "Microfun",
       "Inc."
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -639,6 +666,7 @@
       "1208935482",
       "1203124399"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -658,6 +686,7 @@
       "The Pokémon Company International",
       "The Pokemon Company"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -674,6 +703,7 @@
       "446737235",
       "594261408"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -706,6 +736,7 @@
       "5419502119363831668",
       "Reworks Ltd"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -728,6 +759,7 @@
       "592117366",
       "342462146"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -747,6 +779,7 @@
       "Konami Digital Entertainment",
       "Inc."
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -763,6 +796,7 @@
       "299580230",
       "286115725"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -779,6 +813,7 @@
       "7348725256760208886",
       "8795996613429359757"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -794,6 +829,7 @@
     "developer_ids": [
       "476160947"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -891,6 +927,7 @@
       "絕妙遊戲",
       "37games.Asia"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -943,6 +980,7 @@
       "1373137559",
       "773053241"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -961,6 +999,7 @@
       "Niantic",
       "Inc."
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -976,6 +1015,7 @@
     "developer_ids": [
       "1037205060"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -999,6 +1039,7 @@
       "Gram Games Limited",
       "NaturalMotionGames Ltd"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1018,6 +1059,7 @@
       "330281898",
       "422679887"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1033,6 +1075,7 @@
     "developer_ids": [
       "Florere Game"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1048,6 +1091,7 @@
     "developer_ids": [
       "1777735839"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1086,6 +1130,7 @@
       "Garena Online",
       "MOBA Games Private Limited"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1107,6 +1152,7 @@
       "1222857606",
       "1569575029"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1137,6 +1183,7 @@
       "Paper Games",
       "InFold Pte. Ltd."
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1156,6 +1203,7 @@
       "1385024492",
       "1447235763"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1172,6 +1220,7 @@
       "5696323743535622294",
       "Product Madness"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1187,6 +1236,7 @@
     "developer_ids": [
       "525894639"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1202,6 +1252,7 @@
     "developer_ids": [
       "5258410538530331508"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1217,6 +1268,7 @@
     "developer_ids": [
       "930364579"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1232,6 +1284,7 @@
     "developer_ids": [
       "Aniplex Inc."
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1247,6 +1300,7 @@
     "developer_ids": [
       "884966694"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1263,6 +1317,7 @@
       "6605125519975771237",
       "4826430855807055421"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1279,6 +1334,7 @@
       "284800461",
       "284832145"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1303,6 +1359,7 @@
       "Scientific Games Corporation",
       "Spicerack Media"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1322,6 +1379,7 @@
       "1052764694",
       "354731085"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1357,6 +1415,7 @@
       "Chiseled Games Limited",
       "Globalgamejourney Limited"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1377,6 +1436,7 @@
       "886541729",
       "960546279"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1395,6 +1455,7 @@
       "Cygames",
       "Inc."
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1410,6 +1471,7 @@
     "developer_ids": [
       "561598806"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1429,6 +1491,7 @@
       "8454058997475921489",
       "GRANDE GAMES LIMITED"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1446,6 +1509,7 @@
       "1186162194",
       "1241617493"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1470,6 +1534,7 @@
       "NCSOFT Games",
       "NC TAIWAN"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1489,6 +1554,7 @@
       "366614626",
       "1138886628"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1510,6 +1576,7 @@
       "Oliplay Technology Co.",
       "Ltd."
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1528,6 +1595,7 @@
       "1501478260",
       "1787091657"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1548,6 +1616,7 @@
       "5561174420506036639",
       "NEXON"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1566,6 +1635,7 @@
       "504822446",
       "520995277"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1589,6 +1659,7 @@
       "Lilith Games SG Pte. Ltd.",
       "LILITH GAMES SG PTE. LTD."
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1609,6 +1680,7 @@
       "1696267009",
       "1590319961"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1626,6 +1698,7 @@
       "6163102761666559735",
       "SuperPlay."
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1641,6 +1714,7 @@
     "developer_ids": [
       "1484468650"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1656,6 +1730,7 @@
     "developer_ids": [
       "7496506598896213811"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1671,6 +1746,7 @@
     "developer_ids": [
       "1106824482"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1692,6 +1768,7 @@
       "Topwar Studio",
       "Green Mushroom"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1711,6 +1788,7 @@
       "1734552841",
       "1469399538"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1757,6 +1835,7 @@
       "VMate Inc.",
       "Alibaba Group"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1802,6 +1881,7 @@
       "436672032",
       "387682729"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1825,6 +1905,7 @@
       "MOONTON STUDIO",
       "Skystone Games"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1846,6 +1927,7 @@
       "1742109154",
       "1711000447"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1868,6 +1950,7 @@
       "7761425617423814507",
       "6304076786970923315"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1883,6 +1966,7 @@
     "developer_ids": [
       "285005466"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1901,6 +1985,7 @@
       "TOP GAMES INC.",
       "TG Inc."
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1916,6 +2001,7 @@
     "developer_ids": [
       "1050386041"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1940,6 +2026,7 @@
       "5635477978503001293",
       "Yostar Limited."
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1959,6 +2046,7 @@
       "1782838982",
       "1674540911"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -1984,6 +2072,7 @@
       "SQUARE ENIX Ltd",
       "SQUARE ENIX INC"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2000,6 +2089,7 @@
       "300186801",
       "578072799"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2049,6 +2139,7 @@
       "4399.com",
       "4399en game"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2082,6 +2173,7 @@
       "930102865",
       "1113943835"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2098,6 +2190,7 @@
       "6751239034997003943",
       "8670778571117015724"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2115,6 +2208,7 @@
       "1692119400",
       "1571685288"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2144,6 +2238,7 @@
       "Camel Games",
       "Inc"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2164,6 +2259,7 @@
       "1298915028",
       "542910776"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2184,6 +2280,7 @@
       "Rollic Games",
       "ByteTyper"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2202,6 +2299,7 @@
       "1590849793",
       "1561638383"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2232,6 +2330,7 @@
       "7198059765943546780",
       "TUYOO GAME"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2254,6 +2353,7 @@
       "1490823604",
       "1566267365"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2284,6 +2384,7 @@
       "5374431039651315752",
       "TongYangOnline"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2305,6 +2406,7 @@
       "355472980",
       "1178527367"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2330,6 +2432,7 @@
       "Gluon Interactive Ltd.",
       "Vertex Games PTE. LTD."
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2347,6 +2450,7 @@
       "955409331",
       "1437617948"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2365,6 +2469,7 @@
       "pomelo company limited",
       "5143272543571380181"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2388,6 +2493,7 @@
       "445329835",
       "1548914593"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2443,6 +2549,7 @@
       "Bubble Shooter Games by Ilyon",
       "AppyNation Ltd."
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2471,6 +2578,7 @@
       "997700104",
       "1238111292"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2489,6 +2597,7 @@
       "5001298899523389669",
       "Plarium  LLC"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2505,6 +2614,7 @@
       "489487383",
       "1053231049"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2538,6 +2648,7 @@
       "LINE TAIWAN LIMITED",
       "LINE MUSIC"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2561,6 +2672,7 @@
       "1046762513",
       "978249202"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2577,6 +2689,7 @@
       "7849776799175690127",
       "5256951659267379160"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2593,6 +2706,7 @@
       "403963903",
       "1019335866"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2614,6 +2728,7 @@
       "IGG.COM",
       "幻想娛樂科技"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2632,6 +2747,7 @@
       "455640811",
       "954975110"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2648,6 +2764,7 @@
       "9087509962033752464",
       "Scorewarrior"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2663,6 +2780,7 @@
     "developer_ids": [
       "1274132544"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2691,6 +2809,7 @@
       "株式会社ビリビリ",
       "BILIBILI"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2712,6 +2831,7 @@
       "1517062288",
       "1478403457"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2743,6 +2863,7 @@
       "6860045433664063908",
       "Seagame"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2763,6 +2884,7 @@
       "1629633462",
       "1777794929"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2784,6 +2906,7 @@
       "SEGA　CORPORATION",
       "SEGA　 CORPORATION"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2801,6 +2924,7 @@
       "281966698",
       "541834318"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2820,6 +2944,7 @@
       "Magic Tavern",
       "Inc."
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2836,6 +2961,7 @@
       "1399403555",
       "1111095414"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2862,6 +2988,7 @@
       "CHEN SHIN HSIUNG",
       "X.D. Network"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2883,6 +3010,7 @@
       "727420859",
       "1178857169"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2915,6 +3043,7 @@
       "JYSGames",
       "Leiting Games"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2937,6 +3066,7 @@
       "1249150547",
       "1434798393"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2953,6 +3083,7 @@
       "5819088965110992860",
       "Double Down Interactive LLC"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2968,6 +3099,7 @@
     "developer_ids": [
       "485126027"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2984,6 +3116,7 @@
       "6285385060368291276",
       "Zeroo Gravity Games"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -2999,6 +3132,7 @@
     "developer_ids": [
       "1588007114"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3014,6 +3148,7 @@
     "developer_ids": [
       "1695534339"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3035,6 +3170,7 @@
       "Blizzard Entertainment",
       "Inc."
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3050,6 +3186,7 @@
     "developer_ids": [
       "306862900"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3078,6 +3215,7 @@
       "Neuron Network Limited",
       "6090857969104390434"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3097,6 +3235,7 @@
       "1180931800",
       "1514564892"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3114,6 +3253,7 @@
       "PONOS Corporation",
       "5525924818463575153"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3129,6 +3269,7 @@
     "developer_ids": [
       "297248421"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3179,6 +3320,7 @@
       "Kakao Corporation",
       "Kakao M Corp."
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3205,6 +3347,7 @@
       "298572967",
       "1472304147"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3220,6 +3363,7 @@
     "developer_ids": [
       "7767058403001139720"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3235,6 +3379,7 @@
     "developer_ids": [
       "311464410"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3250,6 +3395,7 @@
     "developer_ids": [
       "5187629073610793871"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3265,6 +3411,7 @@
     "developer_ids": [
       "461402737"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3285,6 +3432,7 @@
       "Inc",
       "RIOT GAMES SERVICES PTE. LTD."
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3301,6 +3449,7 @@
       "346988044",
       "1764685949"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3319,6 +3468,7 @@
       "PlayStudios",
       "6550734437960579461"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3334,6 +3484,7 @@
     "developer_ids": [
       "624795774"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3366,6 +3517,7 @@
       "YOTTA GAMES PTE LTD",
       "Xiao Junyun"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3386,6 +3538,7 @@
       "978992297",
       "1235569397"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3403,6 +3556,7 @@
       "5509190841173705883",
       "TinyCo"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3420,6 +3574,7 @@
       "405176113",
       "373788528"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3437,6 +3592,7 @@
       "8107855987752203465",
       "Vangelina Savva"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3452,6 +3608,7 @@
     "developer_ids": [
       "660706304"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3475,6 +3632,7 @@
       "4647361560738614803",
       "7 Hits Games"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3494,6 +3652,7 @@
       "1269668575",
       "920182716"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3518,6 +3677,7 @@
       "IYAGAMES",
       "SINGAPORE JUST FUN TECHNOLOGY PTE. LTD."
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3538,6 +3698,7 @@
       "1622549166",
       "1606899915"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3566,6 +3727,7 @@
       "PIXONIC",
       "MGL MY.COM (CYPRUS) LIMITED"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3588,6 +3750,7 @@
       "1539932298",
       "652136894"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3604,6 +3767,7 @@
       "4772240228547998649",
       "Mojang"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3619,6 +3783,7 @@
     "developer_ids": [
       "479516146"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3645,6 +3810,7 @@
       "7636126946971633584",
       "5440522347396167156"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3663,6 +3829,7 @@
       "1471349552",
       "314395447"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3688,6 +3855,7 @@
       "Giant Global",
       "Giant       Global"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3706,6 +3874,7 @@
       "1502193073",
       "938550955"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3723,6 +3892,7 @@
       "7240594971851857167",
       "Everywear Games Oy"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3738,6 +3908,7 @@
     "developer_ids": [
       "974585521"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3763,6 +3934,7 @@
       "8097407929876428583",
       "Zego Global Pte"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3782,6 +3954,7 @@
       "1592281460",
       "1673696926"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3800,6 +3973,7 @@
       "MelSoft",
       "5280080061020002660"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3815,6 +3989,7 @@
     "developer_ids": [
       "438182507"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3840,6 +4015,7 @@
       "Fun Games For Free Ltd",
       "Top Free Games."
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3858,6 +4034,7 @@
       "1479050267",
       "429363358"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3878,6 +4055,7 @@
       "BeReal",
       "App Advisory"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3895,6 +4073,7 @@
       "956239526",
       "657096670"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3912,6 +4091,7 @@
       "9133452689932095671",
       "Dark Matter Oy"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3928,6 +4108,7 @@
       "298910979",
       "985584975"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3946,6 +4127,7 @@
       "KOEI TECMO GAMES CO.",
       "LTD."
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3961,6 +4143,7 @@
     "developer_ids": [
       "335308086"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3981,6 +4164,7 @@
       "6179794243705556952",
       "KamaGames Korea"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -3997,6 +4181,7 @@
       "312479206",
       "1487774398"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4012,6 +4197,7 @@
     "developer_ids": [
       "8567646723268777320"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4027,6 +4213,7 @@
     "developer_ids": [
       "419103351"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4044,6 +4231,7 @@
       "5685833084663736990",
       "VIZOR APPS LTD."
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4060,6 +4248,7 @@
       "1568120076",
       "1098184645"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4083,6 +4272,7 @@
       "8309053968004433310",
       "Glaciers Game"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4103,6 +4293,7 @@
       "1539597804",
       "1584278644"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4126,6 +4317,7 @@
       "ONEMT Ltd",
       "7006382305291329295"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4144,6 +4336,7 @@
       "1621059825",
       "896047171"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4159,6 +4352,7 @@
     "developer_ids": [
       "1447922832"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4174,6 +4368,7 @@
     "developer_ids": [
       "Mattel163 Limited"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4190,6 +4385,7 @@
       "1344700141",
       "1731961465"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4229,6 +4425,7 @@
       "9039637452829796984",
       "4887640545618306758"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4251,6 +4448,7 @@
       "1453001973",
       "1465084004"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4274,6 +4472,7 @@
       "6298813763312919073",
       "Autumn Knock Games"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4292,6 +4491,7 @@
       "1584815374",
       "1405039362"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4307,6 +4507,7 @@
     "developer_ids": [
       "7898821361707275817"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4322,6 +4523,7 @@
     "developer_ids": [
       "409060861"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4337,6 +4539,7 @@
     "developer_ids": [
       "杭州游卡网络技术有限公司"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4356,6 +4559,7 @@
       "1812609600",
       "1186188470"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4377,6 +4581,7 @@
       "Homa Games",
       "Emesh Inc"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4394,6 +4599,7 @@
       "1316437775",
       "1592085359"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4410,6 +4616,7 @@
       "6187525518349627915",
       "Candivore"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4425,6 +4632,7 @@
     "developer_ids": [
       "1362025075"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4448,6 +4656,7 @@
       "PUBG CORPORATION",
       "Bluehole"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4464,6 +4673,7 @@
       "852927650",
       "1366526330"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4531,6 +4741,7 @@
       "Hot Casino",
       "GAMEHAUS PTE. LTD."
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4561,6 +4772,7 @@
       "1382108509",
       "1446858202"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4590,6 +4802,7 @@
       "FALCON JSC",
       "1Soft Go Global"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4610,6 +4823,7 @@
       "1795833978",
       "1436458898"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4626,6 +4840,7 @@
     "developer_ids": [
       "Happibits Game"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4641,6 +4856,7 @@
     "developer_ids": [
       "1597889315"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4667,6 +4883,7 @@
       "Limited",
       "HaoPlay"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4685,6 +4902,7 @@
       "1538377668",
       "1661611605"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4700,6 +4918,7 @@
     "developer_ids": [
       "7204391758476304499"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4717,6 +4936,7 @@
       "1719937631",
       "1304907587"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4733,6 +4953,7 @@
       "4629548824296547330",
       "AppQuantum"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4748,6 +4969,7 @@
     "developer_ids": [
       "1464501653"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4768,6 +4990,7 @@
       "Duoyi (Hong Kong)  Interactive Entertainment",
       "Duoyi (Hong Kong) Interactive Entertainment"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4789,6 +5012,7 @@
       "1441411913",
       "1635312536"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4810,6 +5034,7 @@
       "NHN hangame Corp.",
       "NHN JAPAN Corporation"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4827,6 +5052,7 @@
       "1298381858",
       "380298670"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4898,6 +5124,7 @@
       "Douyin",
       "5299725221209516149"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4932,6 +5159,7 @@
       "1479391423",
       "1498607142"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4956,6 +5184,7 @@
       "7398573015863307963",
       "Fyxtech HK Limited"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4974,6 +5203,7 @@
       "1610685845",
       "1669203075"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -4989,6 +5219,7 @@
     "developer_ids": [
       "5153970434677900725"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5004,6 +5235,7 @@
     "developer_ids": [
       "588277915"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5019,6 +5251,7 @@
     "developer_ids": [
       "6499205192421311786"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5034,6 +5267,7 @@
     "developer_ids": [
       "1529787666"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5052,6 +5286,7 @@
       "International Games System Co.",
       "Ltd."
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5067,6 +5302,7 @@
     "developer_ids": [
       "402387648"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5082,6 +5318,7 @@
     "developer_ids": [
       "Rudel inc."
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5097,6 +5334,7 @@
     "developer_ids": [
       "648301876"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5113,6 +5351,7 @@
       "6712852036678955591",
       "4922179359616923865"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5129,6 +5368,7 @@
       "1568415099",
       "1628516807"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5160,6 +5400,7 @@
       "DeNA Global Publishing",
       "Program Twenty Three"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5179,6 +5420,7 @@
       "881149457",
       "581481118"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5195,6 +5437,7 @@
       "5584164941825017957",
       "9199344989204994692"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5211,6 +5454,7 @@
       "1453908357",
       "445459903"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5235,6 +5479,7 @@
       "Leniu Games",
       "lnhwgame"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5252,6 +5497,7 @@
       "1681977869",
       "1570607406"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5267,6 +5513,7 @@
     "developer_ids": [
       "472885643"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5287,6 +5534,7 @@
       "Elex",
       "Galaxy Play Technology Limited"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5305,6 +5553,7 @@
       "624476126",
       "807340020"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5320,6 +5569,7 @@
     "developer_ids": [
       "Warner Bros. International Enterprises"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5336,6 +5586,7 @@
       "298372283",
       "299948604"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5353,6 +5604,7 @@
       "6650389988837544544",
       "Ludia Inc."
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5368,6 +5620,7 @@
     "developer_ids": [
       "293912963"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5383,6 +5636,7 @@
     "developer_ids": [
       "6681606924556273560"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5398,6 +5652,7 @@
     "developer_ids": [
       "324563547"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5415,6 +5670,7 @@
       "7769366979601471884",
       "0.1%"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5431,6 +5687,7 @@
       "1060433596",
       "1247721322"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5446,6 +5703,7 @@
     "developer_ids": [
       "Crowdstar Inc"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5461,6 +5719,7 @@
     "developer_ids": [
       "321598392"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5476,6 +5735,7 @@
     "developer_ids": [
       "1043817467"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5491,6 +5751,7 @@
     "developer_ids": [
       "6430038787206489041"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5506,6 +5767,7 @@
     "developer_ids": [
       "1742757639"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5535,6 +5797,7 @@
       "funplex",
       "Inc"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5552,6 +5815,7 @@
       "403482783",
       "1434641297"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5577,6 +5841,7 @@
       "RED BUTTON LLC",
       "Ararat Games"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5596,6 +5861,7 @@
       "1231732979",
       "460975962"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5611,6 +5877,7 @@
     "developer_ids": [
       "5068259210636929122"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5626,6 +5893,7 @@
     "developer_ids": [
       "329218552"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5650,6 +5918,7 @@
       "SY2019",
       "ShiYue Joy"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5675,6 +5944,7 @@
       "1501305764",
       "1637868869"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5690,6 +5960,7 @@
     "developer_ids": [
       "6496128650038483596"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5705,6 +5976,7 @@
     "developer_ids": [
       "1076918346"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5720,6 +5992,7 @@
     "developer_ids": [
       "DoubleUGames"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5735,6 +6008,7 @@
     "developer_ids": [
       "642727746"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5750,6 +6024,7 @@
     "developer_ids": [
       "7489594886728593506"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5765,6 +6040,7 @@
     "developer_ids": [
       "390712652"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5796,6 +6072,7 @@
       "SPGGame",
       "springgame"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5816,6 +6093,7 @@
       "1687253948",
       "1296148231"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5842,6 +6120,7 @@
       "NEOWIZ PLAY STUDIO",
       "5720721090409394019"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5862,6 +6141,7 @@
       "1133373707",
       "949800192"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5899,6 +6179,7 @@
       "Youzu Games HONGKONG LIMITED",
       "Yoozoo Global"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5921,6 +6202,7 @@
       "1423041750",
       "1112060887"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5959,6 +6241,7 @@
       "HIGGS TECHNOLOGY CO LIMITED",
       "Higgs Technology Ltd."
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5978,6 +6261,7 @@
       "1144468315",
       "966112995"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -5997,6 +6281,7 @@
       "Wemade Co.",
       "Ltd"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -6012,6 +6297,7 @@
     "developer_ids": [
       "467550766"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -6027,6 +6313,7 @@
     "developer_ids": [
       "7784042092088351158"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -6042,6 +6329,7 @@
     "developer_ids": [
       "1675413403"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -6067,6 +6355,7 @@
       "Hortor Interactive",
       "Hortor Games"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -6087,6 +6376,7 @@
       "1591171666",
       "451113309"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -6107,6 +6397,7 @@
       "ZENGAME",
       "ZENGAME INTERACTIVE LIMITED"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -6126,6 +6417,7 @@
       "1169913178",
       "1747645120"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -6141,6 +6433,7 @@
     "developer_ids": [
       "7277267556905944956"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -6156,6 +6449,7 @@
     "developer_ids": [
       "1062496488"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -6171,6 +6465,7 @@
     "developer_ids": [
       "8128532516213169694"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
@@ -6188,6 +6483,7 @@
       "370358797",
       "713998160"
     ],
+    "publisher_rank": null,
     "company_region": "global",
     "company_type": "publisher",
     "company_scale": "mid",
